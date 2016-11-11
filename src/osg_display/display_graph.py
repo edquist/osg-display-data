@@ -1,6 +1,9 @@
 
 import os
-import Image
+try:
+    import Image
+except ImportError:
+    from PIL import Image
 import types
 import matplotlib
 matplotlib.use("Agg")
