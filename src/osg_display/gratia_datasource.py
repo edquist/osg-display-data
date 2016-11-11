@@ -8,6 +8,45 @@ import tempfile
 from common import log
 from monthdelta import monthdelta
 
+import elasticsearch
+from elasticsearch_dsl import Search, A, Q
+#import logging
+#import datetime
+
+
+#logging.basicConfig(level=logging.WARN)
+es = elasticsearch.Elasticsearch(
+        ['https://gracc.opensciencegrid.org/q'],
+        timeout=300, use_ssl=True, verify_certs=True,
+        ca_certs='/etc/ssl/certs/ca-bundle.crt')
+
+jobs_raw_index = 'gracc.osg.raw-*'
+jobs_summary_index = 'gracc.osg.summary'
+
+transfers_raw_index = 'gracc.osg-transfer.raw-*'
+transfers_summary_index = 'gracc.osg-transfer.raw-*' # no summary idx exists yet
+
+def gracc_query_jobs(es, starttime, endtime, interval, index):
+    s = Search(using=es, index=index)
+
+    s = s.query('bool',
+            filter=[
+             Q('range', EndTime={'from': starttime, 'to': endtime })
+          &  Q('term',  ResourceType='Batch')
+          & ~Q('terms', SiteName=['NONE', 'Generic', 'Obsolete'])
+          & ~Q('terms', VOName=['Unknown', 'unknown', 'other'])
+        ]
+    )
+
+    curBucket = s.aggs.bucket('EndTime', 'date_histogram',
+                              field='EndTime', interval=interval)
+
+    curBucket = curBucket.metric('CoreHours', 'sum', field='CoreHours')
+    curBucket = curBucket.bucket('Records', 'sum', field='Count')
+
+    response = s.execute()
+    return response
+
 class DataSource(object):
 
     def __init__(self, cp):
@@ -35,6 +74,17 @@ class DataSource(object):
             raise
         curs = self.conn.cursor()
         curs.execute("set time_zone='+0:00'")
+
+        #gracc_url = self.cp.get("Gracc", "Url")
+        gracc_url = 'https://gracc.opensciencegrid.org/q'
+        try:
+            self.es = elasticsearch.Elasticsearch(
+                [gracc_url], timeout=300, use_ssl=True, verify_certs=True,
+                ca_certs='/etc/ssl/certs/ca-bundle.crt')
+        except Exception, e:
+            log.exception(e)
+            log.error("Unable to connect to Gracc database")
+            raise
 
     def connect_transfer(self):
         user = self.cp.get("Gratia Transfer", "User")
@@ -129,23 +179,32 @@ class HourlyJobsDataSource(DataSource):
         return {'jobs_hourly': int(num_jobs), 'cpu_hours_hourly': float(total_hours)}
 
     def query_jobs(self):
-        curs = self.conn.cursor()
+#       curs = self.conn.cursor()
         params = self.get_params()
-        curs.execute(self.jobs_query, params)
-        results = curs.fetchall()
-        all_results = [(i[1], i[2]) for i in results]
-        log.info("Gratia returned %i results for jobs" % len(all_results))
+#       curs.execute(self.jobs_query, params)
+#       results = curs.fetchall()
+
+        response = gracc_query_jobs(self.es, params['starttime'], params['endtime'],
+                                    'hour', jobs_raw_index)
+
+        results = response.aggregations.to_dict()['EndTime']['buckets']
+
+#       all_results = [(i[1], i[2]) for i in results]
+        all_results = [ (x['Records']['value'] or x['doc_count'],
+                         x['CoreHours']['value'],
+                         x['key'] / 1000) for x in results ]
+        
+        log.info("GRACC returned %i results for jobs" % len(all_results))
         log.debug("Job result dump:")
-        for i in results:
-            count, hrs = i[1:]
-            time_tuple = time.gmtime(i[0])
+        for count, hrs, epochtime in all_results:
+            time_tuple = time.gmtime(epochtime)
             time_str = time.strftime("%Y-%m-%d %H:%M", time_tuple)
             log.debug("Time %s: Count %i, Hours %.2f" % (time_str, count, hrs))
         count_results = [i[0] for i in all_results]
         hour_results = [i[1] for i in all_results]
         num_results = int(self.cp.get("Gratia", "hours"))
-        count_results = count_results[-num_results-1:-1]
-        hour_results = hour_results[-num_results-1:-1]
+        #count_results = count_results[-num_results-1:-1]
+        #hour_results = hour_results[-num_results-1:-1]
         self.count_results, self.hour_results = count_results, hour_results
         return count_results, hour_results
 
