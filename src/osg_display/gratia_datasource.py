@@ -283,6 +283,8 @@ class MonthlyDataSource(DataSource):
         response = gracc_query_jobs(self.es, params['starttime'], params['endtime'],
                                     'month', jobs_summary_index)
 
+        results = response.aggregations.to_dict()['EndTime']['buckets']
+
 #       all_results = [(i[1], i[2]) for i in results]
         all_results = [ (x['Records']['value'] or x['doc_count'],
                          x['CoreHours']['value'],
@@ -445,6 +447,8 @@ class DailyDataSource(DataSource):
 
         response = gracc_query_jobs(self.es, params['starttime'], params['endtime'],
                                     'day', jobs_summary_index)
+
+        results = response.aggregations.to_dict()['EndTime']['buckets']
 
 #       all_results = [(i[1], i[2]) for i in results]
         all_results = [ (x['Records']['value'] or x['doc_count'],
