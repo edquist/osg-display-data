@@ -47,6 +47,29 @@ def gracc_query_jobs(es, starttime, endtime, interval, index):
     response = s.execute()
     return response
 
+def gracc_hourly_query_jobs(es, starttime, endtime, offset, interval, index):
+    s = Search(using=es, index=index)
+
+    s = s.query('bool',
+            filter=[
+             Q('range', received={'from': starttime, 'to': endtime})
+          &  Q('range', EndTime={'lt': endtime})
+          &  Q('term',  ResourceType='Batch')
+          & ~Q('terms', SiteName=['NONE', 'Generic', 'Obsolete'])
+          & ~Q('terms', VOName=['Unknown', 'unknown', 'other'])
+        ]
+    )
+
+    curBucket = s.aggs.bucket('EndTime', 'date_histogram',
+                              field='EndTime', interval=interval,
+                              offset="-%ds" % offset)
+
+    curBucket = curBucket.metric('CoreHours', 'sum', field='CoreHours')
+    curBucket = curBucket.bucket('Records', 'sum', field='Count')
+
+    response = s.execute()
+    return response
+
 class DataSource(object):
 
     def __init__(self, cp):
@@ -184,8 +207,9 @@ class HourlyJobsDataSource(DataSource):
 #       curs.execute(self.jobs_query, params)
 #       results = curs.fetchall()
 
-        response = gracc_query_jobs(self.es, params['starttime'], params['endtime'],
-                                    'hour', jobs_raw_index)
+        response = gracc_hourly_query_jobs(self.es,
+                params['starttime'], params['endtime'], params['offset'],
+                'hour', jobs_raw_index)
 
         results = response.aggregations.to_dict()['EndTime']['buckets']
 
