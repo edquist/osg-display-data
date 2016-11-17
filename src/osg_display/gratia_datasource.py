@@ -52,8 +52,9 @@ def gracc_hourly_query_jobs(es, starttime, endtime, offset, interval, index):
 
     s = s.query('bool',
             filter=[
-             Q('range', received={'from': starttime, 'to': endtime})
-          &  Q('range', EndTime={'lt': endtime})
+             Q('range', EndTime={'from': starttime, 'to': endtime })
+#            Q('range', received={'from': starttime, 'to': endtime})
+#         &  Q('range', EndTime={'lt': endtime})
           &  Q('term',  ResourceType='Batch')
           & ~Q('terms', SiteName=['NONE', 'Generic', 'Obsolete'])
           & ~Q('terms', VOName=['Unknown', 'unknown', 'other'])
