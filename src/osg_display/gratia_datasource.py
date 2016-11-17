@@ -228,8 +228,8 @@ class HourlyJobsDataSource(DataSource):
         count_results = [i[0] for i in all_results]
         hour_results = [i[1] for i in all_results]
         num_results = int(self.cp.get("Gratia", "hours"))
-        #count_results = count_results[-num_results-1:-1]
-        #hour_results = hour_results[-num_results-1:-1]
+        count_results = count_results[-num_results-1:-1]
+        hour_results = hour_results[-num_results-1:-1]
         self.count_results, self.hour_results = count_results, hour_results
         return count_results, hour_results
 
@@ -325,8 +325,8 @@ class MonthlyDataSource(DataSource):
         count_results = [i[0] for i in all_results]
         hour_results = [i[1] for i in all_results]
         num_results = int(self.cp.get("Gratia", "months"))
-#       count_results = count_results[-num_results:]
-#       hour_results = hour_results[-num_results:]
+        count_results = count_results[-num_results:]
+        hour_results = hour_results[-num_results:]
         self.count_results, self.hour_results = count_results, hour_results
         return count_results, hour_results
 
@@ -490,8 +490,8 @@ class DailyDataSource(DataSource):
         count_results = [i[0] for i in all_results]
         hour_results = [i[1] for i in all_results]
         num_results = int(self.cp.get("Gratia", "days"))
-#       count_results = count_results[-num_results-1:-1]
-#       hour_results = hour_results[-num_results-1:-1]
+        count_results = count_results[-num_results-1:-1]
+        hour_results = hour_results[-num_results-1:-1]
         self.count_results, self.hour_results = count_results, hour_results
         return count_results, hour_results
 
