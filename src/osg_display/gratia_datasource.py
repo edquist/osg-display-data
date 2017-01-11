@@ -333,14 +333,14 @@ class MonthlyDataSource(DataSource):
     def query_transfers(self):
         self.connect_transfer()
         curs = self.conn.cursor()
-	cachedresultslist, params=self.getcache()
-	log.debug("Received  <%s> cached results"%(len(cachedresultslist)))
-	log.debug("Received in query_transfers for DB Query start date: <%s> and end date <%s> "%(params['starttime'],params['endtime']))
+        cachedresultslist, params=self.getcache()
+        log.debug("Received  <%s> cached results"%(len(cachedresultslist)))
+        log.debug("Received in query_transfers for DB Query start date: <%s> and end date <%s> "%(params['starttime'],params['endtime']))
         curs.execute(self.transfers_query, params)
         results = curs.fetchall()
         all_results = [(i[0],i[1], i[2]) for i in results]
-	cachedresultslist.extend(all_results)
-	all_results=cachedresultslist
+        cachedresultslist.extend(all_results)
+        all_results=cachedresultslist
         log.info( "-------- Gratia returned %i results for transfers----------------" % len(all_results))
         log.debug("-------- Transfer result dump: DB Fetched results----------------" )
         for i in results:
@@ -360,10 +360,10 @@ class MonthlyDataSource(DataSource):
         count_results = count_results[-num_results:]
         hour_results = hour_results[-num_results:]
 
-	#write the data to cache file
-	pickle_f_handle = open(self.cache_data_file_name, "w")
-	cPickle.dump(all_results, pickle_f_handle)
-	pickle_f_handle.close()
+        #write the data to cache file
+        pickle_f_handle = open(self.cache_data_file_name, "w")
+        cPickle.dump(all_results, pickle_f_handle)
+        pickle_f_handle.close()
 
         self.disconnect()
         self.transfer_results = count_results
@@ -498,15 +498,15 @@ class DailyDataSource(DataSource):
     def query_transfers(self):
         self.connect_transfer()
         curs = self.conn.cursor()
-	cachedresultslist, params=self.getcache()
+        cachedresultslist, params=self.getcache()
 
-	log.debug("Received  <%s> cached results"%(len(cachedresultslist)))
-	log.debug("Received in query_transfers for DB Query start date: <%s> and end date <%s> "%(params['starttime'],params['endtime']))
+        log.debug("Received  <%s> cached results"%(len(cachedresultslist)))
+        log.debug("Received in query_transfers for DB Query start date: <%s> and end date <%s> "%(params['starttime'],params['endtime']))
         curs.execute(self.transfers_query, params)
         results = curs.fetchall()
         all_results = [(i[0],i[1], i[2]) for i in results]
-	cachedresultslist.extend(all_results)
-	all_results=cachedresultslist
+        cachedresultslist.extend(all_results)
+        all_results=cachedresultslist
 
         log.info( "-------- Gratia returned %i results for transfers----------------" % len(all_results))
         log.debug("-------- Transfer result dump: DB Fetched results----------------" )
@@ -525,10 +525,10 @@ class DailyDataSource(DataSource):
         count_results = count_results[-num_results-1:-1]
         hour_results = hour_results[-num_results-1:-1]
 
-	#write the data to cache file
-	pickle_f_handle = open(self.cache_data_file_name, "w")
-	cPickle.dump(all_results, pickle_f_handle)
-	pickle_f_handle.close()
+        #write the data to cache file
+        pickle_f_handle = open(self.cache_data_file_name, "w")
+        cPickle.dump(all_results, pickle_f_handle)
+        pickle_f_handle.close()
 
         self.disconnect()
         self.transfer_results, self.transfer_volume_results = count_results, \
