@@ -244,12 +244,12 @@ class HourlyJobsDataSource(DataSource):
                 params['starttime'], params['endtime'], params['offset'],
                 'hour', jobs_raw_index)
 
-        results = response.aggregations.to_dict()['EndTime']['buckets']
+        results = response.aggregations.EndTime.buckets
 
 #       all_results = [(i[1], i[2]) for i in results]
-        all_results = [ (x['Records']['value'] or x['doc_count'],
-                         x['CoreHours']['value'],
-                         x['key'] / 1000) for x in results ]
+        all_results = [ (x.Records.value or x.doc_count,
+                         x.CoreHours.value,
+                         x.key / 1000) for x in results ]
 
         log.info("GRACC returned %i results for jobs" % len(all_results))
         log.debug("Job result dump:")
@@ -340,12 +340,12 @@ class MonthlyDataSource(DataSource):
         response = gracc_query_jobs(self.es, params['starttime'], params['endtime'],
                                     'month', jobs_summary_index)
 
-        results = response.aggregations.to_dict()['EndTime']['buckets']
+        results = response.aggregations.EndTime.buckets
 
 #       all_results = [(i[1], i[2]) for i in results]
-        all_results = [ (x['Records']['value'] or x['doc_count'],
-                         x['CoreHours']['value'],
-                         x['key'] / 1000) for x in results ]
+        all_results = [ (x.Records.value or x.doc_count,
+                         x.CoreHours.value,
+                         x.key / 1000) for x in results ]
 
         log.info("GRACC returned %i results for jobs" % len(all_results))
         log.debug("Job result dump:")
@@ -517,12 +517,12 @@ class DailyDataSource(DataSource):
         response = gracc_query_jobs(self.es, params['starttime'], params['endtime'],
                                     'day', jobs_summary_index)
 
-        results = response.aggregations.to_dict()['EndTime']['buckets']
+        results = response.aggregations.EndTime.buckets
 
 #       all_results = [(i[1], i[2]) for i in results]
-        all_results = [ (x['Records']['value'] or x['doc_count'],
-                         x['CoreHours']['value'],
-                         x['key'] / 1000) for x in results ]
+        all_results = [ (x.Records.value or x.doc_count,
+                         x.CoreHours.value,
+                         x.key / 1000) for x in results ]
 
         log.info("GRACC returned %i results for daily jobs" % len(all_results))
         log.debug("Job result dump:")
