@@ -370,15 +370,17 @@ class MonthlyDataSource(DataSource):
         #curs.execute(self.transfers_query, params)
         #results = curs.fetchall()
 
-        response = gracc_query_transfers(self.es, params['starttime'], params['endtime'],
-                                         'month', jobs_summary_index)
+        response = gracc_query_transfers(self.es, params['starttime'],
+                                         params['endtime'], 'month',
+                                         transfers_summary_index)
 
-        results = response.aggregations.to_dict()['StartTime']['buckets']
+        results = response.aggregations.StartTime.buckets
 
 #       all_results = [(i[0],i[1], i[2]) for i in results]
-        all_results = [ (x['key'] / 1000,
-                         x['Records']['value'] or x['doc_count'],
-                         x['Network']['value']) for x in results ]
+        all_results = [ (x.key / 1000,
+                         #x.Records.value or
+                         x.doc_count,
+                         x.Network.value / 1024**2) for x in results ]
 
         cachedresultslist.extend(all_results)
         all_results=cachedresultslist
