@@ -541,14 +541,26 @@ class DailyDataSource(DataSource):
 
     def query_transfers(self):
         self.connect_transfer()
-        curs = self.conn.cursor()
+        #curs = self.conn.cursor()
         cachedresultslist, params=self.getcache()
 
         log.debug("Received  <%s> cached results"%(len(cachedresultslist)))
         log.debug("Received in query_transfers for DB Query start date: <%s> and end date <%s> "%(params['starttime'],params['endtime']))
-        curs.execute(self.transfers_query, params)
-        results = curs.fetchall()
-        all_results = [(i[0],i[1], i[2]) for i in results]
+        #curs.execute(self.transfers_query, params)
+        #results = curs.fetchall()
+
+        response = gracc_query_transfers(self.es, params['starttime'],
+                                         params['endtime'], 'day',
+                                         transfers_summary_index)
+
+        results = response.aggregations.StartTime.buckets
+
+#       all_results = [(i[0],i[1], i[2]) for i in results]
+        all_results = [ (x.key / 1000,
+                         #x.Records.value or
+                         x.doc_count,
+                         x.Network.value / 1024**2) for x in results ]
+
         cachedresultslist.extend(all_results)
         all_results=cachedresultslist
 
