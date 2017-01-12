@@ -15,10 +15,11 @@ from elasticsearch_dsl import Search, A, Q
 
 
 #logging.basicConfig(level=logging.WARN)
-es = elasticsearch.Elasticsearch(
-        ['https://gracc.opensciencegrid.org/q'],
-        timeout=300, use_ssl=True, verify_certs=True,
-        ca_certs='/etc/ssl/certs/ca-bundle.crt')
+if False:
+    es = elasticsearch.Elasticsearch(
+            ['https://gracc.opensciencegrid.org/q'],
+            timeout=300, use_ssl=True, verify_certs=True,
+            ca_certs='/etc/ssl/certs/ca-bundle.crt')
 
 jobs_raw_index = 'gracc.osg.raw-*'
 jobs_summary_index = 'gracc.osg.summary'
