@@ -387,7 +387,7 @@ class MonthlyDataSource(DataSource):
         all_results=cachedresultslist
         log.info( "-------- GRACC returned %i results for transfers----------------" % len(all_results))
         log.debug("-------- Transfer result dump: DB Fetched results----------------" )
-        for i in results:
+        for i in all_results:
             count, mbs = i[1:]
             log.debug("Month starting on %s: Transfers %i, Transfer PB %.2f" % \
                 (i[0], count, mbs/1024**2))
@@ -566,7 +566,7 @@ class DailyDataSource(DataSource):
 
         log.info( "-------- Gratia returned %i results for transfers----------------" % len(all_results))
         log.debug("-------- Transfer result dump: DB Fetched results----------------" )
-        for i in results:
+        for i in all_results:
             count, mbs = i[1:]
             log.debug("Day %s: Transfers %i, Transfer PB %.2f" % \
                 (i[0], count, mbs/1024**2))
