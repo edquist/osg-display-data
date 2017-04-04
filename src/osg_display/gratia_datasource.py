@@ -25,7 +25,7 @@ jobs_raw_index = 'gracc.osg.raw-*'
 jobs_summary_index = 'gracc.osg.summary'
 
 transfers_raw_index = 'gracc.osg-transfer.raw-*'
-transfers_summary_index = 'gracc.osg-transfer.raw-*' # no summary idx exists yet
+transfers_summary_index = 'gracc.osg-transfer.summary'
 
 def gracc_query_jobs(es, starttime, endtime, interval, index):
     s = Search(using=es, index=index)
@@ -87,7 +87,7 @@ def gracc_query_transfers(es, starttime, endtime, interval, index):
 
     #curBucket = curBucket.metric('Time', 'min', field='StartTime')
     curBucket = curBucket.metric('Network', 'sum', field='Network')
-    #curBucket = curBucket.bucket('Records', 'sum', field='Njobs')
+    curBucket = curBucket.bucket('Records', 'sum', field='Njobs')
 
     response = s.execute()
     return response
@@ -379,8 +379,7 @@ class MonthlyDataSource(DataSource):
 
 #       all_results = [(i[0],i[1], i[2]) for i in results]
         all_results = [ (x.key / 1000,
-                         #x.Records.value or
-                         x.doc_count,
+                         x.Records.value,
                          x.Network.value / 1024**2) for x in results ]
 
         cachedresultslist.extend(all_results)
