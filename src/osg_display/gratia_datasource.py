@@ -43,7 +43,7 @@ def gracc_query_jobs(es, starttime, endtime, interval, index):
                               field='EndTime', interval=interval)
 
     curBucket = curBucket.metric('CoreHours', 'sum', field='CoreHours')
-    curBucket = curBucket.bucket('Records', 'sum', field='Count')
+    curBucket = curBucket.metric('Records', 'sum', field='Count')
 
     response = s.execute()
     return response
@@ -67,7 +67,7 @@ def gracc_hourly_query_jobs(es, starttime, endtime, offset, interval, index):
                               offset="-%ds" % offset)
 
     curBucket = curBucket.metric('CoreHours', 'sum', field='CoreHours')
-    curBucket = curBucket.bucket('Records', 'sum', field='Count')
+    curBucket = curBucket.metric('Records', 'sum', field='Count')
 
     response = s.execute()
     return response
@@ -87,7 +87,7 @@ def gracc_query_transfers(es, starttime, endtime, interval, index):
 
     #curBucket = curBucket.metric('Time', 'min', field='StartTime')
     curBucket = curBucket.metric('Network', 'sum', field='Network')
-    curBucket = curBucket.bucket('Records', 'sum', field='Njobs')
+    curBucket = curBucket.metric('Records', 'sum', field='Njobs')
 
     response = s.execute()
     return response
