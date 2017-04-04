@@ -556,8 +556,7 @@ class DailyDataSource(DataSource):
 
 #       all_results = [(i[0],i[1], i[2]) for i in results]
         all_results = [ (x.key / 1000,
-                         #x.Records.value or
-                         x.doc_count,
+                         x.Records.value,
                          x.Network.value / 1024**2) for x in results ]
 
         cachedresultslist.extend(all_results)
