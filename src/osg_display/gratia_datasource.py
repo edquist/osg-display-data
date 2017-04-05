@@ -151,7 +151,7 @@ class DataSource(object):
 
 class HourlyJobsDataSource(DataSource):
     """
-    Hourly view of the Gratia job data
+    Hourly view of the GRACC job data
     """
 
     def __init__(self, cp):
@@ -160,7 +160,7 @@ class HourlyJobsDataSource(DataSource):
         self.hour_results = None
 
     def get_params(self):
-        hours = int(int(self.cp.get("Gratia", "hours"))*1.5)
+        hours = int(int(self.cp.get("Gracc", "hours"))*1.5)
         now = int(time.time()-60)
         prev = now - 3600*hours
         offset = prev % 3600
@@ -195,7 +195,7 @@ class HourlyJobsDataSource(DataSource):
             log.debug("Time %s: Count %i, Hours %.2f" % (time_str, count, hrs))
         count_results = [i[0] for i in all_results]
         hour_results = [i[1] for i in all_results]
-        num_results = int(self.cp.get("Gratia", "hours"))
+        num_results = int(self.cp.get("Gracc", "hours"))
         count_results = count_results[-num_results-1:-1]
         hour_results = hour_results[-num_results-1:-1]
         self.count_results, self.hour_results = count_results, hour_results
@@ -215,7 +215,7 @@ class MonthlyDataSource(DataSource):
         return returnval
 	
     def get_params(self):
-        months = int(int(self.cp.get("Gratia", "months"))+2)
+        months = int(int(self.cp.get("Gracc", "months"))+2)
         end = datetime.datetime(*(list(time.gmtime()[:2]) + [1,0,0,0]))
         start = end - datetime.timedelta(14*31, 0)
         start -= datetime.timedelta(start.day-1, 0)
@@ -254,7 +254,7 @@ class MonthlyDataSource(DataSource):
                 (time_str, count, hrs))
         count_results = [i[0] for i in all_results]
         hour_results = [i[1] for i in all_results]
-        num_results = int(self.cp.get("Gratia", "months"))
+        num_results = int(self.cp.get("Gracc", "months"))
         count_results = count_results[-num_results:]
         hour_results = hour_results[-num_results:]
         self.count_results, self.hour_results = count_results, hour_results
@@ -291,7 +291,7 @@ class MonthlyDataSource(DataSource):
         month_results = [i[0] for i in all_results]
         count_results = [i[1] for i in all_results]
         hour_results = [i[2] for i in all_results]
-        num_results = int(self.cp.get("Gratia", "months"))
+        num_results = int(self.cp.get("Gracc", "months"))
         month_results = month_results[-num_results:]
         count_results = count_results[-num_results:]
         hour_results = hour_results[-num_results:]
@@ -310,7 +310,7 @@ class MonthlyDataSource(DataSource):
 class DailyDataSource(DataSource):
     """
     Data source to provide transfer and job information over the past 30
-    days.  Queries the Gratia summary tables for jobs and transfers.
+    days.  Queries the GRACC summary index for jobs and transfers.
     """
     refreshwindowperiod=5
     deprecate_cache_after=10  #deprecate cache after these number of reads
@@ -323,7 +323,7 @@ class DailyDataSource(DataSource):
         return returnval
 
     def get_params(self):
-        days = int(int(self.cp.get("Gratia", "days"))+2)
+        days = int(int(self.cp.get("Gracc", "days"))+2)
         end = datetime.datetime(*(list(time.gmtime()[:3]) + [0,0,0]))
         start = end - datetime.timedelta(days, 0)
         start -= datetime.timedelta(start.day-1, 0)
@@ -362,7 +362,7 @@ class DailyDataSource(DataSource):
                 (time_str, count, hrs))
         count_results = [i[0] for i in all_results]
         hour_results = [i[1] for i in all_results]
-        num_results = int(self.cp.get("Gratia", "days"))
+        num_results = int(self.cp.get("Gracc", "days"))
         count_results = count_results[-num_results-1:-1]
         hour_results = hour_results[-num_results-1:-1]
         self.count_results, self.hour_results = count_results, hour_results
@@ -400,7 +400,7 @@ class DailyDataSource(DataSource):
                 (i[0], count, mbs/1024**2))
         count_results = [i[1] for i in all_results]
         hour_results = [i[2] for i in all_results]
-        num_results = int(self.cp.get("Gratia", "days"))
+        num_results = int(self.cp.get("Gracc", "days"))
         count_results = count_results[-num_results-1:-1]
         hour_results = hour_results[-num_results-1:-1]
 
