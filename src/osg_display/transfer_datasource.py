@@ -222,7 +222,7 @@ class DataSourceTransfers(object):
         all_times = all_times[-26:-1]
         results = []
         for time in all_times:
-            results.append((self.data[time].count, self.data[time].volume_mb))
+            results.append((int(self.data[time].count), self.data[time].volume_mb))
         self.transfer_results, self.transfer_volume_results = zip(*results)
         return results
 
