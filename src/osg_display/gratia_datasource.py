@@ -76,9 +76,7 @@ class DataSource(object):
     def disconnect(self):
         self.conn.close()
 
-    def connect(self):
-        gracc_url = self.cp.get("Gracc", "Url")
-        #gracc_url = 'https://gracc.opensciencegrid.org/q'
+    def connect_gracc_url(self, gracc_url):
         try:
             self.es = elasticsearch.Elasticsearch(
                 [gracc_url], timeout=300, use_ssl=True, verify_certs=True,
@@ -88,17 +86,15 @@ class DataSource(object):
             log.error("Unable to connect to Gracc database")
             raise
 
+    def connect(self):
+        gracc_url = self.cp.get("Gracc", "Url")
+        #gracc_url = 'https://gracc.opensciencegrid.org/q'
+        self.connect_gracc_url(gracc_url)
+
     def connect_transfer(self):
         gracc_url = self.cp.get("Gracc Transfer", "Url")
         #gracc_url = 'https://gracc.opensciencegrid.org/q'
-        try:
-            self.es = elasticsearch.Elasticsearch(
-                [gracc_url], timeout=300, use_ssl=True, verify_certs=True,
-                ca_certs='/etc/ssl/certs/ca-bundle.crt')
-        except Exception, e:
-            log.exception(e)
-            log.error("Unable to connect to Gracc database")
-            raise
+        self.connect_gracc_url(gracc_url)
 
     def getcache(self):
 	cachedresultslist=[]
