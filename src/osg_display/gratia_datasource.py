@@ -10,16 +10,10 @@ from monthdelta import monthdelta
 
 import elasticsearch
 from elasticsearch_dsl import Search, A, Q
-#import logging
-#import datetime
+import logging
 
 
-#logging.basicConfig(level=logging.WARN)
-if False:
-    es = elasticsearch.Elasticsearch(
-            ['https://gracc.opensciencegrid.org/q'],
-            timeout=300, use_ssl=True, verify_certs=True,
-            ca_certs='/etc/ssl/certs/ca-bundle.crt')
+logging.basicConfig(level=logging.WARN)
 
 jobs_raw_index = 'gracc.osg.raw-*'
 jobs_summary_index = 'gracc.osg.summary'
@@ -54,8 +48,6 @@ def gracc_hourly_query_jobs(es, starttime, endtime, offset, interval, index):
     s = s.query('bool',
             filter=[
              Q('range', EndTime={'gte': starttime, 'lt': endtime })
-#            Q('range', received={'from': starttime, 'to': endtime})
-#         &  Q('range', EndTime={'lt': endtime})
           &  Q('term',  ResourceType='Batch')
           & ~Q('terms', SiteName=['NONE', 'Generic', 'Obsolete'])
           & ~Q('terms', VOName=['Unknown', 'unknown', 'other'])
@@ -85,7 +77,6 @@ def gracc_query_transfers(es, starttime, endtime, interval, index):
     curBucket = s.aggs.bucket('StartTime', 'date_histogram',
                               field='StartTime', interval=interval)
 
-    #curBucket = curBucket.metric('Time', 'min', field='StartTime')
     curBucket = curBucket.metric('Network', 'sum', field='Network')
     curBucket = curBucket.metric('Records', 'sum', field='Njobs')
 
@@ -235,10 +226,7 @@ class HourlyJobsDataSource(DataSource):
         return {'jobs_hourly': int(num_jobs), 'cpu_hours_hourly': float(total_hours)}
 
     def query_jobs(self):
-#       curs = self.conn.cursor()
         params = self.get_params()
-#       curs.execute(self.jobs_query, params)
-#       results = curs.fetchall()
 
         response = gracc_hourly_query_jobs(self.es,
                 params['starttime'], params['endtime'], params['offset'],
@@ -246,7 +234,6 @@ class HourlyJobsDataSource(DataSource):
 
         results = response.aggregations.EndTime.buckets
 
-#       all_results = [(i[1], i[2]) for i in results]
         all_results = [ (x.Records.value or x.doc_count,
                          x.CoreHours.value,
                          x.key / 1000) for x in results ]
@@ -332,17 +319,13 @@ class MonthlyDataSource(DataSource):
             'transfer_volume_mb_monthly': total_transfer_volume}
 
     def query_jobs(self):
-#       curs = self.conn.cursor()
         params = self.get_params()
-#       curs.execute(self.jobs_query, params)
-#       results = curs.fetchall()
 
-        response = gracc_query_jobs(self.es, params['starttime'], params['endtime'],
-                                    'month', jobs_summary_index)
+        response = gracc_query_jobs(self.es, params['starttime'],
+                           params['endtime'], 'month', jobs_summary_index)
 
         results = response.aggregations.EndTime.buckets
 
-#       all_results = [(i[1], i[2]) for i in results]
         all_results = [ (x.Records.value or x.doc_count,
                          x.CoreHours.value,
                          x.key / 1000) for x in results ]
@@ -364,12 +347,9 @@ class MonthlyDataSource(DataSource):
 
     def query_transfers(self):
         self.connect_transfer()
-        #curs = self.conn.cursor()
         cachedresultslist, params=self.getcache()
         log.debug("Received  <%s> cached results"%(len(cachedresultslist)))
         log.debug("Received in query_transfers for DB Query start date: <%s> and end date <%s> "%(params['starttime'],params['endtime']))
-        #curs.execute(self.transfers_query, params)
-        #results = curs.fetchall()
 
         response = gracc_query_transfers(self.es, params['starttime'],
                                          params['endtime'], 'month',
@@ -377,7 +357,6 @@ class MonthlyDataSource(DataSource):
 
         results = response.aggregations.StartTime.buckets
 
-#       all_results = [(i[0],i[1], i[2]) for i in results]
         all_results = [ (x.key / 1000,
                          x.Records.value,
                          x.Network.value / 1024**2) for x in results ]
@@ -508,17 +487,13 @@ class DailyDataSource(DataSource):
             'transfer_volume_mb_daily': transfer_volume}
 
     def query_jobs(self):
-#       curs = self.conn.cursor()
         params = self.get_params()
-#       curs.execute(self.jobs_query, params)
-#       results = curs.fetchall()
 
         response = gracc_query_jobs(self.es, params['starttime'], params['endtime'],
                                     'day', jobs_summary_index)
 
         results = response.aggregations.EndTime.buckets
 
-#       all_results = [(i[1], i[2]) for i in results]
         all_results = [ (x.Records.value or x.doc_count,
                          x.CoreHours.value,
                          x.key / 1000) for x in results ]
@@ -540,13 +515,10 @@ class DailyDataSource(DataSource):
 
     def query_transfers(self):
         self.connect_transfer()
-        #curs = self.conn.cursor()
         cachedresultslist, params=self.getcache()
 
         log.debug("Received  <%s> cached results"%(len(cachedresultslist)))
         log.debug("Received in query_transfers for DB Query start date: <%s> and end date <%s> "%(params['starttime'],params['endtime']))
-        #curs.execute(self.transfers_query, params)
-        #results = curs.fetchall()
 
         response = gracc_query_transfers(self.es, params['starttime'],
                                          params['endtime'], 'day',
@@ -554,7 +526,6 @@ class DailyDataSource(DataSource):
 
         results = response.aggregations.StartTime.buckets
 
-#       all_results = [(i[0],i[1], i[2]) for i in results]
         all_results = [ (x.key / 1000,
                          x.Records.value,
                          x.Network.value / 1024**2) for x in results ]
