@@ -5,6 +5,8 @@ import datetime
 
 from common import log, get_files, commit_files, euid
 
+transfers_raw_index = 'gracc.osg-transfer.raw-*'
+transfers_summary_index = 'gracc.osg-transfer.summary'
 
 def gracc_query_transfers(es, index, starttime, endtime, interval):
     s = Search(using=es, index=index)
@@ -182,15 +184,23 @@ class DataSourceTransfers(object):
                 self.save_cache()
 
     def query_transfers(self, starttime, endtime):
-        log.info("Querying Gratia Transfer DB for transfers from %s to %s." \
+        log.info("Querying GRACC Transfer index for transfers from %s to %s." \
             % (starttime.strftime("%Y-%m-%d %H:%M:%S"),
             endtime.strftime("%Y-%m-%d %H:%M:%S")))
-        #curs = self.conn.cursor()
-        params = {'span': 3600}
+        params = {'interval': 'hour'}
         params['starttime'] = starttime
         params['endtime'] = endtime
-        curs.execute(self.transfers_query, params)
-        return curs.fetchall()
+
+        response = gracc_query_transfers(self.es, transfers_summary_index,
+                                                         **params)
+
+        results = response.aggregations.StartTime.buckets
+
+        all_results = [ (x.key / 1000,
+                         x.Records.value,
+                         x.Network.value / 1024**2) for x in results ]
+
+        return all_results
 
     def get_json(self):
         assert self.transfer_results != None
