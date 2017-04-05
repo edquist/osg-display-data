@@ -419,7 +419,7 @@ class DailyDataSource(DataSource):
         cachedresultslist.extend(all_results)
         all_results=cachedresultslist
 
-        log.info( "-------- Gratia returned %i results for transfers----------------" % len(all_results))
+        log.info( "-------- GRACC returned %i results for transfers----------------" % len(all_results))
         log.debug("-------- Transfer result dump: DB Fetched results----------------" )
         for i in all_results:
             count, mbs = i[1:]
