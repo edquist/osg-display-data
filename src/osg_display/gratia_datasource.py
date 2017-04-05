@@ -21,7 +21,7 @@ jobs_summary_index = 'gracc.osg.summary'
 transfers_raw_index = 'gracc.osg-transfer.raw-*'
 transfers_summary_index = 'gracc.osg-transfer.summary'
 
-def gracc_query_jobs(es, index, starttime, endtime, interval):
+def gracc_query_jobs(es, index, starttime, endtime, interval, offset=None):
     s = Search(using=es, index=index)
 
     s = s.query('bool',
@@ -33,30 +33,13 @@ def gracc_query_jobs(es, index, starttime, endtime, interval):
         ]
     )
 
-    curBucket = s.aggs.bucket('EndTime', 'date_histogram',
-                              field='EndTime', interval=interval)
-
-    curBucket = curBucket.metric('CoreHours', 'sum', field='CoreHours')
-    curBucket = curBucket.metric('Records', 'sum', field='Count')
-
-    response = s.execute()
-    return response
-
-def gracc_hourly_query_jobs(es, index, starttime, endtime, offset, interval):
-    s = Search(using=es, index=index)
-
-    s = s.query('bool',
-            filter=[
-             Q('range', EndTime={'gte': starttime, 'lt': endtime })
-          &  Q('term',  ResourceType='Batch')
-          & ~Q('terms', SiteName=['NONE', 'Generic', 'Obsolete'])
-          & ~Q('terms', VOName=['Unknown', 'unknown', 'other'])
-        ]
-    )
+    if offset is None:
+        extra = {}
+    else:
+        extra = {'offset': "-%ds" % offset}
 
     curBucket = s.aggs.bucket('EndTime', 'date_histogram',
-                              field='EndTime', interval=interval,
-                              offset="-%ds" % offset)
+                              field='EndTime', interval=interval, **extra)
 
     curBucket = curBucket.metric('CoreHours', 'sum', field='CoreHours')
     curBucket = curBucket.metric('Records', 'sum', field='Count')
@@ -228,7 +211,7 @@ class HourlyJobsDataSource(DataSource):
     def query_jobs(self):
         params = self.get_params()
 
-        response = gracc_hourly_query_jobs(self.es, jobs_raw_index, **params)
+        response = gracc_query_jobs(self.es, jobs_raw_index, **params)
 
         results = response.aggregations.EndTime.buckets
 
