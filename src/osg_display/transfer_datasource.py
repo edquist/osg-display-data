@@ -1,10 +1,30 @@
 
 import time
 import pickle
-import MySQLdb
 import datetime
 
 from common import log, get_files, commit_files, euid
+
+
+def gracc_query_transfers(es, index, starttime, endtime, interval):
+    s = Search(using=es, index=index)
+
+    s = s.query('bool',
+            filter=[
+             Q('range', StartTime={'gte': starttime, 'lt': endtime })
+          & ~Q('terms', SiteName=['NONE', 'Generic', 'Obsolete'])
+        ]
+    )
+
+    curBucket = s.aggs.bucket('StartTime', 'date_histogram',
+                              field='StartTime', interval=interval)
+
+    curBucket = curBucket.metric('Network', 'sum', field='Network')
+    curBucket = curBucket.metric('Records', 'sum', field='Njobs')
+
+    response = s.execute()
+    return response
+
 
 class TransferData(object):
     """
@@ -38,23 +58,20 @@ class DataSourceTransfers(object):
         self.query_missing()
        
     def disconnect(self):
-        self.conn.close()
+        pass
  
     def connect(self):
-        user = self.cp.get("Gratia Transfer", "User")
-        password = self.cp.get("Gratia Transfer", "Password")
-        host = self.cp.get("Gratia Transfer", "Host")
-        database = self.cp.get("Gratia Transfer", "Database")
-        port = int(self.cp.get("Gratia Transfer", "Port"))
+        gracc_url = self.cp.get("Gracc Transfer", "Url")
+        #gracc_url = 'https://gracc.opensciencegrid.org/q'
+
         try:
-            self.conn = MySQLdb.connect(user=user, passwd=password, host=host,
-                port=port, db=database)
+            self.es = elasticsearch.Elasticsearch(
+                [gracc_url], timeout=300, use_ssl=True, verify_certs=True,
+                ca_certs='/etc/ssl/certs/ca-bundle.crt')
         except Exception, e:
             log.exception(e)
-            log.error("Unable to connect to Gratia Transfer DB")
+            log.error("Unable to connect to Gracc database")
             raise
-        curs=self.conn.cursor()
-        curs.execute("set time_zone='+0:00'")
 
     def load_cached(self):
         try:
@@ -168,7 +185,7 @@ class DataSourceTransfers(object):
         log.info("Querying Gratia Transfer DB for transfers from %s to %s." \
             % (starttime.strftime("%Y-%m-%d %H:%M:%S"),
             endtime.strftime("%Y-%m-%d %H:%M:%S")))
-        curs = self.conn.cursor()
+        #curs = self.conn.cursor()
         params = {'span': 3600}
         params['starttime'] = starttime
         params['endtime'] = endtime
