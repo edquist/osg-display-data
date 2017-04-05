@@ -74,7 +74,7 @@ class DataSource(object):
         self.connect()
 
     def disconnect(self):
-        self.conn.close()
+        pass
 
     def connect_gracc_url(self, gracc_url):
         try:
