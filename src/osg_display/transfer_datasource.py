@@ -52,7 +52,7 @@ class TransferData(object):
 class DataSourceTransfers(object):
     """
     A data source which queries (and caches!) hourly transfer information from
-    Gratia
+    GRACC
     """
 
     def __init__(self, cp):
