@@ -155,7 +155,7 @@ class DataSourceTransfers(object):
         self.missing.add(self._timestamp_to_datetime(hour_now-2*3600))
         self.missing.add(self._timestamp_to_datetime(hour_now-3*3600))
         cur = hour_now
-        hours = int(self.cp.get("Gratia Transfer", "hours"))
+        hours = int(self.cp.get("Gracc Transfer", "hours"))
         while cur >= now - hours*3600:
             cur -= 3600
             cur_dt = self._timestamp_to_datetime(cur)
