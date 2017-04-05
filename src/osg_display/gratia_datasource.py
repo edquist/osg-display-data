@@ -252,39 +252,6 @@ class HourlyJobsDataSource(DataSource):
         self.count_results, self.hour_results = count_results, hour_results
         return count_results, hour_results
 
-    jobs_query = """
-        SELECT
-          time,
-          sum(Records),
-          sum(Hours)
-        FROM (
-          SELECT
-            (truncate((unix_timestamp(JUR.EndTime)-%(offset)s)/%(span)s, 0)*
-              %(span)s) as time,
-            count(*) as Records,
-            sum(WallDuration)/3600 as Hours,
-            JUR.VOName as VOName,
-            JUR.ReportableVOName as ReportableVOName
-          FROM JobUsageRecord_Meta 
-          JOIN JobUsageRecord JUR Ignore index (index16) ON JUR.dbid=JobUsageRecord_Meta.dbid
-          WHERE
-            ServerDate >= %(starttime)s AND
-            ServerDate < %(endtime)s AND
-            JUR.EndTime < %(endtime)s AND
-            JUR.ResourceType = 'Batch'
-          GROUP BY time, VOName, ReportableVOName
-        ) as foo
-        JOIN VONameCorrection VC ON
-          ((foo.VOName = BINARY VC.VOName) AND
-           (((foo.ReportableVOName IS NULL) AND (VC.ReportableVOName IS NULL))
-            OR (BINARY foo.ReportableVOName = BINARY VC.ReportableVOName)))
-        JOIN VO on (VC.void = VO.void)
-        WHERE
-          VO.VOName NOT IN ('Unknown', 'unknown', 'other')
-        GROUP BY time
-        ORDER BY time ASC
-        """
-
 
 class MonthlyDataSource(DataSource):
     refreshwindowperiod=2
@@ -392,64 +359,6 @@ class MonthlyDataSource(DataSource):
         self.transfer_volume_results = hour_results
         return count_results, hour_results
 
-    jobs_query = """
-        SELECT
-          MIN(EndTime) AS time,
-          SUM(Njobs) AS Records,
-          SUM(WallSeconds)/3600 AS Hours
-        FROM (
-            SELECT
-              ProbeName,
-              R.VOCorrid as VOCorrid,
-              MIN(EndTime) AS EndTime,
-              SUM(Njobs) AS NJobs,
-              SUM(WallDuration*Cores) AS WallSeconds,
-              YEAR(EndTime) as Y,
-              MONTH(EndTime) as M
-            FROM MasterSummaryData R FORCE INDEX(index02)
-            WHERE
-              EndTime >= %(starttime)s AND
-              EndTime < %(endtime)s AND
-              ResourceType = 'Batch'
-            GROUP BY Y, M, ProbeName, VOCorrid
-          ) as R
-        JOIN Probe P on R.ProbeName = P.probename
-        JOIN Site S on S.siteid = P.siteid
-        JOIN VONameCorrection VC ON (VC.corrid=R.VOcorrid)
-        JOIN VO on (VC.void = VO.void)
-        WHERE
-          S.SiteName NOT IN ('NONE', 'Generic', 'Obsolete') AND
-          VO.VOName NOT IN ('Unknown', 'unknown', 'other')
-        GROUP BY Y, M
-        ORDER BY time ASC
-    """
-
-    transfers_query = """
-        SELECT
-          MIN(time) AS time,
-          SUM(Records) as Records,
-          SUM(TransferSize*SizeUnits.Multiplier) AS MB
-        FROM ( 
-            SELECT 
-              ProbeName,
-              MIN(StartTime) AS time,
-              SUM(Njobs) AS Records,
-              sum(TransferSize) AS TransferSize,
-              R.StorageUnit,
-              YEAR(StartTime) as Y,
-              MONTH(StartTime) as M
-            FROM MasterTransferSummary R 
-            WHERE StartTime>= %(starttime)s AND StartTime< %(endtime)s
-            GROUP BY Y, M, R.StorageUnit, ProbeName
-          ) as R
-        JOIN Probe P ON R.ProbeName = P.probename
-        JOIN Site S ON S.siteid = P.siteid
-        JOIN SizeUnits on (SizeUnits.Unit = R.StorageUnit)
-        WHERE
-          S.SiteName NOT IN ('NONE', 'Generic', 'Obsolete')
-        GROUP BY Y,M
-        ORDER BY time ASC
-    """
 
 class DailyDataSource(DataSource):
     """
@@ -559,61 +468,4 @@ class DailyDataSource(DataSource):
         self.transfer_results, self.transfer_volume_results = count_results, \
             hour_results
         return count_results, hour_results
-
-    jobs_query = """
-        SELECT
-          Date,
-          SUM(Njobs) AS Records,
-          SUM(WallSeconds)/3600 AS Hours
-        FROM (
-            SELECT
-              ProbeName,
-              R.VOCorrid AS VOCorrid,
-              SUM(Njobs) AS NJobs,
-              SUM(WallDuration*Cores) AS WallSeconds,
-              DATE(EndTime) AS Date
-            FROM MasterSummaryData R FORCE INDEX(index02)
-            WHERE
-              EndTime >= %(starttime)s AND
-              EndTime < %(endtime)s AND
-              ResourceType = 'Batch'
-            GROUP BY Date, ProbeName, VOCorrid
-          ) as R
-        JOIN Probe P on R.ProbeName = P.probename
-        JOIN Site S on S.siteid = P.siteid
-        JOIN VONameCorrection VC ON (VC.corrid=R.VOcorrid)
-        JOIN VO on (VC.void = VO.void)
-        WHERE
-          S.SiteName NOT IN ('NONE', 'Generic', 'Obsolete') AND
-          VO.VOName NOT IN ('Unknown', 'unknown', 'other')
-        GROUP BY Date
-        ORDER BY Date ASC
-    """
-
-    transfers_query = """
-        SELECT
-          Date,
-          SUM(Records) as Records,
-          SUM(TransferSize*SizeUnits.Multiplier) AS MB
-        FROM ( 
-            SELECT 
-              ProbeName,
-              SUM(Njobs) AS Records,
-              sum(TransferSize) AS TransferSize,
-              R.StorageUnit,
-              DATE(StartTime) as Date
-            FROM MasterTransferSummary R 
-            WHERE
-              StartTime >= %(starttime)s AND
-              StartTime < %(endtime)s
-            GROUP BY Date, R.StorageUnit, ProbeName
-          ) as R
-        JOIN Probe P ON R.ProbeName = P.probename
-        JOIN Site S ON S.siteid = P.siteid
-        JOIN SizeUnits on (SizeUnits.Unit = R.StorageUnit)
-        WHERE
-          S.SiteName NOT IN ('NONE', 'Generic', 'Obsolete')
-        GROUP BY Date
-        ORDER BY Date ASC
-    """
 
