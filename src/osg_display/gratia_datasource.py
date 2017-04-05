@@ -2,7 +2,6 @@
 import time
 import os.path
 import cPickle
-import MySQLdb
 import datetime
 import tempfile
 from common import log
@@ -78,22 +77,6 @@ class DataSource(object):
         self.conn.close()
 
     def connect(self):
-        user = self.cp.get("Gratia", "User")
-        password = self.cp.get("Gratia", "Password")
-        host = self.cp.get("Gratia", "Host")
-        database = self.cp.get("Gratia", "Database")
-        port = int(self.cp.get("Gratia", "Port"))
-        try:
-            self.conn = MySQLdb.connect(user=user, passwd=password, host=host,
-                port=port, db=database)
-            log.info("Successfully connected to Gratia database")
-        except Exception, e:
-            log.exception(e)
-            log.error("Unable to connect to Gratia database")
-            raise
-        curs = self.conn.cursor()
-        curs.execute("set time_zone='+0:00'")
-
         gracc_url = self.cp.get("Gracc", "Url")
         #gracc_url = 'https://gracc.opensciencegrid.org/q'
         try:
@@ -106,21 +89,6 @@ class DataSource(object):
             raise
 
     def connect_transfer(self):
-        user = self.cp.get("Gratia Transfer", "User")
-        password = self.cp.get("Gratia Transfer", "Password")
-        host = self.cp.get("Gratia Transfer", "Host")
-        database = self.cp.get("Gratia Transfer", "Database")
-        port = int(self.cp.get("Gratia Transfer", "Port"))
-        try:
-            self.conn = MySQLdb.connect(user=user, passwd=password, host=host,
-                port=port, db=database)
-        except Exception, e:
-            log.exception(e)
-            log.error("Unable to connect to Gratia Transfer DB")
-            raise
-        curs=self.conn.cursor()
-        curs.execute("set time_zone='+0:00'")
-
         gracc_url = self.cp.get("Gracc Transfer", "Url")
         #gracc_url = 'https://gracc.opensciencegrid.org/q'
         try:
