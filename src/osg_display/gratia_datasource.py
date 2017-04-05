@@ -111,8 +111,8 @@ class DataSource(object):
         curs = self.conn.cursor()
         curs.execute("set time_zone='+0:00'")
 
-        #gracc_url = self.cp.get("Gracc", "Url")
-        gracc_url = 'https://gracc.opensciencegrid.org/q'
+        gracc_url = self.cp.get("Gracc", "Url")
+        #gracc_url = 'https://gracc.opensciencegrid.org/q'
         try:
             self.es = elasticsearch.Elasticsearch(
                 [gracc_url], timeout=300, use_ssl=True, verify_certs=True,
@@ -138,8 +138,8 @@ class DataSource(object):
         curs=self.conn.cursor()
         curs.execute("set time_zone='+0:00'")
 
-        #gracc_url = self.cp.get("Gracc Transfer", "Url")
-        gracc_url = 'https://gracc.opensciencegrid.org/q'
+        gracc_url = self.cp.get("Gracc Transfer", "Url")
+        #gracc_url = 'https://gracc.opensciencegrid.org/q'
         try:
             self.es = elasticsearch.Elasticsearch(
                 [gracc_url], timeout=300, use_ssl=True, verify_certs=True,
