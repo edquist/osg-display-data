@@ -192,10 +192,10 @@ class DataSource(object):
 	#remove the cache elements that will be refreshed
 	if(len(cachedresultslist) > 0):
 		cachedresultslist=cachedresultslist[:(len(cachedresultslist)-self.refreshwindowperiod)]	
+		param['starttime'] = start
 	else:
-		start = param['starttime']	
 		log.debug("Setting date back to  start: <%s> "%(param['starttime']))
-	return 	cachedresultslist, {'starttime': start, 'endtime': end}	
+	return cachedresultslist, param
 
 
 class HourlyJobsDataSource(DataSource):
