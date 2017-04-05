@@ -5,6 +5,13 @@ import datetime
 
 from common import log, get_files, commit_files, euid
 
+import elasticsearch
+from elasticsearch_dsl import Search, A, Q
+import logging
+
+
+logging.basicConfig(level=logging.WARN)
+
 transfers_raw_index = 'gracc.osg-transfer.raw-*'
 transfers_summary_index = 'gracc.osg-transfer.summary'
 
