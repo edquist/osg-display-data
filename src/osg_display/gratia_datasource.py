@@ -21,7 +21,7 @@ jobs_summary_index = 'gracc.osg.summary'
 transfers_raw_index = 'gracc.osg-transfer.raw-*'
 transfers_summary_index = 'gracc.osg-transfer.summary'
 
-def gracc_query_jobs(es, starttime, endtime, interval, index):
+def gracc_query_jobs(es, index, starttime, endtime, interval):
     s = Search(using=es, index=index)
 
     s = s.query('bool',
@@ -42,7 +42,7 @@ def gracc_query_jobs(es, starttime, endtime, interval, index):
     response = s.execute()
     return response
 
-def gracc_hourly_query_jobs(es, starttime, endtime, offset, interval, index):
+def gracc_hourly_query_jobs(es, index, starttime, endtime, offset, interval):
     s = Search(using=es, index=index)
 
     s = s.query('bool',
@@ -64,7 +64,7 @@ def gracc_hourly_query_jobs(es, starttime, endtime, offset, interval, index):
     response = s.execute()
     return response
 
-def gracc_query_transfers(es, starttime, endtime, interval, index):
+def gracc_query_transfers(es, index, starttime, endtime, interval):
     s = Search(using=es, index=index)
 
     s = s.query('bool',
@@ -216,7 +216,7 @@ class HourlyJobsDataSource(DataSource):
         starttime = datetime.datetime(*time.gmtime(prev)[:6])
         endtime = datetime.datetime(*time.gmtime(now)[:6])
         return {'offset': offset, 'starttime': starttime, 'endtime': endtime,
-            'span': 3600}
+                'interval': 'hour'}
 
     def get_json(self):
         assert self.count_results != None
@@ -228,9 +228,7 @@ class HourlyJobsDataSource(DataSource):
     def query_jobs(self):
         params = self.get_params()
 
-        response = gracc_hourly_query_jobs(self.es,
-                params['starttime'], params['endtime'], params['offset'],
-                'hour', jobs_raw_index)
+        response = gracc_hourly_query_jobs(self.es, jobs_raw_index, **params)
 
         results = response.aggregations.EndTime.buckets
 
@@ -270,7 +268,7 @@ class MonthlyDataSource(DataSource):
         end = datetime.datetime(*(list(time.gmtime()[:2]) + [1,0,0,0]))
         start = end - datetime.timedelta(14*31, 0)
         start -= datetime.timedelta(start.day-1, 0)
-        return {'starttime': start, 'endtime': end}
+        return {'starttime': start, 'endtime': end, 'interval': 'month'}
 
     def get_json(self):
         assert self.count_results != None
@@ -288,8 +286,7 @@ class MonthlyDataSource(DataSource):
     def query_jobs(self):
         params = self.get_params()
 
-        response = gracc_query_jobs(self.es, params['starttime'],
-                           params['endtime'], 'month', jobs_summary_index)
+        response = gracc_query_jobs(self.es, jobs_summary_index, **params)
 
         results = response.aggregations.EndTime.buckets
 
@@ -318,9 +315,8 @@ class MonthlyDataSource(DataSource):
         log.debug("Received  <%s> cached results"%(len(cachedresultslist)))
         log.debug("Received in query_transfers for DB Query start date: <%s> and end date <%s> "%(params['starttime'],params['endtime']))
 
-        response = gracc_query_transfers(self.es, params['starttime'],
-                                         params['endtime'], 'month',
-                                         transfers_summary_index)
+        response = gracc_query_transfers(self.es, transfers_summary_index,
+                                         **params)
 
         results = response.aggregations.StartTime.buckets
 
@@ -380,7 +376,7 @@ class DailyDataSource(DataSource):
         end = datetime.datetime(*(list(time.gmtime()[:3]) + [0,0,0]))
         start = end - datetime.timedelta(days, 0)
         start -= datetime.timedelta(start.day-1, 0)
-        return {'starttime': start, 'endtime': end}
+        return {'starttime': start, 'endtime': end, 'interval': 'day'}
 
     def get_json(self):
         assert self.count_results != None
@@ -398,8 +394,7 @@ class DailyDataSource(DataSource):
     def query_jobs(self):
         params = self.get_params()
 
-        response = gracc_query_jobs(self.es, params['starttime'], params['endtime'],
-                                    'day', jobs_summary_index)
+        response = gracc_query_jobs(self.es, jobs_summary_index, **params)
 
         results = response.aggregations.EndTime.buckets
 
@@ -429,9 +424,8 @@ class DailyDataSource(DataSource):
         log.debug("Received  <%s> cached results"%(len(cachedresultslist)))
         log.debug("Received in query_transfers for DB Query start date: <%s> and end date <%s> "%(params['starttime'],params['endtime']))
 
-        response = gracc_query_transfers(self.es, params['starttime'],
-                                         params['endtime'], 'day',
-                                         transfers_summary_index)
+        response = gracc_query_transfers(self.es, transfers_summary_index,
+                                         **params)
 
         results = response.aggregations.StartTime.buckets
 
