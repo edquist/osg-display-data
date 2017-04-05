@@ -198,8 +198,7 @@ class DataSourceTransfers(object):
         params['starttime'] = starttime
         params['endtime'] = endtime
 
-        response = gracc_query_transfers(self.es, transfers_summary_index,
-                                                         **params)
+        response = gracc_query_transfers(self.es, transfers_raw_index, **params)
 
         results = response.aggregations.StartTime.buckets
 
