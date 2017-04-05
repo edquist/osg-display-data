@@ -250,20 +250,3 @@ class DataSourceTransfers(object):
             results.append(td.count/float(interval_s))
         return results
 
-
-    transfers_query = """
-        SELECT
-          (truncate((unix_timestamp(ServerDate))/%(span)s, 0)*%(span)s) as time,
-          sum(JR.Njobs) as Records,
-          sum(Value*SU.Multiplier) as SizeMB
-        FROM JobUsageRecord_Meta JURM
-        JOIN Network N on (JURM.dbid = N.dbid)
-        JOIN SizeUnits SU on N.StorageUnit = SU.Unit
-	JOIN JobUsageRecord JR ON JURM.dbid = JR.dbid
-        WHERE
-          ServerDate >= %(starttime)s AND
-          ServerDate < %(endtime)s
-        GROUP BY time;
-        """
-
-
