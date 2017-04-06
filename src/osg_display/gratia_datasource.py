@@ -83,16 +83,16 @@ class DataSource(object):
                 ca_certs='/etc/ssl/certs/ca-bundle.crt')
         except Exception, e:
             log.exception(e)
-            log.error("Unable to connect to Gracc database")
+            log.error("Unable to connect to GRACC database")
             raise
 
     def connect(self):
-        gracc_url = self.cp.get("Gracc", "Url")
+        gracc_url = self.cp.get("GRACC", "Url")
         #gracc_url = 'https://gracc.opensciencegrid.org/q'
         self.connect_gracc_url(gracc_url)
 
     def connect_transfer(self):
-        gracc_url = self.cp.get("Gracc Transfer", "Url")
+        gracc_url = self.cp.get("GRACC Transfer", "Url")
         #gracc_url = 'https://gracc.opensciencegrid.org/q'
         self.connect_gracc_url(gracc_url)
 
@@ -156,7 +156,7 @@ class HourlyJobsDataSource(DataSource):
         self.hour_results = None
 
     def get_params(self):
-        hours = int(int(self.cp.get("Gracc", "hours"))*1.5)
+        hours = int(int(self.cp.get("GRACC", "hours"))*1.5)
         now = int(time.time()-60)
         prev = now - 3600*hours
         offset = prev % 3600
@@ -191,7 +191,7 @@ class HourlyJobsDataSource(DataSource):
             log.debug("Time %s: Count %i, Hours %.2f" % (time_str, count, hrs))
         count_results = [i[0] for i in all_results]
         hour_results = [i[1] for i in all_results]
-        num_results = int(self.cp.get("Gracc", "hours"))
+        num_results = int(self.cp.get("GRACC", "hours"))
         count_results = count_results[-num_results-1:-1]
         hour_results = hour_results[-num_results-1:-1]
         self.count_results, self.hour_results = count_results, hour_results
@@ -211,7 +211,7 @@ class MonthlyDataSource(DataSource):
         return returnval
 	
     def get_params(self):
-        months = int(int(self.cp.get("Gracc", "months"))+2)
+        months = int(int(self.cp.get("GRACC", "months"))+2)
         end = datetime.datetime(*(list(time.gmtime()[:2]) + [1,0,0,0]))
         start = end - datetime.timedelta(14*31, 0)
         start -= datetime.timedelta(start.day-1, 0)
@@ -250,7 +250,7 @@ class MonthlyDataSource(DataSource):
                 (time_str, count, hrs))
         count_results = [i[0] for i in all_results]
         hour_results = [i[1] for i in all_results]
-        num_results = int(self.cp.get("Gracc", "months"))
+        num_results = int(self.cp.get("GRACC", "months"))
         count_results = count_results[-num_results:]
         hour_results = hour_results[-num_results:]
         self.count_results, self.hour_results = count_results, hour_results
@@ -287,7 +287,7 @@ class MonthlyDataSource(DataSource):
         month_results = [i[0] for i in all_results]
         count_results = [i[1] for i in all_results]
         hour_results = [i[2] for i in all_results]
-        num_results = int(self.cp.get("Gracc", "months"))
+        num_results = int(self.cp.get("GRACC", "months"))
         month_results = month_results[-num_results:]
         count_results = count_results[-num_results:]
         hour_results = hour_results[-num_results:]
@@ -319,7 +319,7 @@ class DailyDataSource(DataSource):
         return returnval
 
     def get_params(self):
-        days = int(int(self.cp.get("Gracc", "days"))+2)
+        days = int(int(self.cp.get("GRACC", "days"))+2)
         end = datetime.datetime(*(list(time.gmtime()[:3]) + [0,0,0]))
         start = end - datetime.timedelta(days, 0)
         start -= datetime.timedelta(start.day-1, 0)
@@ -358,7 +358,7 @@ class DailyDataSource(DataSource):
                 (time_str, count, hrs))
         count_results = [i[0] for i in all_results]
         hour_results = [i[1] for i in all_results]
-        num_results = int(self.cp.get("Gracc", "days"))
+        num_results = int(self.cp.get("GRACC", "days"))
         count_results = count_results[-num_results-1:-1]
         hour_results = hour_results[-num_results-1:-1]
         self.count_results, self.hour_results = count_results, hour_results
@@ -396,7 +396,7 @@ class DailyDataSource(DataSource):
                 (i[0], count, mbs/1024**2))
         count_results = [i[1] for i in all_results]
         hour_results = [i[2] for i in all_results]
-        num_results = int(self.cp.get("Gracc", "days"))
+        num_results = int(self.cp.get("GRACC", "days"))
         count_results = count_results[-num_results-1:-1]
         hour_results = hour_results[-num_results-1:-1]
 

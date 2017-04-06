@@ -70,7 +70,7 @@ class DataSourceTransfers(object):
         pass
  
     def connect(self):
-        gracc_url = self.cp.get("Gracc Transfer", "Url")
+        gracc_url = self.cp.get("GRACC Transfer", "Url")
         #gracc_url = 'https://gracc.opensciencegrid.org/q'
 
         try:
@@ -79,7 +79,7 @@ class DataSourceTransfers(object):
                 ca_certs='/etc/ssl/certs/ca-bundle.crt')
         except Exception, e:
             log.exception(e)
-            log.error("Unable to connect to Gracc database")
+            log.error("Unable to connect to GRACC database")
             raise
 
     def load_cached(self):
@@ -155,7 +155,7 @@ class DataSourceTransfers(object):
         self.missing.add(self._timestamp_to_datetime(hour_now-2*3600))
         self.missing.add(self._timestamp_to_datetime(hour_now-3*3600))
         cur = hour_now
-        hours = int(self.cp.get("Gracc Transfer", "hours"))
+        hours = int(self.cp.get("GRACC Transfer", "hours"))
         while cur >= now - hours*3600:
             cur -= 3600
             cur_dt = self._timestamp_to_datetime(cur)
