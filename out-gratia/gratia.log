@@ -1,602 +1,900 @@
-2017-04-05 15:41:25,560 - INFO - Reading from log file /etc/osg_display/osg_display.conf.
-2017-04-05 15:41:25,561 - DEBUG - Setting script timeout to 3600.
-2017-04-05 15:41:25,575 - INFO - Successfully connected to Gratia database
-2017-04-05 15:41:39,939 - INFO - Gratia returned 260 results for jobs
-2017-04-05 15:41:39,939 - DEBUG - Job result dump:
-2017-04-05 15:41:39,939 - DEBUG - Time 2017-03-07 17:00: Count 14, Hours 403.86
-2017-04-05 15:41:39,939 - DEBUG - Time 2017-03-07 18:00: Count 2, Hours 58.76
-2017-04-05 15:41:39,939 - DEBUG - Time 2017-03-07 20:00: Count 10, Hours 318.68
-2017-04-05 15:41:39,939 - DEBUG - Time 2017-03-08 05:00: Count 1, Hours 22.71
-2017-04-05 15:41:39,940 - DEBUG - Time 2017-03-08 09:00: Count 1, Hours 26.89
-2017-04-05 15:41:39,940 - DEBUG - Time 2017-03-08 10:00: Count 2, Hours 54.59
-2017-04-05 15:41:39,940 - DEBUG - Time 2017-03-08 12:00: Count 1, Hours 48.01
-2017-04-05 15:41:39,940 - DEBUG - Time 2017-03-08 17:00: Count 1, Hours 16.51
-2017-04-05 15:41:39,940 - DEBUG - Time 2017-03-09 06:00: Count 1, Hours 15.98
-2017-04-05 15:41:39,940 - DEBUG - Time 2017-03-09 07:00: Count 1, Hours 16.82
-2017-04-05 15:41:39,940 - DEBUG - Time 2017-03-09 08:00: Count 1, Hours 28.91
-2017-04-05 15:41:39,940 - DEBUG - Time 2017-03-09 09:00: Count 13, Hours 369.00
-2017-04-05 15:41:39,940 - DEBUG - Time 2017-03-09 10:00: Count 3, Hours 59.93
-2017-04-05 15:41:39,940 - DEBUG - Time 2017-03-09 11:00: Count 5, Hours 102.34
-2017-04-05 15:41:39,941 - DEBUG - Time 2017-03-09 12:00: Count 6, Hours 126.33
-2017-04-05 15:41:39,941 - DEBUG - Time 2017-03-09 13:00: Count 10, Hours 228.56
-2017-04-05 15:41:39,941 - DEBUG - Time 2017-03-09 14:00: Count 17, Hours 392.98
-2017-04-05 15:41:39,941 - DEBUG - Time 2017-03-09 15:00: Count 9, Hours 212.87
-2017-04-05 15:41:39,941 - DEBUG - Time 2017-03-09 16:00: Count 8, Hours 197.17
-2017-04-05 15:41:39,941 - DEBUG - Time 2017-03-09 17:00: Count 2, Hours 50.54
-2017-04-05 15:41:39,941 - DEBUG - Time 2017-03-09 18:00: Count 4, Hours 103.28
-2017-04-05 15:41:39,941 - DEBUG - Time 2017-03-09 19:00: Count 2, Hours 54.44
-2017-04-05 15:41:39,941 - DEBUG - Time 2017-03-09 21:00: Count 5, Hours 136.48
-2017-04-05 15:41:39,941 - DEBUG - Time 2017-03-09 22:00: Count 1, Hours 27.38
-2017-04-05 15:41:39,942 - DEBUG - Time 2017-03-09 23:00: Count 1, Hours 28.66
-2017-04-05 15:41:39,942 - DEBUG - Time 2017-03-10 09:00: Count 1, Hours 43.09
-2017-04-05 15:41:39,942 - DEBUG - Time 2017-03-11 14:00: Count 4, Hours 10.94
-2017-04-05 15:41:39,942 - DEBUG - Time 2017-03-11 16:00: Count 1, Hours 5.22
-2017-04-05 15:41:39,942 - DEBUG - Time 2017-03-11 18:00: Count 5, Hours 16.77
-2017-04-05 15:41:39,942 - DEBUG - Time 2017-03-18 06:00: Count 1, Hours 40.22
-2017-04-05 15:41:39,942 - DEBUG - Time 2017-03-23 07:00: Count 1, Hours 32.25
-2017-04-05 15:41:39,942 - DEBUG - Time 2017-03-25 01:00: Count 1, Hours 33.49
-2017-04-05 15:41:39,942 - DEBUG - Time 2017-03-25 02:00: Count 3, Hours 102.04
-2017-04-05 15:41:39,942 - DEBUG - Time 2017-03-25 06:00: Count 1, Hours 38.68
-2017-04-05 15:41:39,943 - DEBUG - Time 2017-03-25 08:00: Count 2, Hours 80.24
-2017-04-05 15:41:39,943 - DEBUG - Time 2017-03-25 10:00: Count 1, Hours 41.90
-2017-04-05 15:41:39,943 - DEBUG - Time 2017-03-25 12:00: Count 1, Hours 43.97
-2017-04-05 15:41:39,943 - DEBUG - Time 2017-03-25 16:00: Count 2, Hours 96.20
-2017-04-05 15:41:39,943 - DEBUG - Time 2017-03-25 21:00: Count 1, Hours 52.90
-2017-04-05 15:41:39,943 - DEBUG - Time 2017-03-25 23:00: Count 1, Hours 55.60
-2017-04-05 15:41:39,943 - DEBUG - Time 2017-03-26 14:00: Count 4, Hours 96.02
-2017-04-05 15:41:39,943 - DEBUG - Time 2017-03-26 15:00: Count 2, Hours 48.01
-2017-04-05 15:41:39,943 - DEBUG - Time 2017-03-26 20:00: Count 1, Hours 76.13
-2017-04-05 15:41:39,943 - DEBUG - Time 2017-03-26 23:00: Count 1, Hours 21.93
-2017-04-05 15:41:39,944 - DEBUG - Time 2017-03-27 00:00: Count 7, Hours 158.41
-2017-04-05 15:41:39,944 - DEBUG - Time 2017-03-27 01:00: Count 9, Hours 211.98
-2017-04-05 15:41:39,944 - DEBUG - Time 2017-03-27 02:00: Count 13, Hours 307.19
-2017-04-05 15:41:39,944 - DEBUG - Time 2017-03-27 03:00: Count 11, Hours 282.78
-2017-04-05 15:41:39,944 - DEBUG - Time 2017-03-27 04:00: Count 8, Hours 213.01
-2017-04-05 15:41:39,944 - DEBUG - Time 2017-03-27 05:00: Count 3, Hours 71.90
-2017-04-05 15:41:39,944 - DEBUG - Time 2017-03-27 06:00: Count 3, Hours 86.53
-2017-04-05 15:41:39,944 - DEBUG - Time 2017-03-27 07:00: Count 1, Hours 29.97
-2017-04-05 15:41:39,944 - DEBUG - Time 2017-03-27 08:00: Count 3, Hours 91.24
-2017-04-05 15:41:39,944 - DEBUG - Time 2017-03-27 09:00: Count 3, Hours 94.14
-2017-04-05 15:41:39,945 - DEBUG - Time 2017-03-27 10:00: Count 6, Hours 199.68
-2017-04-05 15:41:39,945 - DEBUG - Time 2017-03-27 11:00: Count 7, Hours 239.99
-2017-04-05 15:41:39,945 - DEBUG - Time 2017-03-27 12:00: Count 5, Hours 178.05
-2017-04-05 15:41:39,945 - DEBUG - Time 2017-03-27 13:00: Count 3, Hours 109.52
-2017-04-05 15:41:39,945 - DEBUG - Time 2017-03-27 14:00: Count 4, Hours 135.52
-2017-04-05 15:41:39,945 - DEBUG - Time 2017-03-27 15:00: Count 5, Hours 193.07
-2017-04-05 15:41:39,945 - DEBUG - Time 2017-03-27 16:00: Count 3, Hours 118.95
-2017-04-05 15:41:39,945 - DEBUG - Time 2017-03-27 17:00: Count 6, Hours 241.19
-2017-04-05 15:41:39,945 - DEBUG - Time 2017-03-27 18:00: Count 7, Hours 287.55
-2017-04-05 15:41:39,945 - DEBUG - Time 2017-03-27 19:00: Count 5, Hours 210.90
-2017-04-05 15:41:39,946 - DEBUG - Time 2017-03-27 20:00: Count 12, Hours 514.58
-2017-04-05 15:41:39,946 - DEBUG - Time 2017-03-27 21:00: Count 8, Hours 353.39
-2017-04-05 15:41:39,946 - DEBUG - Time 2017-03-27 22:00: Count 5, Hours 227.47
-2017-04-05 15:41:39,946 - DEBUG - Time 2017-03-27 23:00: Count 3, Hours 139.07
-2017-04-05 15:41:39,946 - DEBUG - Time 2017-03-28 12:00: Count 1, Hours 0.04
-2017-04-05 15:41:39,946 - DEBUG - Time 2017-03-28 14:00: Count 3, Hours 12.34
-2017-04-05 15:41:39,946 - DEBUG - Time 2017-03-28 15:00: Count 1, Hours 1.40
-2017-04-05 15:41:39,946 - DEBUG - Time 2017-03-28 16:00: Count 2, Hours 3.88
-2017-04-05 15:41:39,946 - DEBUG - Time 2017-03-28 17:00: Count 1, Hours 0.09
-2017-04-05 15:41:39,946 - DEBUG - Time 2017-03-28 18:00: Count 1, Hours 0.06
-2017-04-05 15:41:39,947 - DEBUG - Time 2017-03-28 19:00: Count 1, Hours 0.13
-2017-04-05 15:41:39,947 - DEBUG - Time 2017-03-28 20:00: Count 1, Hours 0.00
-2017-04-05 15:41:39,947 - DEBUG - Time 2017-03-28 21:00: Count 3, Hours 0.11
-2017-04-05 15:41:39,947 - DEBUG - Time 2017-03-28 22:00: Count 6, Hours 0.55
-2017-04-05 15:41:39,947 - DEBUG - Time 2017-03-28 23:00: Count 9, Hours 1.17
-2017-04-05 15:41:39,947 - DEBUG - Time 2017-03-29 00:00: Count 6, Hours 6.51
-2017-04-05 15:41:39,947 - DEBUG - Time 2017-03-29 01:00: Count 8, Hours 6.53
-2017-04-05 15:41:39,947 - DEBUG - Time 2017-03-29 02:00: Count 4, Hours 2.13
-2017-04-05 15:41:39,947 - DEBUG - Time 2017-03-29 03:00: Count 4, Hours 4.51
-2017-04-05 15:41:39,947 - DEBUG - Time 2017-03-29 04:00: Count 4, Hours 1.72
-2017-04-05 15:41:39,948 - DEBUG - Time 2017-03-29 05:00: Count 6, Hours 7.39
-2017-04-05 15:41:39,948 - DEBUG - Time 2017-03-29 06:00: Count 6, Hours 15.58
-2017-04-05 15:41:39,948 - DEBUG - Time 2017-03-29 07:00: Count 7, Hours 12.86
-2017-04-05 15:41:39,948 - DEBUG - Time 2017-03-29 08:00: Count 5, Hours 0.78
-2017-04-05 15:41:39,948 - DEBUG - Time 2017-03-29 09:00: Count 6, Hours 4.49
-2017-04-05 15:41:39,948 - DEBUG - Time 2017-03-29 10:00: Count 4, Hours 4.63
-2017-04-05 15:41:39,948 - DEBUG - Time 2017-03-29 11:00: Count 21, Hours 18.52
-2017-04-05 15:41:39,948 - DEBUG - Time 2017-03-29 12:00: Count 4, Hours 2.39
-2017-04-05 15:41:39,948 - DEBUG - Time 2017-03-29 13:00: Count 2, Hours 5.99
-2017-04-05 15:41:39,948 - DEBUG - Time 2017-03-29 14:00: Count 23, Hours 8.73
-2017-04-05 15:41:39,948 - DEBUG - Time 2017-03-29 15:00: Count 7, Hours 4.81
-2017-04-05 15:41:39,949 - DEBUG - Time 2017-03-29 16:00: Count 3, Hours 5.94
-2017-04-05 15:41:39,949 - DEBUG - Time 2017-03-29 17:00: Count 3, Hours 10.88
-2017-04-05 15:41:39,949 - DEBUG - Time 2017-03-29 18:00: Count 3, Hours 7.19
-2017-04-05 15:41:39,949 - DEBUG - Time 2017-03-29 19:00: Count 4, Hours 4.43
-2017-04-05 15:41:39,949 - DEBUG - Time 2017-03-29 20:00: Count 4, Hours 17.69
-2017-04-05 15:41:39,949 - DEBUG - Time 2017-03-29 21:00: Count 5, Hours 42.39
-2017-04-05 15:41:39,949 - DEBUG - Time 2017-03-29 22:00: Count 4, Hours 31.61
-2017-04-05 15:41:39,949 - DEBUG - Time 2017-03-29 23:00: Count 2, Hours 335.13
-2017-04-05 15:41:39,949 - DEBUG - Time 2017-03-30 00:00: Count 1, Hours 8.92
-2017-04-05 15:41:39,949 - DEBUG - Time 2017-03-30 01:00: Count 11, Hours 76.37
-2017-04-05 15:41:39,950 - DEBUG - Time 2017-03-30 02:00: Count 6, Hours 65.13
-2017-04-05 15:41:39,950 - DEBUG - Time 2017-03-30 03:00: Count 20, Hours 235.38
-2017-04-05 15:41:39,950 - DEBUG - Time 2017-03-30 04:00: Count 35, Hours 467.26
-2017-04-05 15:41:39,950 - DEBUG - Time 2017-03-30 05:00: Count 29, Hours 411.76
-2017-04-05 15:41:39,950 - DEBUG - Time 2017-03-30 06:00: Count 56, Hours 851.52
-2017-04-05 15:41:39,950 - DEBUG - Time 2017-03-30 07:00: Count 63, Hours 1351.71
-2017-04-05 15:41:39,950 - DEBUG - Time 2017-03-30 08:00: Count 93, Hours 1588.06
-2017-04-05 15:41:39,950 - DEBUG - Time 2017-03-30 09:00: Count 104, Hours 1836.22
-2017-04-05 15:41:39,950 - DEBUG - Time 2017-03-30 10:00: Count 108, Hours 1959.87
-2017-04-05 15:41:39,950 - DEBUG - Time 2017-03-30 11:00: Count 115, Hours 2320.97
-2017-04-05 15:41:39,951 - DEBUG - Time 2017-03-30 12:00: Count 141, Hours 2944.69
-2017-04-05 15:41:39,951 - DEBUG - Time 2017-03-30 13:00: Count 137, Hours 2967.89
-2017-04-05 15:41:39,951 - DEBUG - Time 2017-03-30 14:00: Count 102, Hours 2466.07
-2017-04-05 15:41:39,951 - DEBUG - Time 2017-03-30 15:00: Count 116, Hours 2880.36
-2017-04-05 15:41:39,951 - DEBUG - Time 2017-03-30 16:00: Count 82, Hours 2182.21
-2017-04-05 15:41:39,951 - DEBUG - Time 2017-03-30 17:00: Count 84, Hours 2316.38
-2017-04-05 15:41:39,951 - DEBUG - Time 2017-03-30 18:00: Count 65, Hours 1924.94
-2017-04-05 15:41:39,951 - DEBUG - Time 2017-03-30 19:00: Count 54, Hours 1696.90
-2017-04-05 15:41:39,951 - DEBUG - Time 2017-03-30 20:00: Count 62, Hours 1996.74
-2017-04-05 15:41:39,951 - DEBUG - Time 2017-03-30 21:00: Count 58, Hours 2145.95
-2017-04-05 15:41:39,952 - DEBUG - Time 2017-03-30 22:00: Count 50, Hours 1762.11
-2017-04-05 15:41:39,952 - DEBUG - Time 2017-03-30 23:00: Count 46, Hours 1685.94
-2017-04-05 15:41:39,952 - DEBUG - Time 2017-03-31 00:00: Count 35, Hours 1375.93
-2017-04-05 15:41:39,952 - DEBUG - Time 2017-03-31 01:00: Count 31, Hours 1187.77
-2017-04-05 15:41:39,952 - DEBUG - Time 2017-03-31 02:00: Count 28, Hours 1158.79
-2017-04-05 15:41:39,952 - DEBUG - Time 2017-03-31 03:00: Count 32, Hours 1335.80
-2017-04-05 15:41:39,952 - DEBUG - Time 2017-03-31 04:00: Count 28, Hours 1206.53
-2017-04-05 15:41:39,952 - DEBUG - Time 2017-03-31 05:00: Count 30, Hours 1346.24
-2017-04-05 15:41:39,952 - DEBUG - Time 2017-03-31 06:00: Count 26, Hours 1204.45
-2017-04-05 15:41:39,952 - DEBUG - Time 2017-03-31 07:00: Count 25, Hours 1214.57
-2017-04-05 15:41:39,953 - DEBUG - Time 2017-03-31 08:00: Count 27, Hours 1292.91
-2017-04-05 15:41:39,953 - DEBUG - Time 2017-03-31 09:00: Count 34, Hours 1673.46
-2017-04-05 15:41:39,953 - DEBUG - Time 2017-03-31 10:00: Count 26, Hours 1312.68
-2017-04-05 15:41:39,953 - DEBUG - Time 2017-03-31 11:00: Count 33, Hours 1690.22
-2017-04-05 15:41:39,953 - DEBUG - Time 2017-03-31 12:00: Count 36, Hours 1865.75
-2017-04-05 15:41:39,953 - DEBUG - Time 2017-03-31 13:00: Count 27, Hours 1435.32
-2017-04-05 15:41:39,953 - DEBUG - Time 2017-03-31 14:00: Count 32, Hours 1743.15
-2017-04-05 15:41:39,953 - DEBUG - Time 2017-03-31 15:00: Count 34, Hours 1877.31
-2017-04-05 15:41:39,953 - DEBUG - Time 2017-03-31 16:00: Count 32, Hours 1807.15
-2017-04-05 15:41:39,953 - DEBUG - Time 2017-03-31 17:00: Count 40, Hours 2300.02
-2017-04-05 15:41:39,954 - DEBUG - Time 2017-03-31 18:00: Count 35, Hours 2052.07
-2017-04-05 15:41:39,954 - DEBUG - Time 2017-03-31 19:00: Count 24, Hours 1442.88
-2017-04-05 15:41:39,954 - DEBUG - Time 2017-03-31 20:00: Count 21, Hours 1263.75
-2017-04-05 15:41:39,954 - DEBUG - Time 2017-03-31 21:00: Count 30, Hours 1848.13
-2017-04-05 15:41:39,954 - DEBUG - Time 2017-03-31 22:00: Count 18, Hours 1126.47
-2017-04-05 15:41:39,954 - DEBUG - Time 2017-03-31 23:00: Count 26, Hours 1679.36
-2017-04-05 15:41:39,954 - DEBUG - Time 2017-04-01 00:00: Count 15, Hours 974.52
-2017-04-05 15:41:39,954 - DEBUG - Time 2017-04-01 01:00: Count 31, Hours 2073.20
-2017-04-05 15:41:39,954 - DEBUG - Time 2017-04-01 02:00: Count 20, Hours 1350.97
-2017-04-05 15:41:39,954 - DEBUG - Time 2017-04-01 03:00: Count 24, Hours 1686.12
-2017-04-05 15:41:39,955 - DEBUG - Time 2017-04-01 04:00: Count 21, Hours 1474.96
-2017-04-05 15:41:39,955 - DEBUG - Time 2017-04-01 05:00: Count 12, Hours 851.82
-2017-04-05 15:41:39,955 - DEBUG - Time 2017-04-01 06:00: Count 41, Hours 3047.71
-2017-04-05 15:41:39,955 - DEBUG - Time 2017-04-01 07:00: Count 34, Hours 2496.80
-2017-04-05 15:41:39,955 - DEBUG - Time 2017-04-01 08:00: Count 21, Hours 1626.72
-2017-04-05 15:41:39,955 - DEBUG - Time 2017-04-01 09:00: Count 2, Hours 153.63
-2017-04-05 15:41:39,955 - DEBUG - Time 2017-04-01 11:00: Count 1, Hours 81.58
-2017-04-05 15:41:39,955 - DEBUG - Time 2017-04-01 12:00: Count 3, Hours 228.90
-2017-04-05 15:41:39,955 - DEBUG - Time 2017-04-01 13:00: Count 1, Hours 77.21
-2017-04-05 15:41:39,955 - DEBUG - Time 2017-04-01 14:00: Count 1, Hours 121.57
-2017-04-05 15:41:39,956 - DEBUG - Time 2017-04-01 15:00: Count 1, Hours 8.01
-2017-04-05 15:41:39,956 - DEBUG - Time 2017-04-01 19:00: Count 2, Hours 210.67
-2017-04-05 15:41:39,956 - DEBUG - Time 2017-04-01 21:00: Count 2, Hours 258.77
-2017-04-05 15:41:39,956 - DEBUG - Time 2017-04-01 22:00: Count 4, Hours 437.12
-2017-04-05 15:41:39,956 - DEBUG - Time 2017-04-01 23:00: Count 1, Hours 48.36
-2017-04-05 15:41:39,956 - DEBUG - Time 2017-04-02 00:00: Count 6, Hours 544.98
-2017-04-05 15:41:39,956 - DEBUG - Time 2017-04-02 02:00: Count 3, Hours 323.75
-2017-04-05 15:41:39,956 - DEBUG - Time 2017-04-02 03:00: Count 3, Hours 238.87
-2017-04-05 15:41:39,956 - DEBUG - Time 2017-04-02 04:00: Count 26, Hours 2447.38
-2017-04-05 15:41:39,956 - DEBUG - Time 2017-04-02 05:00: Count 15, Hours 1417.48
-2017-04-05 15:41:39,957 - DEBUG - Time 2017-04-02 06:00: Count 5, Hours 331.53
-2017-04-05 15:41:39,957 - DEBUG - Time 2017-04-02 07:00: Count 32, Hours 3987.08
-2017-04-05 15:41:39,957 - DEBUG - Time 2017-04-02 08:00: Count 5, Hours 253.58
-2017-04-05 15:41:39,957 - DEBUG - Time 2017-04-02 09:00: Count 20, Hours 1951.92
-2017-04-05 15:41:39,957 - DEBUG - Time 2017-04-02 10:00: Count 9, Hours 822.70
-2017-04-05 15:41:39,957 - DEBUG - Time 2017-04-02 11:00: Count 15, Hours 735.45
-2017-04-05 15:41:39,957 - DEBUG - Time 2017-04-02 12:00: Count 17, Hours 1948.13
-2017-04-05 15:41:39,957 - DEBUG - Time 2017-04-02 13:00: Count 22, Hours 2239.31
-2017-04-05 15:41:39,957 - DEBUG - Time 2017-04-02 14:00: Count 18, Hours 1964.47
-2017-04-05 15:41:39,957 - DEBUG - Time 2017-04-02 15:00: Count 5, Hours 583.22
-2017-04-05 15:41:39,958 - DEBUG - Time 2017-04-02 16:00: Count 19, Hours 2367.48
-2017-04-05 15:41:39,958 - DEBUG - Time 2017-04-02 17:00: Count 21, Hours 2440.53
-2017-04-05 15:41:39,958 - DEBUG - Time 2017-04-02 18:00: Count 74, Hours 3562.67
-2017-04-05 15:41:39,958 - DEBUG - Time 2017-04-02 19:00: Count 7, Hours 563.48
-2017-04-05 15:41:39,958 - DEBUG - Time 2017-04-02 20:00: Count 15, Hours 1791.34
-2017-04-05 15:41:39,958 - DEBUG - Time 2017-04-02 21:00: Count 7, Hours 792.85
-2017-04-05 15:41:39,958 - DEBUG - Time 2017-04-02 22:00: Count 3, Hours 307.95
-2017-04-05 15:41:39,958 - DEBUG - Time 2017-04-02 23:00: Count 19, Hours 2104.00
-2017-04-05 15:41:39,958 - DEBUG - Time 2017-04-03 00:00: Count 16, Hours 1873.16
-2017-04-05 15:41:39,958 - DEBUG - Time 2017-04-03 01:00: Count 11, Hours 1072.52
-2017-04-05 15:41:39,959 - DEBUG - Time 2017-04-03 02:00: Count 17, Hours 1621.43
-2017-04-05 15:41:39,959 - DEBUG - Time 2017-04-03 03:00: Count 17, Hours 1604.27
-2017-04-05 15:41:39,959 - DEBUG - Time 2017-04-03 04:00: Count 9, Hours 1131.38
-2017-04-05 15:41:39,959 - DEBUG - Time 2017-04-03 05:00: Count 6, Hours 713.57
-2017-04-05 15:41:39,959 - DEBUG - Time 2017-04-03 06:00: Count 15, Hours 2164.89
-2017-04-05 15:41:39,959 - DEBUG - Time 2017-04-03 07:00: Count 7, Hours 1026.77
-2017-04-05 15:41:39,959 - DEBUG - Time 2017-04-03 08:00: Count 8, Hours 1007.03
-2017-04-05 15:41:39,959 - DEBUG - Time 2017-04-03 09:00: Count 2, Hours 185.19
-2017-04-05 15:41:39,959 - DEBUG - Time 2017-04-03 11:00: Count 1, Hours 95.83
-2017-04-05 15:41:39,959 - DEBUG - Time 2017-04-03 12:00: Count 2, Hours 274.88
-2017-04-05 15:41:39,960 - DEBUG - Time 2017-04-03 13:00: Count 4, Hours 510.67
-2017-04-05 15:41:39,960 - DEBUG - Time 2017-04-03 14:00: Count 1, Hours 58.67
-2017-04-05 15:41:39,960 - DEBUG - Time 2017-04-03 15:00: Count 1, Hours 52.85
-2017-04-05 15:41:39,960 - DEBUG - Time 2017-04-03 16:00: Count 4, Hours 554.25
-2017-04-05 15:41:39,960 - DEBUG - Time 2017-04-03 17:00: Count 4, Hours 522.13
-2017-04-05 15:41:39,960 - DEBUG - Time 2017-04-03 18:00: Count 3, Hours 13.42
-2017-04-05 15:41:39,960 - DEBUG - Time 2017-04-03 19:00: Count 2, Hours 199.09
-2017-04-05 15:41:39,960 - DEBUG - Time 2017-04-03 20:00: Count 15, Hours 850.90
-2017-04-05 15:41:39,960 - DEBUG - Time 2017-04-03 21:00: Count 2, Hours 131.00
-2017-04-05 15:41:39,960 - DEBUG - Time 2017-04-03 22:00: Count 11, Hours 488.40
-2017-04-05 15:41:39,961 - DEBUG - Time 2017-04-03 23:00: Count 11, Hours 10.19
-2017-04-05 15:41:39,961 - DEBUG - Time 2017-04-04 00:00: Count 8, Hours 79.57
-2017-04-05 15:41:39,961 - DEBUG - Time 2017-04-04 01:00: Count 10, Hours 157.81
-2017-04-05 15:41:39,961 - DEBUG - Time 2017-04-04 02:00: Count 3, Hours 77.83
-2017-04-05 15:41:39,961 - DEBUG - Time 2017-04-04 03:00: Count 7, Hours 153.57
-2017-04-05 15:41:39,961 - DEBUG - Time 2017-04-04 04:00: Count 28, Hours 41.88
-2017-04-05 15:41:39,961 - DEBUG - Time 2017-04-04 05:00: Count 82, Hours 429.72
-2017-04-05 15:41:39,961 - DEBUG - Time 2017-04-04 06:00: Count 115, Hours 257.94
-2017-04-05 15:41:39,961 - DEBUG - Time 2017-04-04 07:00: Count 3716, Hours 8297.16
-2017-04-05 15:41:39,961 - DEBUG - Time 2017-04-04 08:00: Count 14392, Hours 37827.15
-2017-04-05 15:41:39,962 - DEBUG - Time 2017-04-04 09:00: Count 15678, Hours 38037.29
-2017-04-05 15:41:39,962 - DEBUG - Time 2017-04-04 10:00: Count 18728, Hours 45800.98
-2017-04-05 15:41:39,962 - DEBUG - Time 2017-04-04 11:00: Count 15588, Hours 44829.87
-2017-04-05 15:41:39,962 - DEBUG - Time 2017-04-04 12:00: Count 15524, Hours 56805.87
-2017-04-05 15:41:39,962 - DEBUG - Time 2017-04-04 13:00: Count 16334, Hours 36409.75
-2017-04-05 15:41:39,962 - DEBUG - Time 2017-04-04 14:00: Count 14032, Hours 31885.08
-2017-04-05 15:41:39,962 - DEBUG - Time 2017-04-04 15:00: Count 14359, Hours 34814.94
-2017-04-05 15:41:39,962 - DEBUG - Time 2017-04-04 16:00: Count 12323, Hours 29060.61
-2017-04-05 15:41:39,962 - DEBUG - Time 2017-04-04 17:00: Count 16047, Hours 31856.84
-2017-04-05 15:41:39,962 - DEBUG - Time 2017-04-04 18:00: Count 17154, Hours 39586.25
-2017-04-05 15:41:39,963 - DEBUG - Time 2017-04-04 19:00: Count 13833, Hours 27261.63
-2017-04-05 15:41:39,963 - DEBUG - Time 2017-04-04 20:00: Count 13706, Hours 28591.95
-2017-04-05 15:41:39,963 - DEBUG - Time 2017-04-04 21:00: Count 14644, Hours 28061.55
-2017-04-05 15:41:39,963 - DEBUG - Time 2017-04-04 22:00: Count 14860, Hours 30772.40
-2017-04-05 15:41:39,963 - DEBUG - Time 2017-04-04 23:00: Count 12702, Hours 23936.06
-2017-04-05 15:41:39,963 - DEBUG - Time 2017-04-05 00:00: Count 13114, Hours 25825.37
-2017-04-05 15:41:39,963 - DEBUG - Time 2017-04-05 01:00: Count 11540, Hours 25645.77
-2017-04-05 15:41:39,963 - DEBUG - Time 2017-04-05 02:00: Count 10065, Hours 25472.39
-2017-04-05 15:41:39,963 - DEBUG - Time 2017-04-05 03:00: Count 12168, Hours 36727.13
-2017-04-05 15:41:39,963 - DEBUG - Time 2017-04-05 04:00: Count 10519, Hours 29984.58
-2017-04-05 15:41:39,964 - DEBUG - Time 2017-04-05 05:00: Count 11041, Hours 29040.87
-2017-04-05 15:41:39,964 - DEBUG - Time 2017-04-05 06:00: Count 10738, Hours 29448.29
-2017-04-05 15:41:39,964 - DEBUG - Time 2017-04-05 07:00: Count 10712, Hours 30581.69
-2017-04-05 15:41:39,964 - DEBUG - Time 2017-04-05 08:00: Count 14896, Hours 64243.86
-2017-04-05 15:41:39,964 - DEBUG - Time 2017-04-05 09:00: Count 12460, Hours 34415.58
-2017-04-05 15:41:39,964 - DEBUG - Time 2017-04-05 10:00: Count 11944, Hours 27223.05
-2017-04-05 15:41:39,964 - DEBUG - Time 2017-04-05 11:00: Count 13570, Hours 29355.13
-2017-04-05 15:41:39,964 - DEBUG - Time 2017-04-05 12:00: Count 14293, Hours 34573.90
-2017-04-05 15:41:39,964 - DEBUG - Time 2017-04-05 13:00: Count 14615, Hours 29727.61
-2017-04-05 15:41:39,964 - DEBUG - Time 2017-04-05 14:00: Count 16234, Hours 33639.53
-2017-04-05 15:41:39,965 - DEBUG - Time 2017-04-05 15:00: Count 15036, Hours 33190.12
-2017-04-05 15:41:39,965 - DEBUG - Time 2017-04-05 16:00: Count 14160, Hours 51458.01
-2017-04-05 15:41:39,965 - DEBUG - Time 2017-04-05 17:00: Count 15504, Hours 45941.72
-2017-04-05 15:41:39,965 - DEBUG - Time 2017-04-05 18:00: Count 13488, Hours 39132.83
-2017-04-05 15:41:39,965 - DEBUG - Time 2017-04-05 19:00: Count 12946, Hours 29136.43
-2017-04-05 15:41:39,967 - DEBUG - Using temporary file /tmp/osg_displayQBcJAz for jobs_hourly
-2017-04-05 15:41:40,160 - DEBUG - Overwriting /var/www/html/osg_display/jobs_hourly.png with /tmp/osg_displayQBcJAz.
-2017-04-05 15:41:40,160 - DEBUG - Time log - Hourly Jobs Query Time: 14.5984098911
-2017-04-05 15:41:40,476 - DEBUG - Using temporary file /tmp/osg_displaypiwyh6 for hours_hourly
-2017-04-05 15:41:40,683 - DEBUG - Overwriting /var/www/html/osg_display/cpu_hours_hourly.png with /tmp/osg_displaypiwyh6.
-2017-04-05 15:41:40,683 - DEBUG - Time log - Hourly Jobs Graph Time: 0.522781848907
-2017-04-05 15:41:40,695 - INFO - Successfully loaded transfer data from cache; 61 cache entries.
-2017-04-05 15:41:40,695 - DEBUG - Ignoring cached data from 2017-04-05 18:00:00 as it is over 30 minutes old and is for a recent interval.
-2017-04-05 15:41:40,695 - DEBUG - Ignoring cached data from 2017-04-04 18:00:00 as it is over an hour old.
-2017-04-05 15:41:40,695 - DEBUG - Ignoring cached data from 2017-04-04 21:00:00 as it is over an hour old.
-2017-04-05 15:41:40,695 - DEBUG - Ignoring cached data from 2017-04-05 08:00:00 as it is over an hour old.
-2017-04-05 15:41:40,695 - DEBUG - Ignoring cached data from 2017-04-05 08:00:00 as it is over 30 minutes old and is for a recent interval.
-2017-04-05 15:41:40,695 - DEBUG - Ignoring cached data from 2017-04-04 06:00:00 as it is over an hour old.
-2017-04-05 15:41:40,695 - DEBUG - Ignoring cached data from 2017-04-04 08:00:00 as it is over an hour old.
-2017-04-05 15:41:40,695 - DEBUG - Ignoring cached data from 2017-04-04 03:00:00 as it is over an hour old.
-2017-04-05 15:41:40,695 - DEBUG - Ignoring cached data from 2017-04-05 01:00:00 as it is over an hour old.
-2017-04-05 15:41:40,696 - DEBUG - Ignoring cached data from 2017-04-04 14:00:00 as it is over an hour old.
-2017-04-05 15:41:40,696 - DEBUG - Ignoring cached data from 2017-04-04 01:00:00 as it is over an hour old.
-2017-04-05 15:41:40,696 - DEBUG - Ignoring cached data from 2017-04-04 16:00:00 as it is over an hour old.
-2017-04-05 15:41:40,696 - DEBUG - Ignoring cached data from 2017-04-04 11:00:00 as it is over an hour old.
-2017-04-05 15:41:40,696 - DEBUG - Ignoring cached data from 2017-04-03 07:00:00 as it is over an hour old.
-2017-04-05 15:41:40,696 - DEBUG - Ignoring cached data from 2017-04-05 06:00:00 as it is over an hour old.
-2017-04-05 15:41:40,696 - DEBUG - Ignoring cached data from 2017-04-05 06:00:00 as it is over 30 minutes old and is for a recent interval.
-2017-04-05 15:41:40,696 - DEBUG - Ignoring cached data from 2017-04-03 17:00:00 as it is over an hour old.
-2017-04-05 15:41:40,696 - DEBUG - Ignoring cached data from 2017-04-03 10:00:00 as it is over an hour old.
-2017-04-05 15:41:40,696 - DEBUG - Ignoring cached data from 2017-04-03 20:00:00 as it is over an hour old.
-2017-04-05 15:41:40,696 - DEBUG - Ignoring cached data from 2017-04-05 09:00:00 as it is over an hour old.
-2017-04-05 15:41:40,696 - DEBUG - Ignoring cached data from 2017-04-05 09:00:00 as it is over 30 minutes old and is for a recent interval.
-2017-04-05 15:41:40,697 - DEBUG - Ignoring cached data from 2017-04-05 14:00:00 as it is over an hour old.
-2017-04-05 15:41:40,697 - DEBUG - Ignoring cached data from 2017-04-05 14:00:00 as it is over 30 minutes old and is for a recent interval.
-2017-04-05 15:41:40,697 - DEBUG - Ignoring cached data from 2017-04-03 18:00:00 as it is over an hour old.
-2017-04-05 15:41:40,697 - DEBUG - Ignoring cached data from 2017-04-05 03:00:00 as it is over an hour old.
-2017-04-05 15:41:40,697 - DEBUG - Ignoring cached data from 2017-04-04 04:00:00 as it is over an hour old.
-2017-04-05 15:41:40,697 - DEBUG - Ignoring cached data from 2017-04-05 15:00:00 as it is over an hour old.
-2017-04-05 15:41:40,697 - DEBUG - Ignoring cached data from 2017-04-05 15:00:00 as it is over 30 minutes old and is for a recent interval.
-2017-04-05 15:41:40,697 - DEBUG - Ignoring cached data from 2017-04-05 19:00:00 as it is over 30 minutes old and is for a recent interval.
-2017-04-05 15:41:40,697 - DEBUG - Ignoring cached data from 2017-04-05 17:00:00 as it is over 30 minutes old and is for a recent interval.
-2017-04-05 15:41:40,697 - DEBUG - Ignoring cached data from 2017-04-04 12:00:00 as it is over an hour old.
-2017-04-05 15:41:40,697 - DEBUG - Ignoring cached data from 2017-04-04 07:00:00 as it is over an hour old.
-2017-04-05 15:41:40,697 - DEBUG - Ignoring cached data from 2017-04-04 22:00:00 as it is over an hour old.
-2017-04-05 15:41:40,698 - DEBUG - Ignoring cached data from 2017-04-04 09:00:00 as it is over an hour old.
-2017-04-05 15:41:40,698 - DEBUG - Ignoring cached data from 2017-04-04 19:00:00 as it is over an hour old.
-2017-04-05 15:41:40,698 - DEBUG - Ignoring cached data from 2017-04-03 15:00:00 as it is over an hour old.
-2017-04-05 15:41:40,698 - DEBUG - Ignoring cached data from 2017-04-04 17:00:00 as it is over an hour old.
-2017-04-05 15:41:40,698 - DEBUG - Ignoring cached data from 2017-04-03 08:00:00 as it is over an hour old.
-2017-04-05 15:41:40,698 - DEBUG - Ignoring cached data from 2017-04-03 23:00:00 as it is over an hour old.
-2017-04-05 15:41:40,698 - DEBUG - Ignoring cached data from 2017-04-03 16:00:00 as it is over an hour old.
-2017-04-05 15:41:40,698 - DEBUG - Ignoring cached data from 2017-04-05 12:00:00 as it is over an hour old.
-2017-04-05 15:41:40,698 - DEBUG - Ignoring cached data from 2017-04-05 12:00:00 as it is over 30 minutes old and is for a recent interval.
-2017-04-05 15:41:40,698 - DEBUG - Ignoring cached data from 2017-04-05 05:00:00 as it is over an hour old.
-2017-04-05 15:41:40,698 - DEBUG - Ignoring cached data from 2017-04-05 05:00:00 as it is over 30 minutes old and is for a recent interval.
-2017-04-05 15:41:40,698 - DEBUG - Ignoring cached data from 2017-04-03 13:00:00 as it is over an hour old.
-2017-04-05 15:41:40,699 - DEBUG - Ignoring cached data from 2017-04-05 00:00:00 as it is over an hour old.
-2017-04-05 15:41:40,699 - DEBUG - Ignoring cached data from 2017-04-05 16:00:00 as it is over 30 minutes old and is for a recent interval.
-2017-04-05 15:41:40,699 - DEBUG - Ignoring cached data from 2017-04-03 11:00:00 as it is over an hour old.
-2017-04-05 15:41:40,699 - DEBUG - Ignoring cached data from 2017-04-05 11:00:00 as it is over an hour old.
-2017-04-05 15:41:40,699 - DEBUG - Ignoring cached data from 2017-04-05 11:00:00 as it is over 30 minutes old and is for a recent interval.
-2017-04-05 15:41:40,699 - DEBUG - Ignoring cached data from 2017-04-03 21:00:00 as it is over an hour old.
-2017-04-05 15:41:40,699 - DEBUG - Ignoring cached data from 2017-04-03 14:00:00 as it is over an hour old.
-2017-04-05 15:41:40,699 - DEBUG - Ignoring cached data from 2017-04-04 02:00:00 as it is over an hour old.
-2017-04-05 15:41:40,699 - DEBUG - Ignoring cached data from 2017-04-04 05:00:00 as it is over an hour old.
-2017-04-05 15:41:40,699 - DEBUG - Ignoring cached data from 2017-04-04 20:00:00 as it is over an hour old.
-2017-04-05 15:41:40,699 - DEBUG - Ignoring cached data from 2017-04-04 15:00:00 as it is over an hour old.
-2017-04-05 15:41:40,699 - DEBUG - Ignoring cached data from 2017-04-04 10:00:00 as it is over an hour old.
-2017-04-05 15:41:40,700 - DEBUG - Ignoring cached data from 2017-04-04 13:00:00 as it is over an hour old.
-2017-04-05 15:41:40,700 - DEBUG - Ignoring cached data from 2017-04-04 23:00:00 as it is over an hour old.
-2017-04-05 15:41:40,700 - DEBUG - Ignoring cached data from 2017-04-04 00:00:00 as it is over an hour old.
-2017-04-05 15:41:40,700 - DEBUG - Ignoring cached data from 2017-04-05 07:00:00 as it is over an hour old.
-2017-04-05 15:41:40,700 - DEBUG - Ignoring cached data from 2017-04-05 07:00:00 as it is over 30 minutes old and is for a recent interval.
-2017-04-05 15:41:40,700 - DEBUG - Ignoring cached data from 2017-04-05 10:00:00 as it is over an hour old.
-2017-04-05 15:41:40,700 - DEBUG - Ignoring cached data from 2017-04-05 10:00:00 as it is over 30 minutes old and is for a recent interval.
-2017-04-05 15:41:40,700 - DEBUG - Ignoring cached data from 2017-04-03 09:00:00 as it is over an hour old.
-2017-04-05 15:41:40,700 - DEBUG - Ignoring cached data from 2017-04-05 04:00:00 as it is over an hour old.
-2017-04-05 15:41:40,700 - DEBUG - Ignoring cached data from 2017-04-05 04:00:00 as it is over 30 minutes old and is for a recent interval.
-2017-04-05 15:41:40,700 - DEBUG - Ignoring cached data from 2017-04-05 13:00:00 as it is over an hour old.
-2017-04-05 15:41:40,700 - DEBUG - Ignoring cached data from 2017-04-05 13:00:00 as it is over 30 minutes old and is for a recent interval.
-2017-04-05 15:41:40,701 - DEBUG - Ignoring cached data from 2017-04-03 22:00:00 as it is over an hour old.
-2017-04-05 15:41:40,701 - DEBUG - Ignoring cached data from 2017-04-03 19:00:00 as it is over an hour old.
-2017-04-05 15:41:40,701 - DEBUG - Ignoring cached data from 2017-04-03 12:00:00 as it is over an hour old.
-2017-04-05 15:41:40,701 - DEBUG - Ignoring cached data from 2017-04-05 02:00:00 as it is over an hour old.
-2017-04-05 15:41:40,701 - WARNING - Unable to load cache; it may not exist. Error: datetime.datetime(2017, 4, 5, 8, 0)
-2017-04-05 15:41:40,701 - INFO - Querying 7 missing data entries.
-2017-04-05 15:41:40,701 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-05 20:00:00 to 2017-04-05 21:00:00.
-2017-04-05 15:41:40,745 - DEBUG - Successfully parsed results for 2017-04-05 20:00:00.
-2017-04-05 15:41:40,745 - DEBUG - Using temporary file /tmp/osg_displaynAxh0S for transfer_data
-2017-04-05 15:41:40,754 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displaynAxh0S.
-2017-04-05 15:41:40,754 - DEBUG - Saved data to cache.
-2017-04-05 15:41:40,754 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-05 18:00:00 to 2017-04-05 19:00:00.
-2017-04-05 15:41:40,790 - DEBUG - Successfully parsed results for 2017-04-05 18:00:00.
-2017-04-05 15:41:40,790 - DEBUG - Using temporary file /tmp/osg_displayiF8iHb for transfer_data
-2017-04-05 15:41:40,800 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayiF8iHb.
-2017-04-05 15:41:40,800 - DEBUG - Saved data to cache.
-2017-04-05 15:41:40,800 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-05 17:00:00 to 2017-04-05 18:00:00.
-2017-04-05 15:41:40,836 - DEBUG - Successfully parsed results for 2017-04-05 17:00:00.
-2017-04-05 15:41:40,837 - DEBUG - Using temporary file /tmp/osg_displayCXSa7q for transfer_data
-2017-04-05 15:41:40,846 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayCXSa7q.
-2017-04-05 15:41:40,846 - DEBUG - Saved data to cache.
-2017-04-05 15:41:40,846 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-04 21:00:00 to 2017-04-04 22:00:00.
-2017-04-05 15:41:40,873 - DEBUG - Successfully parsed results for 2017-04-04 21:00:00.
-2017-04-05 15:41:40,873 - DEBUG - Using temporary file /tmp/osg_display4ltHTj for transfer_data
-2017-04-05 15:41:40,882 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_display4ltHTj.
-2017-04-05 15:41:40,882 - DEBUG - Saved data to cache.
-2017-04-05 15:41:40,882 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-04 18:00:00 to 2017-04-04 19:00:00.
-2017-04-05 15:41:40,907 - DEBUG - Successfully parsed results for 2017-04-04 18:00:00.
-2017-04-05 15:41:40,908 - DEBUG - Using temporary file /tmp/osg_display6LXaZe for transfer_data
-2017-04-05 15:41:40,917 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_display6LXaZe.
-2017-04-05 15:41:40,917 - DEBUG - Saved data to cache.
-2017-04-05 15:41:40,917 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-05 19:00:00 to 2017-04-05 20:00:00.
-2017-04-05 15:41:40,953 - DEBUG - Successfully parsed results for 2017-04-05 19:00:00.
-2017-04-05 15:41:40,953 - DEBUG - Using temporary file /tmp/osg_display5dBnao for transfer_data
-2017-04-05 15:41:40,963 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_display5dBnao.
-2017-04-05 15:41:40,963 - DEBUG - Saved data to cache.
-2017-04-05 15:41:40,963 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-05 08:00:00 to 2017-04-05 09:00:00.
-2017-04-05 15:41:40,996 - DEBUG - Successfully parsed results for 2017-04-05 08:00:00.
-2017-04-05 15:41:40,996 - DEBUG - Using temporary file /tmp/osg_display1k3k0H for transfer_data
-2017-04-05 15:41:41,006 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_display1k3k0H.
-2017-04-05 15:41:41,006 - DEBUG - Saved data to cache.
-2017-04-05 15:41:41,006 - DEBUG - Time log - Hourly Transfer Query Time: 0.323406934738
-2017-04-05 15:41:41,352 - DEBUG - Transfer volumes: 20.1356640491, 18.5175971431, 11.4045186347, 10.458945202, 13.8227653695, 14.0451348133, 21.318853278, 15.6790298033, 13.1545122847, 14.7239746099, 40.3457478275, 44.3682119361, 37.4612265435, 18.3997359796, 14.4636216621, 14.6391845526, 11.7317097273, 9.04541115133, 25.1492177884, 24.0816696215, 22.4198328301, 23.2240016335, 25.0405975938, 24.3309215601, 16.7902726726
-2017-04-05 15:41:41,352 - DEBUG - Using temporary file /tmp/osg_display0fTPov for transfer_volume_hourly
-2017-04-05 15:41:41,532 - DEBUG - Overwriting /var/www/html/osg_display/transfer_volume_hourly.png with /tmp/osg_display0fTPov.
-2017-04-05 15:41:41,849 - DEBUG - Using temporary file /tmp/osg_displayQEIs0K for transfers_hourly
-2017-04-05 15:41:42,034 - DEBUG - Overwriting /var/www/html/osg_display/transfers_hourly.png with /tmp/osg_displayQEIs0K.
-2017-04-05 15:41:42,035 - DEBUG - Time log - Hourly Transfer Graph Time: 1.02850198746
-2017-04-05 15:41:42,039 - INFO - Successfully connected to Gratia database
-2017-04-05 15:41:48,529 - INFO - Gratia returned 35 results for daily jobs
-2017-04-05 15:41:48,529 - DEBUG - Job result dump:
-2017-04-05 15:41:48,529 - DEBUG - Day 2017-03-01: Jobs 477998, Job Hours 4364560.72
-2017-04-05 15:41:48,530 - DEBUG - Day 2017-03-02: Jobs 479812, Job Hours 4438173.10
-2017-04-05 15:41:48,530 - DEBUG - Day 2017-03-03: Jobs 603790, Job Hours 4951095.96
-2017-04-05 15:41:48,530 - DEBUG - Day 2017-03-04: Jobs 583192, Job Hours 4537387.70
-2017-04-05 15:41:48,530 - DEBUG - Day 2017-03-05: Jobs 515960, Job Hours 4943670.89
-2017-04-05 15:41:48,530 - DEBUG - Day 2017-03-06: Jobs 586509, Job Hours 4836650.49
-2017-04-05 15:41:48,530 - DEBUG - Day 2017-03-07: Jobs 417356, Job Hours 3610849.88
-2017-04-05 15:41:48,530 - DEBUG - Day 2017-03-08: Jobs 360454, Job Hours 3993069.46
-2017-04-05 15:41:48,530 - DEBUG - Day 2017-03-09: Jobs 572274, Job Hours 3794363.21
-2017-04-05 15:41:48,530 - DEBUG - Day 2017-03-10: Jobs 400540, Job Hours 5069480.31
-2017-04-05 15:41:48,530 - DEBUG - Day 2017-03-11: Jobs 386615, Job Hours 4053829.15
-2017-04-05 15:41:48,530 - DEBUG - Day 2017-03-12: Jobs 358689, Job Hours 4465731.00
-2017-04-05 15:41:48,531 - DEBUG - Day 2017-03-13: Jobs 432681, Job Hours 3856606.40
-2017-04-05 15:41:48,531 - DEBUG - Day 2017-03-14: Jobs 515373, Job Hours 4029086.95
-2017-04-05 15:41:48,531 - DEBUG - Day 2017-03-15: Jobs 440572, Job Hours 5036275.17
-2017-04-05 15:41:48,531 - DEBUG - Day 2017-03-16: Jobs 514179, Job Hours 3924369.37
-2017-04-05 15:41:48,531 - DEBUG - Day 2017-03-17: Jobs 615473, Job Hours 4708124.76
-2017-04-05 15:41:48,531 - DEBUG - Day 2017-03-18: Jobs 543371, Job Hours 4537940.87
-2017-04-05 15:41:48,531 - DEBUG - Day 2017-03-19: Jobs 402954, Job Hours 4404476.35
-2017-04-05 15:41:48,531 - DEBUG - Day 2017-03-20: Jobs 385687, Job Hours 4740836.03
-2017-04-05 15:41:48,531 - DEBUG - Day 2017-03-21: Jobs 385311, Job Hours 4124184.56
-2017-04-05 15:41:48,531 - DEBUG - Day 2017-03-22: Jobs 275556, Job Hours 3502847.73
-2017-04-05 15:41:48,531 - DEBUG - Day 2017-03-23: Jobs 273839, Job Hours 4706495.24
-2017-04-05 15:41:48,531 - DEBUG - Day 2017-03-24: Jobs 320340, Job Hours 4080313.57
-2017-04-05 15:41:48,532 - DEBUG - Day 2017-03-25: Jobs 288965, Job Hours 5029530.65
-2017-04-05 15:41:48,532 - DEBUG - Day 2017-03-26: Jobs 328419, Job Hours 4322510.03
-2017-04-05 15:41:48,532 - DEBUG - Day 2017-03-27: Jobs 403429, Job Hours 3880404.45
-2017-04-05 15:41:48,532 - DEBUG - Day 2017-03-28: Jobs 362263, Job Hours 3350073.05
-2017-04-05 15:41:48,532 - DEBUG - Day 2017-03-29: Jobs 331674, Job Hours 3347201.58
-2017-04-05 15:41:48,532 - DEBUG - Day 2017-03-30: Jobs 360351, Job Hours 3918689.45
-2017-04-05 15:41:48,532 - DEBUG - Day 2017-03-31: Jobs 339772, Job Hours 4496955.21
-2017-04-05 15:41:48,532 - DEBUG - Day 2017-04-01: Jobs 303689, Job Hours 3822649.55
-2017-04-05 15:41:48,532 - DEBUG - Day 2017-04-02: Jobs 321252, Job Hours 3779504.50
-2017-04-05 15:41:48,532 - DEBUG - Day 2017-04-03: Jobs 389327, Job Hours 4989337.69
-2017-04-05 15:41:48,532 - DEBUG - Day 2017-04-04: Jobs 377186, Job Hours 3621547.86
-2017-04-05 15:41:48,533 - DEBUG - Time log - 30-Day Query Time: 6.49783396721
-2017-04-05 15:41:48,850 - DEBUG - Using temporary file /tmp/osg_displaywYjBFC for jobs_daily
-2017-04-05 15:41:49,034 - DEBUG - Overwriting /var/www/html/osg_display/jobs_daily.png with /tmp/osg_displaywYjBFC.
-2017-04-05 15:41:49,035 - DEBUG - Time log - 30-Day Count Graph Time: 0.501801013947
-2017-04-05 15:41:49,352 - DEBUG - Using temporary file /tmp/osg_display59XU_M for hours_daily
-2017-04-05 15:41:49,528 - DEBUG - Overwriting /var/www/html/osg_display/cpu_hours_daily.png with /tmp/osg_display59XU_M.
-2017-04-05 15:41:49,529 - DEBUG - Time log - 30-Day CPU Graph Time: 0.49388384819
-2017-04-05 15:41:49,533 - INFO - Unable to find cache file: </tmp/dailydatasourcecount.b>
-2017-04-05 15:41:49,533 - DEBUG - Default dates received in getcache are start: <2017-03-01 00:00:00> and end: <2017-04-05 00:00:00> 
-2017-04-05 15:41:49,533 - DEBUG - Setting date back to  start: <2017-03-01 00:00:00> 
-2017-04-05 15:41:49,534 - DEBUG - Received  <0> cached results
-2017-04-05 15:41:49,534 - DEBUG - Received in query_transfers for DB Query start date: <2017-03-01 00:00:00> and end date <2017-04-05 00:00:00> 
-2017-04-05 15:41:52,439 - INFO - -------- Gratia returned 35 results for transfers----------------
-2017-04-05 15:41:52,439 - DEBUG - -------- Transfer result dump: DB Fetched results----------------
-2017-04-05 15:41:52,439 - DEBUG - Day 2017-03-01: Transfers 9050464, Transfer PB 704.13
-2017-04-05 15:41:52,439 - DEBUG - Day 2017-03-02: Transfers 7435223, Transfer PB 605.86
-2017-04-05 15:41:52,439 - DEBUG - Day 2017-03-03: Transfers 9000858, Transfer PB 455.43
-2017-04-05 15:41:52,439 - DEBUG - Day 2017-03-04: Transfers 5345436, Transfer PB 307.34
-2017-04-05 15:41:52,440 - DEBUG - Day 2017-03-05: Transfers 7111452, Transfer PB 383.71
-2017-04-05 15:41:52,440 - DEBUG - Day 2017-03-06: Transfers 5468932, Transfer PB 252.50
-2017-04-05 15:41:52,440 - DEBUG - Day 2017-03-07: Transfers 6220939, Transfer PB 477.83
-2017-04-05 15:41:52,440 - DEBUG - Day 2017-03-08: Transfers 4917496, Transfer PB 396.20
-2017-04-05 15:41:52,440 - DEBUG - Day 2017-03-09: Transfers 6994991, Transfer PB 425.87
-2017-04-05 15:41:52,440 - DEBUG - Day 2017-03-10: Transfers 6298908, Transfer PB 435.53
-2017-04-05 15:41:52,440 - DEBUG - Day 2017-03-11: Transfers 8013482, Transfer PB 518.93
-2017-04-05 15:41:52,440 - DEBUG - Day 2017-03-12: Transfers 6642712, Transfer PB 202.91
-2017-04-05 15:41:52,440 - DEBUG - Day 2017-03-13: Transfers 4971373, Transfer PB 289.03
-2017-04-05 15:41:52,440 - DEBUG - Day 2017-03-14: Transfers 4883250, Transfer PB 513.32
-2017-04-05 15:41:52,441 - DEBUG - Day 2017-03-15: Transfers 5808320, Transfer PB 440.56
-2017-04-05 15:41:52,441 - DEBUG - Day 2017-03-16: Transfers 4097574, Transfer PB 409.31
-2017-04-05 15:41:52,441 - DEBUG - Day 2017-03-17: Transfers 4325331, Transfer PB 389.40
-2017-04-05 15:41:52,441 - DEBUG - Day 2017-03-18: Transfers 4792415, Transfer PB 282.53
-2017-04-05 15:41:52,441 - DEBUG - Day 2017-03-19: Transfers 6641271, Transfer PB 307.58
-2017-04-05 15:41:52,441 - DEBUG - Day 2017-03-20: Transfers 7433990, Transfer PB 390.51
-2017-04-05 15:41:52,441 - DEBUG - Day 2017-03-21: Transfers 5211778, Transfer PB 512.13
-2017-04-05 15:41:52,441 - DEBUG - Day 2017-03-22: Transfers 8026510, Transfer PB 335.85
-2017-04-05 15:41:52,441 - DEBUG - Day 2017-03-23: Transfers 10029168, Transfer PB 460.49
-2017-04-05 15:41:52,441 - DEBUG - Day 2017-03-24: Transfers 7313527, Transfer PB 377.52
-2017-04-05 15:41:52,441 - DEBUG - Day 2017-03-25: Transfers 6530665, Transfer PB 419.00
-2017-04-05 15:41:52,442 - DEBUG - Day 2017-03-26: Transfers 8236826, Transfer PB 360.27
-2017-04-05 15:41:52,442 - DEBUG - Day 2017-03-27: Transfers 7937999, Transfer PB 524.13
-2017-04-05 15:41:52,442 - DEBUG - Day 2017-03-28: Transfers 6657733, Transfer PB 471.10
-2017-04-05 15:41:52,442 - DEBUG - Day 2017-03-29: Transfers 6293892, Transfer PB 622.48
-2017-04-05 15:41:52,442 - DEBUG - Day 2017-03-30: Transfers 5345186, Transfer PB 657.39
-2017-04-05 15:41:52,442 - DEBUG - Day 2017-03-31: Transfers 5947538, Transfer PB 620.12
-2017-04-05 15:41:52,442 - DEBUG - Day 2017-04-01: Transfers 7997239, Transfer PB 683.85
-2017-04-05 15:41:52,442 - DEBUG - Day 2017-04-02: Transfers 6364890, Transfer PB 679.22
-2017-04-05 15:41:52,442 - DEBUG - Day 2017-04-03: Transfers 9728453, Transfer PB 516.85
-2017-04-05 15:41:52,442 - DEBUG - Day 2017-04-04: Transfers 6390201, Transfer PB 526.06
-2017-04-05 15:41:52,442 - DEBUG - -------- Printing cached and DB Merged results----------------
-2017-04-05 15:41:52,443 - DEBUG - Day 2017-03-01: Transfers 9050464, Transfer PB 704.13
-2017-04-05 15:41:52,443 - DEBUG - Day 2017-03-02: Transfers 7435223, Transfer PB 605.86
-2017-04-05 15:41:52,443 - DEBUG - Day 2017-03-03: Transfers 9000858, Transfer PB 455.43
-2017-04-05 15:41:52,443 - DEBUG - Day 2017-03-04: Transfers 5345436, Transfer PB 307.34
-2017-04-05 15:41:52,443 - DEBUG - Day 2017-03-05: Transfers 7111452, Transfer PB 383.71
-2017-04-05 15:41:52,443 - DEBUG - Day 2017-03-06: Transfers 5468932, Transfer PB 252.50
-2017-04-05 15:41:52,443 - DEBUG - Day 2017-03-07: Transfers 6220939, Transfer PB 477.83
-2017-04-05 15:41:52,443 - DEBUG - Day 2017-03-08: Transfers 4917496, Transfer PB 396.20
-2017-04-05 15:41:52,443 - DEBUG - Day 2017-03-09: Transfers 6994991, Transfer PB 425.87
-2017-04-05 15:41:52,443 - DEBUG - Day 2017-03-10: Transfers 6298908, Transfer PB 435.53
-2017-04-05 15:41:52,443 - DEBUG - Day 2017-03-11: Transfers 8013482, Transfer PB 518.93
-2017-04-05 15:41:52,444 - DEBUG - Day 2017-03-12: Transfers 6642712, Transfer PB 202.91
-2017-04-05 15:41:52,444 - DEBUG - Day 2017-03-13: Transfers 4971373, Transfer PB 289.03
-2017-04-05 15:41:52,444 - DEBUG - Day 2017-03-14: Transfers 4883250, Transfer PB 513.32
-2017-04-05 15:41:52,444 - DEBUG - Day 2017-03-15: Transfers 5808320, Transfer PB 440.56
-2017-04-05 15:41:52,444 - DEBUG - Day 2017-03-16: Transfers 4097574, Transfer PB 409.31
-2017-04-05 15:41:52,444 - DEBUG - Day 2017-03-17: Transfers 4325331, Transfer PB 389.40
-2017-04-05 15:41:52,444 - DEBUG - Day 2017-03-18: Transfers 4792415, Transfer PB 282.53
-2017-04-05 15:41:52,444 - DEBUG - Day 2017-03-19: Transfers 6641271, Transfer PB 307.58
-2017-04-05 15:41:52,444 - DEBUG - Day 2017-03-20: Transfers 7433990, Transfer PB 390.51
-2017-04-05 15:41:52,444 - DEBUG - Day 2017-03-21: Transfers 5211778, Transfer PB 512.13
-2017-04-05 15:41:52,444 - DEBUG - Day 2017-03-22: Transfers 8026510, Transfer PB 335.85
-2017-04-05 15:41:52,444 - DEBUG - Day 2017-03-23: Transfers 10029168, Transfer PB 460.49
-2017-04-05 15:41:52,445 - DEBUG - Day 2017-03-24: Transfers 7313527, Transfer PB 377.52
-2017-04-05 15:41:52,445 - DEBUG - Day 2017-03-25: Transfers 6530665, Transfer PB 419.00
-2017-04-05 15:41:52,445 - DEBUG - Day 2017-03-26: Transfers 8236826, Transfer PB 360.27
-2017-04-05 15:41:52,445 - DEBUG - Day 2017-03-27: Transfers 7937999, Transfer PB 524.13
-2017-04-05 15:41:52,445 - DEBUG - Day 2017-03-28: Transfers 6657733, Transfer PB 471.10
-2017-04-05 15:41:52,445 - DEBUG - Day 2017-03-29: Transfers 6293892, Transfer PB 622.48
-2017-04-05 15:41:52,445 - DEBUG - Day 2017-03-30: Transfers 5345186, Transfer PB 657.39
-2017-04-05 15:41:52,445 - DEBUG - Day 2017-03-31: Transfers 5947538, Transfer PB 620.12
-2017-04-05 15:41:52,445 - DEBUG - Day 2017-04-01: Transfers 7997239, Transfer PB 683.85
-2017-04-05 15:41:52,445 - DEBUG - Day 2017-04-02: Transfers 6364890, Transfer PB 679.22
-2017-04-05 15:41:52,446 - DEBUG - Day 2017-04-03: Transfers 9728453, Transfer PB 516.85
-2017-04-05 15:41:52,446 - DEBUG - Day 2017-04-04: Transfers 6390201, Transfer PB 526.06
-2017-04-05 15:41:52,447 - DEBUG - Time log - 30-Day Transfer Query Time: 2.91782784462
-2017-04-05 15:41:52,768 - DEBUG - Using temporary file /tmp/osg_displayhvsrWv for transfers_daily
-2017-04-05 15:41:52,949 - DEBUG - Overwriting /var/www/html/osg_display/transfers_daily.png with /tmp/osg_displayhvsrWv.
-2017-04-05 15:41:52,950 - DEBUG - Time log - 30-Day Transfer Count Graph Time: 0.502913951874
-2017-04-05 15:41:53,265 - DEBUG - Using temporary file /tmp/osg_displayy9K77O for transfer_volume_daily
-2017-04-05 15:41:53,460 - DEBUG - Overwriting /var/www/html/osg_display/transfer_volume_daily.png with /tmp/osg_displayy9K77O.
-2017-04-05 15:41:53,460 - DEBUG - Time log - 30-Day Transfer Volume Graph Time: 0.510692834854
-2017-04-05 15:41:53,465 - INFO - Successfully connected to Gratia database
-2017-04-05 15:42:00,872 - INFO - Gratia returned 15 results for jobs
-2017-04-05 15:42:00,872 - DEBUG - Job result dump:
-2017-04-05 15:42:00,872 - DEBUG - Month starting on 2016-01-01 00:00:00: Jobs 13343585, Job Hours 107529836.67
-2017-04-05 15:42:00,872 - DEBUG - Month starting on 2016-02-01 00:00:00: Jobs 15032976, Job Hours 101772478.59
-2017-04-05 15:42:00,872 - DEBUG - Month starting on 2016-03-01 00:00:00: Jobs 15397267, Job Hours 103798683.21
-2017-04-05 15:42:00,872 - DEBUG - Month starting on 2016-04-01 00:00:00: Jobs 12061023, Job Hours 100381258.61
-2017-04-05 15:42:00,872 - DEBUG - Month starting on 2016-05-01 00:00:00: Jobs 11720195, Job Hours 108912661.75
-2017-04-05 15:42:00,872 - DEBUG - Month starting on 2016-06-01 00:00:00: Jobs 10519551, Job Hours 105309627.28
-2017-04-05 15:42:00,873 - DEBUG - Month starting on 2016-07-01 00:00:00: Jobs 10190532, Job Hours 107098422.41
-2017-04-05 15:42:00,873 - DEBUG - Month starting on 2016-08-01 00:00:00: Jobs 9314400, Job Hours 100325336.64
-2017-04-05 15:42:00,873 - DEBUG - Month starting on 2016-09-01 00:00:00: Jobs 9467508, Job Hours 116410566.01
-2017-04-05 15:42:00,873 - DEBUG - Month starting on 2016-10-01 00:00:00: Jobs 11567049, Job Hours 120020171.04
-2017-04-05 15:42:00,873 - DEBUG - Month starting on 2016-11-01 00:00:00: Jobs 11816322, Job Hours 123798843.79
-2017-04-05 15:42:00,873 - DEBUG - Month starting on 2016-12-01 00:00:00: Jobs 10499165, Job Hours 134583118.27
-2017-04-05 15:42:00,873 - DEBUG - Month starting on 2017-01-01 00:00:00: Jobs 12852888, Job Hours 133590651.36
-2017-04-05 15:42:00,873 - DEBUG - Month starting on 2017-02-01 00:00:00: Jobs 10793194, Job Hours 115915190.95
-2017-04-05 15:42:00,873 - DEBUG - Month starting on 2017-03-01 00:00:00: Jobs 13263398, Job Hours 133055783.30
-2017-04-05 15:42:00,874 - DEBUG - Time log - 12-Month Query Time: 7.41309905052
-2017-04-05 15:42:01,191 - DEBUG - Using temporary file /tmp/osg_display7JoxAg for jobs_monthly
-2017-04-05 15:42:01,373 - DEBUG - Overwriting /var/www/html/osg_display/jobs_monthly.png with /tmp/osg_display7JoxAg.
-2017-04-05 15:42:01,373 - DEBUG - Time log - 12-Month Job Count Graph Time: 0.49937081337
-2017-04-05 15:42:01,695 - DEBUG - Using temporary file /tmp/osg_displayb5HxfJ for hours_monthly
-2017-04-05 15:42:01,878 - DEBUG - Overwriting /var/www/html/osg_display/cpu_hours_monthly.png with /tmp/osg_displayb5HxfJ.
-2017-04-05 15:42:01,878 - DEBUG - Time log - 12-Month Hour Graph Time: 0.504956960678
-2017-04-05 15:42:01,883 - INFO - Unable to find cache file: </tmp/monthlydatasourcecount.b>
-2017-04-05 15:42:01,883 - DEBUG - Default dates received in getcache are start: <2016-01-01 00:00:00> and end: <2017-04-01 00:00:00> 
-2017-04-05 15:42:01,883 - DEBUG - Setting date back to  start: <2016-01-01 00:00:00> 
-2017-04-05 15:42:01,883 - DEBUG - Received  <0> cached results
-2017-04-05 15:42:01,883 - DEBUG - Received in query_transfers for DB Query start date: <2016-01-01 00:00:00> and end date <2017-04-01 00:00:00> 
-2017-04-05 15:42:54,574 - INFO - -------- Gratia returned 15 results for transfers----------------
-2017-04-05 15:42:54,574 - DEBUG - -------- Transfer result dump: DB Fetched results----------------
-2017-04-05 15:42:54,574 - DEBUG - Month starting on 2016-01-01 00:00:00: Transfers 179837011, Transfer PB 21318.38
-2017-04-05 15:42:54,574 - DEBUG - Month starting on 2016-02-01 00:00:00: Transfers 136780903, Transfer PB 20361.53
-2017-04-05 15:42:54,574 - DEBUG - Month starting on 2016-03-01 00:00:00: Transfers 190492386, Transfer PB 23730.85
-2017-04-05 15:42:54,574 - DEBUG - Month starting on 2016-04-01 00:00:00: Transfers 171305221, Transfer PB 19141.82
-2017-04-05 15:42:54,575 - DEBUG - Month starting on 2016-05-01 00:00:00: Transfers 157014406, Transfer PB 15972.45
-2017-04-05 15:42:54,575 - DEBUG - Month starting on 2016-06-01 00:00:00: Transfers 166361650, Transfer PB 12713.80
-2017-04-05 15:42:54,575 - DEBUG - Month starting on 2016-07-01 00:00:00: Transfers 189527665, Transfer PB 12983.48
-2017-04-05 15:42:54,575 - DEBUG - Month starting on 2016-08-01 00:00:00: Transfers 147777693, Transfer PB 11200.46
-2017-04-05 15:42:54,575 - DEBUG - Month starting on 2016-09-01 00:00:00: Transfers 94980163, Transfer PB 11589.38
-2017-04-05 15:42:54,575 - DEBUG - Month starting on 2016-10-01 00:00:00: Transfers 111822666, Transfer PB 17332.99
-2017-04-05 15:42:54,575 - DEBUG - Month starting on 2016-11-01 00:00:00: Transfers 158222395, Transfer PB 16788.88
-2017-04-05 15:42:54,575 - DEBUG - Month starting on 2016-12-01 00:00:00: Transfers 165991999, Transfer PB 12480.13
-2017-04-05 15:42:54,575 - DEBUG - Month starting on 2017-01-01 00:00:00: Transfers 218457828, Transfer PB 17115.43
-2017-04-05 15:42:54,575 - DEBUG - Month starting on 2017-02-01 00:00:00: Transfers 224035739, Transfer PB 13337.30
-2017-04-05 15:42:54,576 - DEBUG - Month starting on 2017-03-01 00:00:00: Transfers 202985239, Transfer PB 13548.96
-2017-04-05 15:42:54,576 - DEBUG - -------- Printing cached and DB Merged results----------------
-2017-04-05 15:42:54,576 - DEBUG - Month starting on 2016-01-01 00:00:00: Transfers 179837011, Transfer PB 21318.38
-2017-04-05 15:42:54,576 - DEBUG - Month starting on 2016-02-01 00:00:00: Transfers 136780903, Transfer PB 20361.53
-2017-04-05 15:42:54,576 - DEBUG - Month starting on 2016-03-01 00:00:00: Transfers 190492386, Transfer PB 23730.85
-2017-04-05 15:42:54,576 - DEBUG - Month starting on 2016-04-01 00:00:00: Transfers 171305221, Transfer PB 19141.82
-2017-04-05 15:42:54,576 - DEBUG - Month starting on 2016-05-01 00:00:00: Transfers 157014406, Transfer PB 15972.45
-2017-04-05 15:42:54,576 - DEBUG - Month starting on 2016-06-01 00:00:00: Transfers 166361650, Transfer PB 12713.80
-2017-04-05 15:42:54,576 - DEBUG - Month starting on 2016-07-01 00:00:00: Transfers 189527665, Transfer PB 12983.48
-2017-04-05 15:42:54,576 - DEBUG - Month starting on 2016-08-01 00:00:00: Transfers 147777693, Transfer PB 11200.46
-2017-04-05 15:42:54,576 - DEBUG - Month starting on 2016-09-01 00:00:00: Transfers 94980163, Transfer PB 11589.38
-2017-04-05 15:42:54,577 - DEBUG - Month starting on 2016-10-01 00:00:00: Transfers 111822666, Transfer PB 17332.99
-2017-04-05 15:42:54,577 - DEBUG - Month starting on 2016-11-01 00:00:00: Transfers 158222395, Transfer PB 16788.88
-2017-04-05 15:42:54,577 - DEBUG - Month starting on 2016-12-01 00:00:00: Transfers 165991999, Transfer PB 12480.13
-2017-04-05 15:42:54,577 - DEBUG - Month starting on 2017-01-01 00:00:00: Transfers 218457828, Transfer PB 17115.43
-2017-04-05 15:42:54,577 - DEBUG - Month starting on 2017-02-01 00:00:00: Transfers 224035739, Transfer PB 13337.30
-2017-04-05 15:42:54,577 - DEBUG - Month starting on 2017-03-01 00:00:00: Transfers 202985239, Transfer PB 13548.96
-2017-04-05 15:42:54,578 - DEBUG - Time log - 12-Month Transfer Query Time: 52.6995379925
-2017-04-05 15:42:54,894 - DEBUG - Using temporary file /tmp/osg_displayBo3Boj for transfers_monthly
-2017-04-05 15:42:55,072 - DEBUG - Overwriting /var/www/html/osg_display/transfers_monthly.png with /tmp/osg_displayBo3Boj.
-2017-04-05 15:42:55,073 - DEBUG - Time log - 12-Month Transfer Count Graph Time: 0.494697093964
-2017-04-05 15:42:55,391 - DEBUG - Using temporary file /tmp/osg_displayle4Qkf for transfer_volume_monthly
-2017-04-05 15:42:55,570 - DEBUG - Overwriting /var/www/html/osg_display/transfer_volume_monthly.png with /tmp/osg_displayle4Qkf.
-2017-04-05 15:42:55,570 - DEBUG - Time log - 12-Month Transfer Volume Graph Time: 0.497885942459
-2017-04-05 15:42:56,355 - DEBUG - OIM returned the following sites: NIU ATLAS T3, UCHC_CBG, KANSAS_HOSTED, CSU Fresno T3, brown-cms-new, UMSNH, OU DOSAR, UConn-OSG, JINR_Tier2, STAR-Online, UJ Research Cluster, TAMU Mathematics, Nebraska-CMS, SLAC, GC_UCALDAS, Lehigh Coral, shenma high performance computing at IPP CAS, NYSGRID Cornell, UAB Research Computing, Purdue CMS, CCHDV, UGA Research Computing Center, T3_KR_KISTI, UPittTier3, OU HEP, Florida State HEP, GC_PUJ, UPRM_HEP, ANL ASC, School of Physics and Astronomy, GLOW, DukeTier3, UCR HEP, ucsb-hep, UCSD CMS Tier2, Brown-CMS, KISTI-NSDC, Vanderbilt ACCRE, Vanderbilt_EC2, GC_UDEM, FermiGrid, Nebraska-Omaha, Nebraska-Lincoln, Harvard University, GridUNESP, Nevis, CAS-CNIC, SUSQU, TIGRE TTU, FNAL USCMS Tier1, LU HEP, UW Milwaukee Physics, OSC, FIU CMS Tier3, cinvestav, SWT2 ATLAS UTA, OU ATLAS, Caltech CMS Tier2, WIPAC, Kennesaw State University, LONI_LSU, LUCCRE, Boston University ATLAS Tier2, Brookhaven ATLAS Tier1, uva-cms, Georgia Tech, STANFORD_HOSTED, Baylor University Tier3, UTD-HEP, Bellarmine University, T2_BR_UERJ, Arizona Tier 3, rutgers-cms, NUMEP-OSG, ILS, MWT2 ATLAS UC, SPRACE, Clemson IT, Illinois High Energy Physics, UCIT3, GLOW ATLAS, NERSC, GC_UTB, OSU-CMS, STAR Brookhaven, UC Davis CMS T3, GC_UC, UF HPC, JINR_Cloud, MIT CMS, NU Tier3, UNM HPC, FZU, GC_UV, SU OrangeGrid, NYU ATLAS Tier3, GROW, SBU Atlas Tier3, UF CMS Tier2, OSG-Rice, Penn ATLAS Tier 3, JetStream, High Performance Computing Facility - University of Puerto Rico, UMD-IGS, Princeton_ICSE, UMissHEP, UC Santa Cruz ATLAS Tier-3, GLOW EDU, SMU_HPC, LaTech, FIU HPC, UMD-CMS, NWICG_NDCMS, T3_US_NEU, IIT - Illinois Institute of Technology, TAMU Academy, GC_UPB, AGLT2, GC_UAC, GC_UAM, PNNL_DC, Brandeis Tier 3, GC_UNIANDES, Beocat, NYSGRID Buffalo, Florida Tech, UColorado_HEP, UW-IT, GC_UIS, MIT CMS T3, MSU OSG, CHPC
-2017-04-05 15:42:56,355 - INFO - OIM has 132 registered sites.
-2017-04-05 15:42:56,355 - DEBUG - Querying the following MyOSG URL: http://myosg.grid.iu.edu/rgsummary/xml?datasource=summary&all_resources=on&gridtype=on&gridtype_1=on&active=on&active_value=1&disable=on&disable_value=0&summary_attrs_showhierarchy=on&summary_attrs_showservice=on&service=on&service_1=on&service_5=on&service_2=on&service_3=on
-2017-04-05 15:42:57,083 - DEBUG - OIM returned the following CEs: .
-2017-04-05 15:42:57,083 - DEBUG - OIM returned the following SEs: .
-2017-04-05 15:42:57,083 - INFO - OIM returned 0 CEs and 0 SEs
-2017-04-05 15:42:57,083 - DEBUG - Time log - OIM Time: 1.51265907288
-2017-04-05 15:42:57,083 - DEBUG - Starting JSON creation
-2017-04-05 15:42:57,087 - DEBUG - Done creating JSON.
-2017-04-05 15:42:57,087 - DEBUG - Using temporary file /tmp/osg_displayav_RRi for json
-2017-04-05 15:42:57,096 - DEBUG - Overwriting /var/www/html/osg_display/display.json with /tmp/osg_displayav_RRi.
-2017-04-05 15:42:57,097 - INFO - OSG Display done!
-2017-04-05 15:42:57,097 - DEBUG - Time log - Total Time: 91.5375249386
+2017-04-06 10:29:35,654 - INFO - Reading from log file /etc/osg_display/osg_display.conf.
+2017-04-06 10:29:35,655 - DEBUG - Setting script timeout to 3600.
+2017-04-06 10:29:35,668 - INFO - Successfully connected to Gratia database
+2017-04-06 10:29:49,388 - INFO - Gratia returned 297 results for jobs
+2017-04-06 10:29:49,388 - DEBUG - Job result dump:
+2017-04-06 10:29:49,389 - DEBUG - Time 2017-03-07 02:00: Count 1, Hours 10.15
+2017-04-06 10:29:49,389 - DEBUG - Time 2017-03-07 04:00: Count 1, Hours 11.33
+2017-04-06 10:29:49,389 - DEBUG - Time 2017-03-07 12:00: Count 1, Hours 5.27
+2017-04-06 10:29:49,389 - DEBUG - Time 2017-03-07 17:00: Count 11, Hours 316.51
+2017-04-06 10:29:49,389 - DEBUG - Time 2017-03-07 18:00: Count 5, Hours 146.10
+2017-04-06 10:29:49,389 - DEBUG - Time 2017-03-07 20:00: Count 10, Hours 318.68
+2017-04-06 10:29:49,389 - DEBUG - Time 2017-03-07 22:00: Count 9, Hours 303.45
+2017-04-06 10:29:49,389 - DEBUG - Time 2017-03-07 23:00: Count 5, Hours 170.89
+2017-04-06 10:29:49,389 - DEBUG - Time 2017-03-08 01:00: Count 3, Hours 110.33
+2017-04-06 10:29:49,389 - DEBUG - Time 2017-03-08 05:00: Count 1, Hours 22.71
+2017-04-06 10:29:49,390 - DEBUG - Time 2017-03-08 10:00: Count 3, Hours 81.48
+2017-04-06 10:29:49,390 - DEBUG - Time 2017-03-08 13:00: Count 1, Hours 48.01
+2017-04-06 10:29:49,390 - DEBUG - Time 2017-03-08 17:00: Count 1, Hours 16.51
+2017-04-06 10:29:49,390 - DEBUG - Time 2017-03-09 06:00: Count 1, Hours 15.98
+2017-04-06 10:29:49,390 - DEBUG - Time 2017-03-09 07:00: Count 1, Hours 16.82
+2017-04-06 10:29:49,390 - DEBUG - Time 2017-03-09 08:00: Count 1, Hours 28.91
+2017-04-06 10:29:49,390 - DEBUG - Time 2017-03-09 09:00: Count 13, Hours 369.00
+2017-04-06 10:29:49,390 - DEBUG - Time 2017-03-09 11:00: Count 6, Hours 120.57
+2017-04-06 10:29:49,390 - DEBUG - Time 2017-03-09 12:00: Count 7, Hours 146.08
+2017-04-06 10:29:49,390 - DEBUG - Time 2017-03-09 13:00: Count 9, Hours 215.24
+2017-04-06 10:29:49,391 - DEBUG - Time 2017-03-09 14:00: Count 33, Hours 928.93
+2017-04-06 10:29:49,391 - DEBUG - Time 2017-03-09 15:00: Count 10, Hours 236.05
+2017-04-06 10:29:49,391 - DEBUG - Time 2017-03-09 16:00: Count 9, Hours 222.08
+2017-04-06 10:29:49,391 - DEBUG - Time 2017-03-09 17:00: Count 2, Hours 50.54
+2017-04-06 10:29:49,391 - DEBUG - Time 2017-03-09 18:00: Count 4, Hours 103.28
+2017-04-06 10:29:49,391 - DEBUG - Time 2017-03-09 19:00: Count 2, Hours 54.44
+2017-04-06 10:29:49,391 - DEBUG - Time 2017-03-09 21:00: Count 6, Hours 191.81
+2017-04-06 10:29:49,391 - DEBUG - Time 2017-03-09 22:00: Count 2, Hours 54.59
+2017-04-06 10:29:49,391 - DEBUG - Time 2017-03-09 23:00: Count 1, Hours 28.66
+2017-04-06 10:29:49,391 - DEBUG - Time 2017-03-10 04:00: Count 16, Hours 768.11
+2017-04-06 10:29:49,392 - DEBUG - Time 2017-03-10 05:00: Count 1, Hours 48.01
+2017-04-06 10:29:49,392 - DEBUG - Time 2017-03-10 09:00: Count 50, Hours 2221.58
+2017-04-06 10:29:49,392 - DEBUG - Time 2017-03-10 10:00: Count 23, Hours 1024.79
+2017-04-06 10:29:49,392 - DEBUG - Time 2017-03-10 12:00: Count 10, Hours 480.08
+2017-04-06 10:29:49,392 - DEBUG - Time 2017-03-10 13:00: Count 96, Hours 4608.59
+2017-04-06 10:29:49,392 - DEBUG - Time 2017-03-10 15:00: Count 3, Hours 144.02
+2017-04-06 10:29:49,392 - DEBUG - Time 2017-03-10 19:00: Count 1, Hours 48.01
+2017-04-06 10:29:49,392 - DEBUG - Time 2017-03-11 14:00: Count 4, Hours 10.94
+2017-04-06 10:29:49,392 - DEBUG - Time 2017-03-11 17:00: Count 1, Hours 5.22
+2017-04-06 10:29:49,392 - DEBUG - Time 2017-03-11 18:00: Count 3, Hours 8.16
+2017-04-06 10:29:49,393 - DEBUG - Time 2017-03-11 19:00: Count 2, Hours 8.61
+2017-04-06 10:29:49,393 - DEBUG - Time 2017-03-12 07:00: Count 1, Hours 15.52
+2017-04-06 10:29:49,393 - DEBUG - Time 2017-03-12 12:00: Count 26, Hours 1248.15
+2017-04-06 10:29:49,393 - DEBUG - Time 2017-03-12 17:00: Count 2, Hours 21.72
+2017-04-06 10:29:49,393 - DEBUG - Time 2017-03-14 01:00: Count 1, Hours 29.61
+2017-04-06 10:29:49,393 - DEBUG - Time 2017-03-17 00:00: Count 1, Hours 18.14
+2017-04-06 10:29:49,393 - DEBUG - Time 2017-03-17 01:00: Count 1, Hours 18.75
+2017-04-06 10:29:49,393 - DEBUG - Time 2017-03-17 03:00: Count 1, Hours 20.38
+2017-04-06 10:29:49,393 - DEBUG - Time 2017-03-17 06:00: Count 2, Hours 25.85
+2017-04-06 10:29:49,393 - DEBUG - Time 2017-03-17 07:00: Count 9, Hours 119.62
+2017-04-06 10:29:49,394 - DEBUG - Time 2017-03-17 09:00: Count 4, Hours 62.03
+2017-04-06 10:29:49,394 - DEBUG - Time 2017-03-17 11:00: Count 1, Hours 17.68
+2017-04-06 10:29:49,394 - DEBUG - Time 2017-03-17 12:00: Count 1, Hours 18.34
+2017-04-06 10:29:49,394 - DEBUG - Time 2017-03-18 06:00: Count 1, Hours 40.22
+2017-04-06 10:29:49,394 - DEBUG - Time 2017-03-20 03:00: Count 3, Hours 39.41
+2017-04-06 10:29:49,394 - DEBUG - Time 2017-03-20 04:00: Count 5, Hours 66.44
+2017-04-06 10:29:49,394 - DEBUG - Time 2017-03-20 05:00: Count 2, Hours 27.60
+2017-04-06 10:29:49,394 - DEBUG - Time 2017-03-20 08:00: Count 2, Hours 36.21
+2017-04-06 10:29:49,394 - DEBUG - Time 2017-03-20 09:00: Count 2, Hours 34.83
+2017-04-06 10:29:49,394 - DEBUG - Time 2017-03-20 10:00: Count 5, Hours 99.72
+2017-04-06 10:29:49,395 - DEBUG - Time 2017-03-20 15:00: Count 3, Hours 65.89
+2017-04-06 10:29:49,395 - DEBUG - Time 2017-03-22 22:00: Count 1, Hours 12.73
+2017-04-06 10:29:49,395 - DEBUG - Time 2017-03-22 23:00: Count 2, Hours 24.63
+2017-04-06 10:29:49,395 - DEBUG - Time 2017-03-23 00:00: Count 3, Hours 35.58
+2017-04-06 10:29:49,395 - DEBUG - Time 2017-03-23 01:00: Count 4, Hours 53.68
+2017-04-06 10:29:49,395 - DEBUG - Time 2017-03-23 05:00: Count 2, Hours 39.85
+2017-04-06 10:29:49,395 - DEBUG - Time 2017-03-23 08:00: Count 1, Hours 32.25
+2017-04-06 10:29:49,395 - DEBUG - Time 2017-03-24 00:00: Count 1, Hours 7.75
+2017-04-06 10:29:49,395 - DEBUG - Time 2017-03-24 01:00: Count 2, Hours 17.28
+2017-04-06 10:29:49,395 - DEBUG - Time 2017-03-24 06:00: Count 2, Hours 26.85
+2017-04-06 10:29:49,396 - DEBUG - Time 2017-03-25 01:00: Count 1, Hours 33.49
+2017-04-06 10:29:49,396 - DEBUG - Time 2017-03-25 02:00: Count 3, Hours 102.04
+2017-04-06 10:29:49,396 - DEBUG - Time 2017-03-25 07:00: Count 1, Hours 38.68
+2017-04-06 10:29:49,396 - DEBUG - Time 2017-03-25 08:00: Count 2, Hours 80.24
+2017-04-06 10:29:49,396 - DEBUG - Time 2017-03-25 10:00: Count 1, Hours 41.90
+2017-04-06 10:29:49,396 - DEBUG - Time 2017-03-25 12:00: Count 1, Hours 43.97
+2017-04-06 10:29:49,396 - DEBUG - Time 2017-03-25 16:00: Count 2, Hours 96.20
+2017-04-06 10:29:49,396 - DEBUG - Time 2017-03-25 21:00: Count 1, Hours 52.90
+2017-04-06 10:29:49,396 - DEBUG - Time 2017-03-26 00:00: Count 1, Hours 55.60
+2017-04-06 10:29:49,396 - DEBUG - Time 2017-03-26 15:00: Count 6, Hours 144.03
+2017-04-06 10:29:49,397 - DEBUG - Time 2017-03-26 20:00: Count 1, Hours 76.13
+2017-04-06 10:29:49,397 - DEBUG - Time 2017-03-26 23:00: Count 1, Hours 21.93
+2017-04-06 10:29:49,397 - DEBUG - Time 2017-03-27 00:00: Count 5, Hours 112.19
+2017-04-06 10:29:49,397 - DEBUG - Time 2017-03-27 01:00: Count 10, Hours 233.77
+2017-04-06 10:29:49,397 - DEBUG - Time 2017-03-27 02:00: Count 11, Hours 264.71
+2017-04-06 10:29:49,397 - DEBUG - Time 2017-03-27 03:00: Count 10, Hours 245.43
+2017-04-06 10:29:49,397 - DEBUG - Time 2017-03-27 04:00: Count 10, Hours 263.02
+2017-04-06 10:29:49,397 - DEBUG - Time 2017-03-27 05:00: Count 4, Hours 98.07
+2017-04-06 10:29:49,397 - DEBUG - Time 2017-03-27 06:00: Count 4, Hours 114.61
+2017-04-06 10:29:49,397 - DEBUG - Time 2017-03-27 07:00: Count 1, Hours 29.97
+2017-04-06 10:29:49,398 - DEBUG - Time 2017-03-27 08:00: Count 2, Hours 61.28
+2017-04-06 10:29:49,398 - DEBUG - Time 2017-03-27 09:00: Count 4, Hours 124.10
+2017-04-06 10:29:49,398 - DEBUG - Time 2017-03-27 10:00: Count 4, Hours 132.27
+2017-04-06 10:29:49,398 - DEBUG - Time 2017-03-27 11:00: Count 8, Hours 272.52
+2017-04-06 10:29:49,398 - DEBUG - Time 2017-03-27 12:00: Count 5, Hours 177.11
+2017-04-06 10:29:49,398 - DEBUG - Time 2017-03-27 13:00: Count 2, Hours 71.72
+2017-04-06 10:29:49,398 - DEBUG - Time 2017-03-27 14:00: Count 6, Hours 209.15
+2017-04-06 10:29:49,398 - DEBUG - Time 2017-03-27 15:00: Count 4, Hours 153.95
+2017-04-06 10:29:49,398 - DEBUG - Time 2017-03-27 16:00: Count 3, Hours 118.12
+2017-04-06 10:29:49,398 - DEBUG - Time 2017-03-27 17:00: Count 5, Hours 200.85
+2017-04-06 10:29:49,399 - DEBUG - Time 2017-03-27 18:00: Count 7, Hours 285.28
+2017-04-06 10:29:49,399 - DEBUG - Time 2017-03-27 19:00: Count 6, Hours 251.07
+2017-04-06 10:29:49,399 - DEBUG - Time 2017-03-27 20:00: Count 10, Hours 425.97
+2017-04-06 10:29:49,399 - DEBUG - Time 2017-03-27 21:00: Count 11, Hours 484.40
+2017-04-06 10:29:49,399 - DEBUG - Time 2017-03-27 22:00: Count 4, Hours 181.67
+2017-04-06 10:29:49,399 - DEBUG - Time 2017-03-27 23:00: Count 4, Hours 184.88
+2017-04-06 10:29:49,399 - DEBUG - Time 2017-03-28 14:00: Count 1, Hours 12.02
+2017-04-06 10:29:49,399 - DEBUG - Time 2017-03-28 20:00: Count 1, Hours 0.00
+2017-04-06 10:29:49,399 - DEBUG - Time 2017-03-29 05:00: Count 1, Hours 0.23
+2017-04-06 10:29:49,399 - DEBUG - Time 2017-03-29 07:00: Count 1, Hours 0.19
+2017-04-06 10:29:49,399 - DEBUG - Time 2017-03-29 08:00: Count 1, Hours 0.00
+2017-04-06 10:29:49,400 - DEBUG - Time 2017-03-29 09:00: Count 2, Hours 4.24
+2017-04-06 10:29:49,400 - DEBUG - Time 2017-03-29 11:00: Count 5, Hours 9.40
+2017-04-06 10:29:49,400 - DEBUG - Time 2017-03-29 13:00: Count 1, Hours 3.10
+2017-04-06 10:29:49,400 - DEBUG - Time 2017-03-29 14:00: Count 1, Hours 2.89
+2017-04-06 10:29:49,400 - DEBUG - Time 2017-03-29 15:00: Count 18, Hours 0.28
+2017-04-06 10:29:49,400 - DEBUG - Time 2017-03-29 16:00: Count 1, Hours 4.99
+2017-04-06 10:29:49,400 - DEBUG - Time 2017-03-29 17:00: Count 2, Hours 8.44
+2017-04-06 10:29:49,400 - DEBUG - Time 2017-03-29 18:00: Count 1, Hours 3.18
+2017-04-06 10:29:49,400 - DEBUG - Time 2017-03-29 19:00: Count 5, Hours 8.39
+2017-04-06 10:29:49,400 - DEBUG - Time 2017-03-29 20:00: Count 2, Hours 11.70
+2017-04-06 10:29:49,401 - DEBUG - Time 2017-03-29 21:00: Count 2, Hours 17.87
+2017-04-06 10:29:49,401 - DEBUG - Time 2017-03-29 22:00: Count 5, Hours 40.26
+2017-04-06 10:29:49,401 - DEBUG - Time 2017-03-29 23:00: Count 4, Hours 351.01
+2017-04-06 10:29:49,401 - DEBUG - Time 2017-03-30 00:00: Count 1, Hours 8.92
+2017-04-06 10:29:49,401 - DEBUG - Time 2017-03-30 01:00: Count 7, Hours 65.54
+2017-04-06 10:29:49,401 - DEBUG - Time 2017-03-30 02:00: Count 10, Hours 75.96
+2017-04-06 10:29:49,401 - DEBUG - Time 2017-03-30 03:00: Count 12, Hours 147.43
+2017-04-06 10:29:49,401 - DEBUG - Time 2017-03-30 04:00: Count 36, Hours 470.66
+2017-04-06 10:29:49,401 - DEBUG - Time 2017-03-30 05:00: Count 30, Hours 428.03
+2017-04-06 10:29:49,401 - DEBUG - Time 2017-03-30 06:00: Count 50, Hours 753.94
+2017-04-06 10:29:49,402 - DEBUG - Time 2017-03-30 07:00: Count 62, Hours 1317.65
+2017-04-06 10:29:49,402 - DEBUG - Time 2017-03-30 08:00: Count 85, Hours 1436.19
+2017-04-06 10:29:49,402 - DEBUG - Time 2017-03-30 09:00: Count 103, Hours 1822.09
+2017-04-06 10:29:49,402 - DEBUG - Time 2017-03-30 10:00: Count 107, Hours 1921.78
+2017-04-06 10:29:49,402 - DEBUG - Time 2017-03-30 11:00: Count 111, Hours 2214.11
+2017-04-06 10:29:49,402 - DEBUG - Time 2017-03-30 12:00: Count 137, Hours 2840.92
+2017-04-06 10:29:49,402 - DEBUG - Time 2017-03-30 13:00: Count 132, Hours 2817.21
+2017-04-06 10:29:49,402 - DEBUG - Time 2017-03-30 14:00: Count 122, Hours 2878.26
+2017-04-06 10:29:49,402 - DEBUG - Time 2017-03-30 15:00: Count 109, Hours 2701.86
+2017-04-06 10:29:49,402 - DEBUG - Time 2017-03-30 16:00: Count 92, Hours 2391.52
+2017-04-06 10:29:49,403 - DEBUG - Time 2017-03-30 17:00: Count 87, Hours 2391.87
+2017-04-06 10:29:49,403 - DEBUG - Time 2017-03-30 18:00: Count 66, Hours 1900.92
+2017-04-06 10:29:49,403 - DEBUG - Time 2017-03-30 19:00: Count 57, Hours 1776.03
+2017-04-06 10:29:49,403 - DEBUG - Time 2017-03-30 20:00: Count 62, Hours 1988.89
+2017-04-06 10:29:49,403 - DEBUG - Time 2017-03-30 21:00: Count 48, Hours 1730.90
+2017-04-06 10:29:49,403 - DEBUG - Time 2017-03-30 22:00: Count 49, Hours 1687.26
+2017-04-06 10:29:49,403 - DEBUG - Time 2017-03-30 23:00: Count 44, Hours 1546.12
+2017-04-06 10:29:49,403 - DEBUG - Time 2017-03-31 00:00: Count 30, Hours 1113.70
+2017-04-06 10:29:49,403 - DEBUG - Time 2017-03-31 01:00: Count 25, Hours 923.12
+2017-04-06 10:29:49,403 - DEBUG - Time 2017-03-31 02:00: Count 30, Hours 1182.30
+2017-04-06 10:29:49,404 - DEBUG - Time 2017-03-31 03:00: Count 26, Hours 1058.36
+2017-04-06 10:29:49,404 - DEBUG - Time 2017-03-31 04:00: Count 27, Hours 1135.00
+2017-04-06 10:29:49,404 - DEBUG - Time 2017-03-31 05:00: Count 27, Hours 1179.72
+2017-04-06 10:29:49,404 - DEBUG - Time 2017-03-31 06:00: Count 20, Hours 873.11
+2017-04-06 10:29:49,404 - DEBUG - Time 2017-03-31 07:00: Count 19, Hours 852.68
+2017-04-06 10:29:49,404 - DEBUG - Time 2017-03-31 08:00: Count 23, Hours 1064.58
+2017-04-06 10:29:49,404 - DEBUG - Time 2017-03-31 09:00: Count 27, Hours 1286.60
+2017-04-06 10:29:49,404 - DEBUG - Time 2017-03-31 10:00: Count 25, Hours 1232.13
+2017-04-06 10:29:49,404 - DEBUG - Time 2017-03-31 11:00: Count 31, Hours 1560.93
+2017-04-06 10:29:49,404 - DEBUG - Time 2017-03-31 12:00: Count 33, Hours 1691.64
+2017-04-06 10:29:49,405 - DEBUG - Time 2017-03-31 13:00: Count 25, Hours 1319.53
+2017-04-06 10:29:49,405 - DEBUG - Time 2017-03-31 14:00: Count 29, Hours 1560.69
+2017-04-06 10:29:49,405 - DEBUG - Time 2017-03-31 15:00: Count 28, Hours 1534.88
+2017-04-06 10:29:49,405 - DEBUG - Time 2017-03-31 16:00: Count 31, Hours 1735.06
+2017-04-06 10:29:49,405 - DEBUG - Time 2017-03-31 17:00: Count 36, Hours 2062.94
+2017-04-06 10:29:49,405 - DEBUG - Time 2017-03-31 18:00: Count 32, Hours 1862.53
+2017-04-06 10:29:49,405 - DEBUG - Time 2017-03-31 19:00: Count 26, Hours 1550.24
+2017-04-06 10:29:49,405 - DEBUG - Time 2017-03-31 20:00: Count 24, Hours 1446.77
+2017-04-06 10:29:49,405 - DEBUG - Time 2017-03-31 21:00: Count 26, Hours 1596.30
+2017-04-06 10:29:49,405 - DEBUG - Time 2017-03-31 22:00: Count 18, Hours 1111.33
+2017-04-06 10:29:49,406 - DEBUG - Time 2017-03-31 23:00: Count 23, Hours 1459.56
+2017-04-06 10:29:49,406 - DEBUG - Time 2017-04-01 00:00: Count 18, Hours 1164.85
+2017-04-06 10:29:49,406 - DEBUG - Time 2017-04-01 01:00: Count 23, Hours 1533.81
+2017-04-06 10:29:49,406 - DEBUG - Time 2017-04-01 02:00: Count 24, Hours 1604.74
+2017-04-06 10:29:49,406 - DEBUG - Time 2017-04-01 03:00: Count 25, Hours 1754.63
+2017-04-06 10:29:49,406 - DEBUG - Time 2017-04-01 04:00: Count 19, Hours 1330.95
+2017-04-06 10:29:49,406 - DEBUG - Time 2017-04-01 05:00: Count 16, Hours 1127.95
+2017-04-06 10:29:49,406 - DEBUG - Time 2017-04-01 06:00: Count 37, Hours 2752.00
+2017-04-06 10:29:49,406 - DEBUG - Time 2017-04-01 07:00: Count 37, Hours 2753.82
+2017-04-06 10:29:49,406 - DEBUG - Time 2017-04-01 08:00: Count 22, Hours 1702.84
+2017-04-06 10:29:49,406 - DEBUG - Time 2017-04-01 09:00: Count 1, Hours 73.70
+2017-04-06 10:29:49,407 - DEBUG - Time 2017-04-01 12:00: Count 2, Hours 152.08
+2017-04-06 10:29:49,407 - DEBUG - Time 2017-04-01 13:00: Count 2, Hours 154.03
+2017-04-06 10:29:49,407 - DEBUG - Time 2017-04-01 14:00: Count 1, Hours 121.57
+2017-04-06 10:29:49,407 - DEBUG - Time 2017-04-01 19:00: Count 1, Hours 126.57
+2017-04-06 10:29:49,407 - DEBUG - Time 2017-04-01 20:00: Count 1, Hours 84.10
+2017-04-06 10:29:49,407 - DEBUG - Time 2017-04-01 21:00: Count 2, Hours 258.77
+2017-04-06 10:29:49,407 - DEBUG - Time 2017-04-01 22:00: Count 4, Hours 437.12
+2017-04-06 10:29:49,407 - DEBUG - Time 2017-04-02 00:00: Count 6, Hours 460.31
+2017-04-06 10:29:49,407 - DEBUG - Time 2017-04-02 01:00: Count 1, Hours 133.02
+2017-04-06 10:29:49,407 - DEBUG - Time 2017-04-02 02:00: Count 2, Hours 228.95
+2017-04-06 10:29:49,408 - DEBUG - Time 2017-04-02 03:00: Count 4, Hours 333.67
+2017-04-06 10:29:49,408 - DEBUG - Time 2017-04-02 04:00: Count 17, Hours 1714.52
+2017-04-06 10:29:49,408 - DEBUG - Time 2017-04-02 05:00: Count 22, Hours 2095.54
+2017-04-06 10:29:49,408 - DEBUG - Time 2017-04-02 06:00: Count 2, Hours 109.40
+2017-04-06 10:29:49,408 - DEBUG - Time 2017-04-02 07:00: Count 32, Hours 4253.75
+2017-04-06 10:29:49,408 - DEBUG - Time 2017-04-02 08:00: Count 2, Hours 123.39
+2017-04-06 10:29:49,408 - DEBUG - Time 2017-04-02 09:00: Count 15, Hours 1593.53
+2017-04-06 10:29:49,408 - DEBUG - Time 2017-04-02 10:00: Count 10, Hours 1016.52
+2017-04-06 10:29:49,408 - DEBUG - Time 2017-04-02 11:00: Count 11, Hours 613.70
+2017-04-06 10:29:49,408 - DEBUG - Time 2017-04-02 12:00: Count 9, Hours 539.72
+2017-04-06 10:29:49,409 - DEBUG - Time 2017-04-02 13:00: Count 28, Hours 3376.75
+2017-04-06 10:29:49,409 - DEBUG - Time 2017-04-02 14:00: Count 19, Hours 1963.81
+2017-04-06 10:29:49,409 - DEBUG - Time 2017-04-02 15:00: Count 4, Hours 385.17
+2017-04-06 10:29:49,409 - DEBUG - Time 2017-04-02 16:00: Count 12, Hours 1535.11
+2017-04-06 10:29:49,409 - DEBUG - Time 2017-04-02 17:00: Count 26, Hours 3185.98
+2017-04-06 10:29:49,409 - DEBUG - Time 2017-04-02 18:00: Count 53, Hours 2696.00
+2017-04-06 10:29:49,409 - DEBUG - Time 2017-04-02 19:00: Count 27, Hours 1419.71
+2017-04-06 10:29:49,409 - DEBUG - Time 2017-04-02 20:00: Count 7, Hours 775.94
+2017-04-06 10:29:49,409 - DEBUG - Time 2017-04-02 21:00: Count 10, Hours 1384.07
+2017-04-06 10:29:49,409 - DEBUG - Time 2017-04-02 22:00: Count 3, Hours 306.98
+2017-04-06 10:29:49,410 - DEBUG - Time 2017-04-02 23:00: Count 13, Hours 1377.53
+2017-04-06 10:29:49,410 - DEBUG - Time 2017-04-03 00:00: Count 15, Hours 1955.47
+2017-04-06 10:29:49,410 - DEBUG - Time 2017-04-03 01:00: Count 10, Hours 1100.82
+2017-04-06 10:29:49,410 - DEBUG - Time 2017-04-03 02:00: Count 19, Hours 1683.07
+2017-04-06 10:29:49,410 - DEBUG - Time 2017-04-03 03:00: Count 13, Hours 1109.04
+2017-04-06 10:29:49,410 - DEBUG - Time 2017-04-03 04:00: Count 11, Hours 1378.35
+2017-04-06 10:29:49,410 - DEBUG - Time 2017-04-03 05:00: Count 5, Hours 669.79
+2017-04-06 10:29:49,410 - DEBUG - Time 2017-04-03 06:00: Count 13, Hours 1853.39
+2017-04-06 10:29:49,410 - DEBUG - Time 2017-04-03 07:00: Count 11, Hours 1324.01
+2017-04-06 10:29:49,410 - DEBUG - Time 2017-04-03 08:00: Count 8, Hours 979.09
+2017-04-06 10:29:49,411 - DEBUG - Time 2017-04-03 09:00: Count 4, Hours 396.14
+2017-04-06 10:29:49,411 - DEBUG - Time 2017-04-03 11:00: Count 1, Hours 95.83
+2017-04-06 10:29:49,411 - DEBUG - Time 2017-04-03 12:00: Count 1, Hours 168.97
+2017-04-06 10:29:49,411 - DEBUG - Time 2017-04-03 13:00: Count 3, Hours 509.53
+2017-04-06 10:29:49,411 - DEBUG - Time 2017-04-03 14:00: Count 1, Hours 58.67
+2017-04-06 10:29:49,411 - DEBUG - Time 2017-04-03 16:00: Count 3, Hours 324.51
+2017-04-06 10:29:49,411 - DEBUG - Time 2017-04-03 17:00: Count 2, Hours 346.31
+2017-04-06 10:29:49,411 - DEBUG - Time 2017-04-03 18:00: Count 2, Hours 348.10
+2017-04-06 10:29:49,411 - DEBUG - Time 2017-04-03 19:00: Count 1, Hours 174.65
+2017-04-06 10:29:49,411 - DEBUG - Time 2017-04-03 20:00: Count 10, Hours 705.61
+2017-04-06 10:29:49,412 - DEBUG - Time 2017-04-03 21:00: Count 1, Hours 65.32
+2017-04-06 10:29:49,412 - DEBUG - Time 2017-04-03 22:00: Count 6, Hours 118.98
+2017-04-06 10:29:49,412 - DEBUG - Time 2017-04-03 23:00: Count 12, Hours 248.70
+2017-04-06 10:29:49,412 - DEBUG - Time 2017-04-04 00:00: Count 1, Hours 67.59
+2017-04-06 10:29:49,412 - DEBUG - Time 2017-04-04 01:00: Count 2, Hours 139.69
+2017-04-06 10:29:49,412 - DEBUG - Time 2017-04-04 02:00: Count 5, Hours 78.06
+2017-04-06 10:29:49,412 - DEBUG - Time 2017-04-04 03:00: Count 5, Hours 152.51
+2017-04-06 10:29:49,412 - DEBUG - Time 2017-04-04 04:00: Count 4, Hours 2.32
+2017-04-06 10:29:49,412 - DEBUG - Time 2017-04-04 05:00: Count 15, Hours 3.00
+2017-04-06 10:29:49,412 - DEBUG - Time 2017-04-04 06:00: Count 11, Hours 8.66
+2017-04-06 10:29:49,413 - DEBUG - Time 2017-04-04 07:00: Count 14, Hours 96.44
+2017-04-06 10:29:49,413 - DEBUG - Time 2017-04-04 08:00: Count 5, Hours 9.47
+2017-04-06 10:29:49,413 - DEBUG - Time 2017-04-04 09:00: Count 5, Hours 144.72
+2017-04-06 10:29:49,413 - DEBUG - Time 2017-04-04 11:00: Count 2, Hours 8.03
+2017-04-06 10:29:49,413 - DEBUG - Time 2017-04-04 12:00: Count 2, Hours 1.85
+2017-04-06 10:29:49,413 - DEBUG - Time 2017-04-04 13:00: Count 2, Hours 147.35
+2017-04-06 10:29:49,413 - DEBUG - Time 2017-04-04 14:00: Count 5, Hours 207.86
+2017-04-06 10:29:49,413 - DEBUG - Time 2017-04-04 15:00: Count 44, Hours 66.48
+2017-04-06 10:29:49,413 - DEBUG - Time 2017-04-04 16:00: Count 77, Hours 46.02
+2017-04-06 10:29:49,413 - DEBUG - Time 2017-04-04 17:00: Count 690, Hours 175.62
+2017-04-06 10:29:49,414 - DEBUG - Time 2017-04-04 18:00: Count 616, Hours 155.31
+2017-04-06 10:29:49,414 - DEBUG - Time 2017-04-04 19:00: Count 129, Hours 224.20
+2017-04-06 10:29:49,414 - DEBUG - Time 2017-04-04 20:00: Count 37, Hours 81.66
+2017-04-06 10:29:49,414 - DEBUG - Time 2017-04-04 21:00: Count 35, Hours 98.31
+2017-04-06 10:29:49,414 - DEBUG - Time 2017-04-04 22:00: Count 49, Hours 397.25
+2017-04-06 10:29:49,414 - DEBUG - Time 2017-04-04 23:00: Count 68, Hours 739.90
+2017-04-06 10:29:49,414 - DEBUG - Time 2017-04-05 00:00: Count 48, Hours 625.97
+2017-04-06 10:29:49,414 - DEBUG - Time 2017-04-05 01:00: Count 46, Hours 347.10
+2017-04-06 10:29:49,414 - DEBUG - Time 2017-04-05 02:00: Count 1597, Hours 4657.86
+2017-04-06 10:29:49,414 - DEBUG - Time 2017-04-05 03:00: Count 12083, Hours 34474.83
+2017-04-06 10:29:49,415 - DEBUG - Time 2017-04-05 04:00: Count 11050, Hours 29619.93
+2017-04-06 10:29:49,415 - DEBUG - Time 2017-04-05 05:00: Count 10652, Hours 30865.98
+2017-04-06 10:29:49,415 - DEBUG - Time 2017-04-05 06:00: Count 11211, Hours 29045.00
+2017-04-06 10:29:49,415 - DEBUG - Time 2017-04-05 07:00: Count 10661, Hours 29460.97
+2017-04-06 10:29:49,415 - DEBUG - Time 2017-04-05 08:00: Count 14593, Hours 62286.31
+2017-04-06 10:29:49,415 - DEBUG - Time 2017-04-05 09:00: Count 12988, Hours 37908.99
+2017-04-06 10:29:49,415 - DEBUG - Time 2017-04-05 10:00: Count 12055, Hours 29152.76
+2017-04-06 10:29:49,415 - DEBUG - Time 2017-04-05 11:00: Count 13332, Hours 29028.44
+2017-04-06 10:29:49,415 - DEBUG - Time 2017-04-05 12:00: Count 14386, Hours 33939.28
+2017-04-06 10:29:49,415 - DEBUG - Time 2017-04-05 13:00: Count 14512, Hours 31165.84
+2017-04-06 10:29:49,416 - DEBUG - Time 2017-04-05 14:00: Count 16668, Hours 30264.54
+2017-04-06 10:29:49,416 - DEBUG - Time 2017-04-05 15:00: Count 16497, Hours 37565.89
+2017-04-06 10:29:49,416 - DEBUG - Time 2017-04-05 16:00: Count 13303, Hours 46981.38
+2017-04-06 10:29:49,416 - DEBUG - Time 2017-04-05 17:00: Count 16709, Hours 47395.23
+2017-04-06 10:29:49,416 - DEBUG - Time 2017-04-05 18:00: Count 13641, Hours 42494.56
+2017-04-06 10:29:49,416 - DEBUG - Time 2017-04-05 19:00: Count 16058, Hours 37524.91
+2017-04-06 10:29:49,416 - DEBUG - Time 2017-04-05 20:00: Count 17294, Hours 444764.29
+2017-04-06 10:29:49,416 - DEBUG - Time 2017-04-05 21:00: Count 14308, Hours 28893.84
+2017-04-06 10:29:49,416 - DEBUG - Time 2017-04-05 22:00: Count 15785, Hours 35394.84
+2017-04-06 10:29:49,416 - DEBUG - Time 2017-04-05 23:00: Count 17699, Hours 37103.00
+2017-04-06 10:29:49,416 - DEBUG - Time 2017-04-06 00:00: Count 17745, Hours 36791.98
+2017-04-06 10:29:49,417 - DEBUG - Time 2017-04-06 01:00: Count 15473, Hours 59112.06
+2017-04-06 10:29:49,417 - DEBUG - Time 2017-04-06 02:00: Count 13833, Hours 44931.57
+2017-04-06 10:29:49,417 - DEBUG - Time 2017-04-06 03:00: Count 14406, Hours 54308.44
+2017-04-06 10:29:49,417 - DEBUG - Time 2017-04-06 04:00: Count 13036, Hours 53799.31
+2017-04-06 10:29:49,417 - DEBUG - Time 2017-04-06 05:00: Count 12089, Hours 43330.92
+2017-04-06 10:29:49,417 - DEBUG - Time 2017-04-06 06:00: Count 13156, Hours 43474.34
+2017-04-06 10:29:49,417 - DEBUG - Time 2017-04-06 07:00: Count 14252, Hours 52116.59
+2017-04-06 10:29:49,417 - DEBUG - Time 2017-04-06 08:00: Count 16927, Hours 46703.30
+2017-04-06 10:29:49,417 - DEBUG - Time 2017-04-06 09:00: Count 16951, Hours 54689.90
+2017-04-06 10:29:49,417 - DEBUG - Time 2017-04-06 10:00: Count 15909, Hours 53122.43
+2017-04-06 10:29:49,418 - DEBUG - Time 2017-04-06 11:00: Count 16220, Hours 60774.78
+2017-04-06 10:29:49,418 - DEBUG - Time 2017-04-06 12:00: Count 17258, Hours 67033.26
+2017-04-06 10:29:49,418 - DEBUG - Time 2017-04-06 13:00: Count 14125, Hours 38767.01
+2017-04-06 10:29:49,418 - DEBUG - Time 2017-04-06 14:00: Count 10587, Hours 29251.85
+2017-04-06 10:29:49,420 - DEBUG - Using temporary file /tmp/osg_displayc11Ee3 for jobs_hourly
+2017-04-06 10:29:49,634 - DEBUG - Overwriting /var/www/html/osg_display/jobs_hourly.png with /tmp/osg_displayc11Ee3.
+2017-04-06 10:29:49,635 - DEBUG - Time log - Hourly Jobs Query Time: 13.9795768261
+2017-04-06 10:29:49,961 - DEBUG - Using temporary file /tmp/osg_displayczmXY4 for hours_hourly
+2017-04-06 10:29:50,141 - DEBUG - Overwriting /var/www/html/osg_display/cpu_hours_hourly.png with /tmp/osg_displayczmXY4.
+2017-04-06 10:29:50,141 - DEBUG - Time log - Hourly Jobs Graph Time: 0.506117105484
+2017-04-06 10:29:50,154 - INFO - Successfully loaded transfer data from cache; 62 cache entries.
+2017-04-06 10:29:50,154 - DEBUG - Ignoring cached data from 2017-04-05 13:00:00 as it is over an hour old.
+2017-04-06 10:29:50,154 - DEBUG - Ignoring cached data from 2017-04-05 18:00:00 as it is over an hour old.
+2017-04-06 10:29:50,154 - DEBUG - Ignoring cached data from 2017-04-04 18:00:00 as it is over an hour old.
+2017-04-06 10:29:50,154 - DEBUG - Ignoring cached data from 2017-04-04 21:00:00 as it is over an hour old.
+2017-04-06 10:29:50,154 - DEBUG - Ignoring cached data from 2017-04-03 14:00:00 as it is over an hour old.
+2017-04-06 10:29:50,154 - DEBUG - Ignoring cached data from 2017-04-04 06:00:00 as it is over an hour old.
+2017-04-06 10:29:50,154 - DEBUG - Ignoring cached data from 2017-04-04 08:00:00 as it is over an hour old.
+2017-04-06 10:29:50,154 - DEBUG - Ignoring cached data from 2017-04-04 03:00:00 as it is over an hour old.
+2017-04-06 10:29:50,154 - DEBUG - Ignoring cached data from 2017-04-05 01:00:00 as it is over an hour old.
+2017-04-06 10:29:50,154 - DEBUG - Ignoring cached data from 2017-04-04 14:00:00 as it is over an hour old.
+2017-04-06 10:29:50,154 - DEBUG - Ignoring cached data from 2017-04-04 01:00:00 as it is over an hour old.
+2017-04-06 10:29:50,155 - DEBUG - Ignoring cached data from 2017-04-04 16:00:00 as it is over an hour old.
+2017-04-06 10:29:50,155 - DEBUG - Ignoring cached data from 2017-04-04 11:00:00 as it is over an hour old.
+2017-04-06 10:29:50,155 - DEBUG - Ignoring cached data from 2017-04-03 07:00:00 as it is over an hour old.
+2017-04-06 10:29:50,155 - DEBUG - Ignoring cached data from 2017-04-05 06:00:00 as it is over an hour old.
+2017-04-06 10:29:50,155 - DEBUG - Ignoring cached data from 2017-04-03 17:00:00 as it is over an hour old.
+2017-04-06 10:29:50,155 - DEBUG - Ignoring cached data from 2017-04-03 10:00:00 as it is over an hour old.
+2017-04-06 10:29:50,155 - DEBUG - Ignoring cached data from 2017-04-03 20:00:00 as it is over an hour old.
+2017-04-06 10:29:50,155 - DEBUG - Ignoring cached data from 2017-04-05 09:00:00 as it is over an hour old.
+2017-04-06 10:29:50,155 - DEBUG - Ignoring cached data from 2017-04-05 14:00:00 as it is over an hour old.
+2017-04-06 10:29:50,155 - DEBUG - Ignoring cached data from 2017-04-03 18:00:00 as it is over an hour old.
+2017-04-06 10:29:50,155 - DEBUG - Ignoring cached data from 2017-04-05 03:00:00 as it is over an hour old.
+2017-04-06 10:29:50,155 - DEBUG - Ignoring cached data from 2017-04-04 04:00:00 as it is over an hour old.
+2017-04-06 10:29:50,156 - DEBUG - Ignoring cached data from 2017-04-03 09:00:00 as it is over an hour old.
+2017-04-06 10:29:50,156 - DEBUG - Ignoring cached data from 2017-04-03 23:00:00 as it is over an hour old.
+2017-04-06 10:29:50,156 - DEBUG - Ignoring cached data from 2017-04-04 12:00:00 as it is over an hour old.
+2017-04-06 10:29:50,156 - DEBUG - Ignoring cached data from 2017-04-04 07:00:00 as it is over an hour old.
+2017-04-06 10:29:50,156 - DEBUG - Ignoring cached data from 2017-04-03 21:00:00 as it is over an hour old.
+2017-04-06 10:29:50,156 - DEBUG - Ignoring cached data from 2017-04-04 22:00:00 as it is over an hour old.
+2017-04-06 10:29:50,156 - DEBUG - Ignoring cached data from 2017-04-04 09:00:00 as it is over an hour old.
+2017-04-06 10:29:50,156 - DEBUG - Ignoring cached data from 2017-04-04 19:00:00 as it is over an hour old.
+2017-04-06 10:29:50,156 - DEBUG - Ignoring cached data from 2017-04-03 15:00:00 as it is over an hour old.
+2017-04-06 10:29:50,156 - DEBUG - Ignoring cached data from 2017-04-04 17:00:00 as it is over an hour old.
+2017-04-06 10:29:50,156 - DEBUG - Ignoring cached data from 2017-04-03 08:00:00 as it is over an hour old.
+2017-04-06 10:29:50,157 - DEBUG - Ignoring cached data from 2017-04-05 17:00:00 as it is over an hour old.
+2017-04-06 10:29:50,157 - DEBUG - Ignoring cached data from 2017-04-03 16:00:00 as it is over an hour old.
+2017-04-06 10:29:50,157 - DEBUG - Ignoring cached data from 2017-04-05 05:00:00 as it is over an hour old.
+2017-04-06 10:29:50,157 - DEBUG - Ignoring cached data from 2017-04-03 13:00:00 as it is over an hour old.
+2017-04-06 10:29:50,157 - DEBUG - Ignoring cached data from 2017-04-05 00:00:00 as it is over an hour old.
+2017-04-06 10:29:50,157 - DEBUG - Ignoring cached data from 2017-04-05 20:00:00 as it is over an hour old.
+2017-04-06 10:29:50,157 - DEBUG - Ignoring cached data from 2017-04-05 12:00:00 as it is over an hour old.
+2017-04-06 10:29:50,157 - DEBUG - Ignoring cached data from 2017-04-05 11:00:00 as it is over an hour old.
+2017-04-06 10:29:50,157 - DEBUG - Ignoring cached data from 2017-04-05 19:00:00 as it is over an hour old.
+2017-04-06 10:29:50,157 - DEBUG - Ignoring cached data from 2017-04-05 08:00:00 as it is over an hour old.
+2017-04-06 10:29:50,157 - DEBUG - Ignoring cached data from 2017-04-04 02:00:00 as it is over an hour old.
+2017-04-06 10:29:50,157 - DEBUG - Ignoring cached data from 2017-04-04 05:00:00 as it is over an hour old.
+2017-04-06 10:29:50,158 - DEBUG - Ignoring cached data from 2017-04-04 20:00:00 as it is over an hour old.
+2017-04-06 10:29:50,158 - DEBUG - Ignoring cached data from 2017-04-04 15:00:00 as it is over an hour old.
+2017-04-06 10:29:50,158 - DEBUG - Ignoring cached data from 2017-04-04 10:00:00 as it is over an hour old.
+2017-04-06 10:29:50,158 - DEBUG - Ignoring cached data from 2017-04-04 13:00:00 as it is over an hour old.
+2017-04-06 10:29:50,158 - DEBUG - Ignoring cached data from 2017-04-04 23:00:00 as it is over an hour old.
+2017-04-06 10:29:50,158 - DEBUG - Ignoring cached data from 2017-04-04 00:00:00 as it is over an hour old.
+2017-04-06 10:29:50,158 - DEBUG - Ignoring cached data from 2017-04-05 07:00:00 as it is over an hour old.
+2017-04-06 10:29:50,158 - DEBUG - Ignoring cached data from 2017-04-05 02:00:00 as it is over an hour old.
+2017-04-06 10:29:50,158 - DEBUG - Ignoring cached data from 2017-04-03 12:00:00 as it is over an hour old.
+2017-04-06 10:29:50,158 - DEBUG - Ignoring cached data from 2017-04-05 15:00:00 as it is over an hour old.
+2017-04-06 10:29:50,158 - DEBUG - Ignoring cached data from 2017-04-05 04:00:00 as it is over an hour old.
+2017-04-06 10:29:50,158 - DEBUG - Ignoring cached data from 2017-04-03 11:00:00 as it is over an hour old.
+2017-04-06 10:29:50,159 - DEBUG - Ignoring cached data from 2017-04-03 22:00:00 as it is over an hour old.
+2017-04-06 10:29:50,159 - DEBUG - Ignoring cached data from 2017-04-03 19:00:00 as it is over an hour old.
+2017-04-06 10:29:50,159 - DEBUG - Ignoring cached data from 2017-04-05 10:00:00 as it is over an hour old.
+2017-04-06 10:29:50,159 - DEBUG - Ignoring cached data from 2017-04-05 16:00:00 as it is over an hour old.
+2017-04-06 10:29:50,159 - INFO - Querying 61 missing data entries.
+2017-04-06 10:29:50,159 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-04 07:00:00 to 2017-04-04 08:00:00.
+2017-04-06 10:29:50,185 - DEBUG - Successfully parsed results for 2017-04-04 07:00:00.
+2017-04-06 10:29:50,185 - DEBUG - Using temporary file /tmp/osg_display29cso9 for transfer_data
+2017-04-06 10:29:50,185 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_display29cso9.
+2017-04-06 10:29:50,185 - DEBUG - Saved data to cache.
+2017-04-06 10:29:50,185 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-05 18:00:00 to 2017-04-05 19:00:00.
+2017-04-06 10:29:50,227 - DEBUG - Successfully parsed results for 2017-04-05 18:00:00.
+2017-04-06 10:29:50,227 - DEBUG - Using temporary file /tmp/osg_displayMJltiV for transfer_data
+2017-04-06 10:29:50,227 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayMJltiV.
+2017-04-06 10:29:50,228 - DEBUG - Saved data to cache.
+2017-04-06 10:29:50,228 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-04 18:00:00 to 2017-04-04 19:00:00.
+2017-04-06 10:29:50,256 - DEBUG - Successfully parsed results for 2017-04-04 18:00:00.
+2017-04-06 10:29:50,257 - DEBUG - Using temporary file /tmp/osg_display3InIaw for transfer_data
+2017-04-06 10:29:50,257 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_display3InIaw.
+2017-04-06 10:29:50,258 - DEBUG - Saved data to cache.
+2017-04-06 10:29:50,258 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-04 21:00:00 to 2017-04-04 22:00:00.
+2017-04-06 10:29:50,288 - DEBUG - Successfully parsed results for 2017-04-04 21:00:00.
+2017-04-06 10:29:50,288 - DEBUG - Using temporary file /tmp/osg_display_eeZfU for transfer_data
+2017-04-06 10:29:50,289 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_display_eeZfU.
+2017-04-06 10:29:50,289 - DEBUG - Saved data to cache.
+2017-04-06 10:29:50,289 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-04 11:00:00 to 2017-04-04 12:00:00.
+2017-04-06 10:29:50,326 - DEBUG - Successfully parsed results for 2017-04-04 11:00:00.
+2017-04-06 10:29:50,326 - DEBUG - Using temporary file /tmp/osg_display_Jy_D9 for transfer_data
+2017-04-06 10:29:50,327 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_display_Jy_D9.
+2017-04-06 10:29:50,327 - DEBUG - Saved data to cache.
+2017-04-06 10:29:50,327 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-06 08:00:00 to 2017-04-06 09:00:00.
+2017-04-06 10:29:50,357 - DEBUG - Successfully parsed results for 2017-04-06 08:00:00.
+2017-04-06 10:29:50,357 - DEBUG - Using temporary file /tmp/osg_displayE0f9tO for transfer_data
+2017-04-06 10:29:50,358 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayE0f9tO.
+2017-04-06 10:29:50,359 - DEBUG - Saved data to cache.
+2017-04-06 10:29:50,359 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-06 06:00:00 to 2017-04-06 07:00:00.
+2017-04-06 10:29:50,393 - DEBUG - Successfully parsed results for 2017-04-06 06:00:00.
+2017-04-06 10:29:50,394 - DEBUG - Using temporary file /tmp/osg_displaysgL15n for transfer_data
+2017-04-06 10:29:50,395 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displaysgL15n.
+2017-04-06 10:29:50,395 - DEBUG - Saved data to cache.
+2017-04-06 10:29:50,395 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-06 13:00:00 to 2017-04-06 14:00:00.
+2017-04-06 10:29:50,416 - DEBUG - Successfully parsed results for 2017-04-06 13:00:00.
+2017-04-06 10:29:50,417 - DEBUG - Using temporary file /tmp/osg_displayGMp3xb for transfer_data
+2017-04-06 10:29:50,418 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayGMp3xb.
+2017-04-06 10:29:50,418 - DEBUG - Saved data to cache.
+2017-04-06 10:29:50,418 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-06 00:00:00 to 2017-04-06 01:00:00.
+2017-04-06 10:29:50,454 - DEBUG - Successfully parsed results for 2017-04-06 00:00:00.
+2017-04-06 10:29:50,454 - DEBUG - Using temporary file /tmp/osg_displayUtH6Sp for transfer_data
+2017-04-06 10:29:50,456 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayUtH6Sp.
+2017-04-06 10:29:50,456 - DEBUG - Saved data to cache.
+2017-04-06 10:29:50,456 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-06 15:00:00 to 2017-04-06 16:00:00.
+2017-04-06 10:29:50,481 - DEBUG - Successfully parsed results for 2017-04-06 15:00:00.
+2017-04-06 10:29:50,481 - DEBUG - Using temporary file /tmp/osg_displayNQDM27 for transfer_data
+2017-04-06 10:29:50,482 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayNQDM27.
+2017-04-06 10:29:50,483 - DEBUG - Saved data to cache.
+2017-04-06 10:29:50,483 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-04 16:00:00 to 2017-04-04 17:00:00.
+2017-04-06 10:29:50,512 - DEBUG - Successfully parsed results for 2017-04-04 16:00:00.
+2017-04-06 10:29:50,512 - DEBUG - Using temporary file /tmp/osg_displayiGw5oy for transfer_data
+2017-04-06 10:29:50,514 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayiGw5oy.
+2017-04-06 10:29:50,514 - DEBUG - Saved data to cache.
+2017-04-06 10:29:50,514 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-06 05:00:00 to 2017-04-06 06:00:00.
+2017-04-06 10:29:50,540 - DEBUG - Successfully parsed results for 2017-04-06 05:00:00.
+2017-04-06 10:29:50,541 - DEBUG - Using temporary file /tmp/osg_display8ZZjeI for transfer_data
+2017-04-06 10:29:50,543 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_display8ZZjeI.
+2017-04-06 10:29:50,543 - DEBUG - Saved data to cache.
+2017-04-06 10:29:50,543 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-05 01:00:00 to 2017-04-05 02:00:00.
+2017-04-06 10:29:50,580 - DEBUG - Successfully parsed results for 2017-04-05 01:00:00.
+2017-04-06 10:29:50,580 - DEBUG - Using temporary file /tmp/osg_displayerRk0X for transfer_data
+2017-04-06 10:29:50,582 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayerRk0X.
+2017-04-06 10:29:50,582 - DEBUG - Saved data to cache.
+2017-04-06 10:29:50,583 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-05 06:00:00 to 2017-04-05 07:00:00.
+2017-04-06 10:29:50,621 - DEBUG - Successfully parsed results for 2017-04-05 06:00:00.
+2017-04-06 10:29:50,622 - DEBUG - Using temporary file /tmp/osg_displaywIv9c_ for transfer_data
+2017-04-06 10:29:50,624 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displaywIv9c_.
+2017-04-06 10:29:50,624 - DEBUG - Saved data to cache.
+2017-04-06 10:29:50,624 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-05 23:00:00 to 2017-04-06 00:00:00.
+2017-04-06 10:29:50,662 - DEBUG - Successfully parsed results for 2017-04-05 23:00:00.
+2017-04-06 10:29:50,662 - DEBUG - Using temporary file /tmp/osg_displayDIXa2M for transfer_data
+2017-04-06 10:29:50,665 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayDIXa2M.
+2017-04-06 10:29:50,665 - DEBUG - Saved data to cache.
+2017-04-06 10:29:50,665 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-05 12:00:00 to 2017-04-05 13:00:00.
+2017-04-06 10:29:50,700 - DEBUG - Successfully parsed results for 2017-04-05 12:00:00.
+2017-04-06 10:29:50,700 - DEBUG - Using temporary file /tmp/osg_displayFNNYkl for transfer_data
+2017-04-06 10:29:50,703 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayFNNYkl.
+2017-04-06 10:29:50,703 - DEBUG - Saved data to cache.
+2017-04-06 10:29:50,703 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-05 09:00:00 to 2017-04-05 10:00:00.
+2017-04-06 10:29:50,730 - DEBUG - Successfully parsed results for 2017-04-05 09:00:00.
+2017-04-06 10:29:50,730 - DEBUG - Using temporary file /tmp/osg_displayJCW07f for transfer_data
+2017-04-06 10:29:50,733 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayJCW07f.
+2017-04-06 10:29:50,733 - DEBUG - Saved data to cache.
+2017-04-06 10:29:50,733 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-05 14:00:00 to 2017-04-05 15:00:00.
+2017-04-06 10:29:50,775 - DEBUG - Successfully parsed results for 2017-04-05 14:00:00.
+2017-04-06 10:29:50,775 - DEBUG - Using temporary file /tmp/osg_displayBxT6W_ for transfer_data
+2017-04-06 10:29:50,778 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayBxT6W_.
+2017-04-06 10:29:50,778 - DEBUG - Saved data to cache.
+2017-04-06 10:29:50,778 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-05 20:00:00 to 2017-04-05 21:00:00.
+2017-04-06 10:29:50,819 - DEBUG - Successfully parsed results for 2017-04-05 20:00:00.
+2017-04-06 10:29:50,819 - DEBUG - Using temporary file /tmp/osg_displayVfltq4 for transfer_data
+2017-04-06 10:29:50,822 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayVfltq4.
+2017-04-06 10:29:50,822 - DEBUG - Saved data to cache.
+2017-04-06 10:29:50,822 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-05 03:00:00 to 2017-04-05 04:00:00.
+2017-04-06 10:29:50,861 - DEBUG - Successfully parsed results for 2017-04-05 03:00:00.
+2017-04-06 10:29:50,861 - DEBUG - Using temporary file /tmp/osg_displayOXhpRV for transfer_data
+2017-04-06 10:29:50,864 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayOXhpRV.
+2017-04-06 10:29:50,865 - DEBUG - Saved data to cache.
+2017-04-06 10:29:50,865 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-06 10:00:00 to 2017-04-06 11:00:00.
+2017-04-06 10:29:50,882 - DEBUG - Successfully parsed results for 2017-04-06 10:00:00.
+2017-04-06 10:29:50,882 - DEBUG - Using temporary file /tmp/osg_display7ZmJtO for transfer_data
+2017-04-06 10:29:50,885 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_display7ZmJtO.
+2017-04-06 10:29:50,885 - DEBUG - Saved data to cache.
+2017-04-06 10:29:50,885 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-04 12:00:00 to 2017-04-04 13:00:00.
+2017-04-06 10:29:50,922 - DEBUG - Successfully parsed results for 2017-04-04 12:00:00.
+2017-04-06 10:29:50,922 - DEBUG - Using temporary file /tmp/osg_displaya368D8 for transfer_data
+2017-04-06 10:29:50,926 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displaya368D8.
+2017-04-06 10:29:50,926 - DEBUG - Saved data to cache.
+2017-04-06 10:29:50,926 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-04 05:00:00 to 2017-04-04 06:00:00.
+2017-04-06 10:29:50,956 - DEBUG - Successfully parsed results for 2017-04-04 05:00:00.
+2017-04-06 10:29:50,956 - DEBUG - Using temporary file /tmp/osg_displayzo50QF for transfer_data
+2017-04-06 10:29:50,960 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayzo50QF.
+2017-04-06 10:29:50,960 - DEBUG - Saved data to cache.
+2017-04-06 10:29:50,960 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-06 02:00:00 to 2017-04-06 03:00:00.
+2017-04-06 10:29:50,988 - DEBUG - Successfully parsed results for 2017-04-06 02:00:00.
+2017-04-06 10:29:50,988 - DEBUG - Using temporary file /tmp/osg_displaygUI5e2 for transfer_data
+2017-04-06 10:29:50,992 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displaygUI5e2.
+2017-04-06 10:29:50,992 - DEBUG - Saved data to cache.
+2017-04-06 10:29:50,992 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-06 09:00:00 to 2017-04-06 10:00:00.
+2017-04-06 10:29:51,016 - DEBUG - Successfully parsed results for 2017-04-06 09:00:00.
+2017-04-06 10:29:51,016 - DEBUG - Using temporary file /tmp/osg_displayUd3MBm for transfer_data
+2017-04-06 10:29:51,020 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayUd3MBm.
+2017-04-06 10:29:51,020 - DEBUG - Saved data to cache.
+2017-04-06 10:29:51,020 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-04 08:00:00 to 2017-04-04 09:00:00.
+2017-04-06 10:29:51,042 - DEBUG - Successfully parsed results for 2017-04-04 08:00:00.
+2017-04-06 10:29:51,043 - DEBUG - Using temporary file /tmp/osg_display94BEAB for transfer_data
+2017-04-06 10:29:51,047 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_display94BEAB.
+2017-04-06 10:29:51,047 - DEBUG - Saved data to cache.
+2017-04-06 10:29:51,047 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-04 22:00:00 to 2017-04-04 23:00:00.
+2017-04-06 10:29:51,076 - DEBUG - Successfully parsed results for 2017-04-04 22:00:00.
+2017-04-06 10:29:51,076 - DEBUG - Using temporary file /tmp/osg_displayglS7g0 for transfer_data
+2017-04-06 10:29:51,081 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayglS7g0.
+2017-04-06 10:29:51,081 - DEBUG - Saved data to cache.
+2017-04-06 10:29:51,081 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-06 07:00:00 to 2017-04-06 08:00:00.
+2017-04-06 10:29:51,115 - DEBUG - Successfully parsed results for 2017-04-06 07:00:00.
+2017-04-06 10:29:51,116 - DEBUG - Using temporary file /tmp/osg_displaytRoaOO for transfer_data
+2017-04-06 10:29:51,120 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displaytRoaOO.
+2017-04-06 10:29:51,120 - DEBUG - Saved data to cache.
+2017-04-06 10:29:51,120 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-04 15:00:00 to 2017-04-04 16:00:00.
+2017-04-06 10:29:51,152 - DEBUG - Successfully parsed results for 2017-04-04 15:00:00.
+2017-04-06 10:29:51,152 - DEBUG - Using temporary file /tmp/osg_displayPmI6BQ for transfer_data
+2017-04-06 10:29:51,156 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayPmI6BQ.
+2017-04-06 10:29:51,157 - DEBUG - Saved data to cache.
+2017-04-06 10:29:51,157 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-04 19:00:00 to 2017-04-04 20:00:00.
+2017-04-06 10:29:51,216 - DEBUG - Successfully parsed results for 2017-04-04 19:00:00.
+2017-04-06 10:29:51,217 - DEBUG - Using temporary file /tmp/osg_display6m4W7S for transfer_data
+2017-04-06 10:29:51,221 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_display6m4W7S.
+2017-04-06 10:29:51,222 - DEBUG - Saved data to cache.
+2017-04-06 10:29:51,222 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-04 10:00:00 to 2017-04-04 11:00:00.
+2017-04-06 10:29:51,253 - DEBUG - Successfully parsed results for 2017-04-04 10:00:00.
+2017-04-06 10:29:51,254 - DEBUG - Using temporary file /tmp/osg_displaybSGL4_ for transfer_data
+2017-04-06 10:29:51,258 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displaybSGL4_.
+2017-04-06 10:29:51,259 - DEBUG - Saved data to cache.
+2017-04-06 10:29:51,259 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-04 17:00:00 to 2017-04-04 18:00:00.
+2017-04-06 10:29:51,279 - DEBUG - Successfully parsed results for 2017-04-04 17:00:00.
+2017-04-06 10:29:51,279 - DEBUG - Using temporary file /tmp/osg_display2rOHPx for transfer_data
+2017-04-06 10:29:51,284 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_display2rOHPx.
+2017-04-06 10:29:51,284 - DEBUG - Saved data to cache.
+2017-04-06 10:29:51,285 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-04 13:00:00 to 2017-04-04 14:00:00.
+2017-04-06 10:29:51,317 - DEBUG - Successfully parsed results for 2017-04-04 13:00:00.
+2017-04-06 10:29:51,318 - DEBUG - Using temporary file /tmp/osg_display1ic2XK for transfer_data
+2017-04-06 10:29:51,323 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_display1ic2XK.
+2017-04-06 10:29:51,323 - DEBUG - Saved data to cache.
+2017-04-06 10:29:51,323 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-05 17:00:00 to 2017-04-05 18:00:00.
+2017-04-06 10:29:51,359 - DEBUG - Successfully parsed results for 2017-04-05 17:00:00.
+2017-04-06 10:29:51,359 - DEBUG - Using temporary file /tmp/osg_displayTVKEoq for transfer_data
+2017-04-06 10:29:51,365 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayTVKEoq.
+2017-04-06 10:29:51,365 - DEBUG - Saved data to cache.
+2017-04-06 10:29:51,365 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-05 22:00:00 to 2017-04-05 23:00:00.
+2017-04-06 10:29:51,410 - DEBUG - Successfully parsed results for 2017-04-05 22:00:00.
+2017-04-06 10:29:51,410 - DEBUG - Using temporary file /tmp/osg_displayx9FInR for transfer_data
+2017-04-06 10:29:51,416 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayx9FInR.
+2017-04-06 10:29:51,416 - DEBUG - Saved data to cache.
+2017-04-06 10:29:51,416 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-05 05:00:00 to 2017-04-05 06:00:00.
+2017-04-06 10:29:51,462 - DEBUG - Successfully parsed results for 2017-04-05 05:00:00.
+2017-04-06 10:29:51,463 - DEBUG - Using temporary file /tmp/osg_displayS7kucU for transfer_data
+2017-04-06 10:29:51,468 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayS7kucU.
+2017-04-06 10:29:51,468 - DEBUG - Saved data to cache.
+2017-04-06 10:29:51,469 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-05 11:00:00 to 2017-04-05 12:00:00.
+2017-04-06 10:29:51,512 - DEBUG - Successfully parsed results for 2017-04-05 11:00:00.
+2017-04-06 10:29:51,512 - DEBUG - Using temporary file /tmp/osg_displayknddOh for transfer_data
+2017-04-06 10:29:51,518 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayknddOh.
+2017-04-06 10:29:51,518 - DEBUG - Saved data to cache.
+2017-04-06 10:29:51,518 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-05 00:00:00 to 2017-04-05 01:00:00.
+2017-04-06 10:29:51,576 - DEBUG - Successfully parsed results for 2017-04-05 00:00:00.
+2017-04-06 10:29:51,576 - DEBUG - Using temporary file /tmp/osg_displayN2rxtc for transfer_data
+2017-04-06 10:29:51,582 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayN2rxtc.
+2017-04-06 10:29:51,582 - DEBUG - Saved data to cache.
+2017-04-06 10:29:51,582 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-04 03:00:00 to 2017-04-04 04:00:00.
+2017-04-06 10:29:51,615 - DEBUG - Successfully parsed results for 2017-04-04 03:00:00.
+2017-04-06 10:29:51,616 - DEBUG - Using temporary file /tmp/osg_displayvPJ0kc for transfer_data
+2017-04-06 10:29:51,622 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayvPJ0kc.
+2017-04-06 10:29:51,622 - DEBUG - Saved data to cache.
+2017-04-06 10:29:51,622 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-05 13:00:00 to 2017-04-05 14:00:00.
+2017-04-06 10:29:51,673 - DEBUG - Successfully parsed results for 2017-04-05 13:00:00.
+2017-04-06 10:29:51,673 - DEBUG - Using temporary file /tmp/osg_displayEuyjdj for transfer_data
+2017-04-06 10:29:51,680 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayEuyjdj.
+2017-04-06 10:29:51,680 - DEBUG - Saved data to cache.
+2017-04-06 10:29:51,680 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-05 02:00:00 to 2017-04-05 03:00:00.
+2017-04-06 10:29:51,726 - DEBUG - Successfully parsed results for 2017-04-05 02:00:00.
+2017-04-06 10:29:51,726 - DEBUG - Using temporary file /tmp/osg_displayaN4z8C for transfer_data
+2017-04-06 10:29:51,733 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayaN4z8C.
+2017-04-06 10:29:51,733 - DEBUG - Saved data to cache.
+2017-04-06 10:29:51,733 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-05 19:00:00 to 2017-04-05 20:00:00.
+2017-04-06 10:29:51,774 - DEBUG - Successfully parsed results for 2017-04-05 19:00:00.
+2017-04-06 10:29:51,774 - DEBUG - Using temporary file /tmp/osg_displayt0u3C6 for transfer_data
+2017-04-06 10:29:51,781 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayt0u3C6.
+2017-04-06 10:29:51,781 - DEBUG - Saved data to cache.
+2017-04-06 10:29:51,781 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-05 08:00:00 to 2017-04-05 09:00:00.
+2017-04-06 10:29:51,821 - DEBUG - Successfully parsed results for 2017-04-05 08:00:00.
+2017-04-06 10:29:51,821 - DEBUG - Using temporary file /tmp/osg_displayuuwAHX for transfer_data
+2017-04-06 10:29:51,828 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayuuwAHX.
+2017-04-06 10:29:51,828 - DEBUG - Saved data to cache.
+2017-04-06 10:29:51,828 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-06 12:00:00 to 2017-04-06 13:00:00.
+2017-04-06 10:29:51,855 - DEBUG - Successfully parsed results for 2017-04-06 12:00:00.
+2017-04-06 10:29:51,855 - DEBUG - Using temporary file /tmp/osg_displayrBNzfR for transfer_data
+2017-04-06 10:29:51,862 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayrBNzfR.
+2017-04-06 10:29:51,862 - DEBUG - Saved data to cache.
+2017-04-06 10:29:51,862 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-06 11:00:00 to 2017-04-06 12:00:00.
+2017-04-06 10:29:51,890 - DEBUG - Successfully parsed results for 2017-04-06 11:00:00.
+2017-04-06 10:29:51,891 - DEBUG - Using temporary file /tmp/osg_displayH2_eRZ for transfer_data
+2017-04-06 10:29:51,897 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayH2_eRZ.
+2017-04-06 10:29:51,898 - DEBUG - Saved data to cache.
+2017-04-06 10:29:51,898 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-04 20:00:00 to 2017-04-04 21:00:00.
+2017-04-06 10:29:51,930 - DEBUG - Successfully parsed results for 2017-04-04 20:00:00.
+2017-04-06 10:29:51,930 - DEBUG - Using temporary file /tmp/osg_displayzvaiGg for transfer_data
+2017-04-06 10:29:51,937 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayzvaiGg.
+2017-04-06 10:29:51,938 - DEBUG - Saved data to cache.
+2017-04-06 10:29:51,938 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-06 01:00:00 to 2017-04-06 02:00:00.
+2017-04-06 10:29:51,971 - DEBUG - Successfully parsed results for 2017-04-06 01:00:00.
+2017-04-06 10:29:51,972 - DEBUG - Using temporary file /tmp/osg_displayGsH7C7 for transfer_data
+2017-04-06 10:29:51,979 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayGsH7C7.
+2017-04-06 10:29:51,979 - DEBUG - Saved data to cache.
+2017-04-06 10:29:51,979 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-04 04:00:00 to 2017-04-04 05:00:00.
+2017-04-06 10:29:52,015 - DEBUG - Successfully parsed results for 2017-04-04 04:00:00.
+2017-04-06 10:29:52,015 - DEBUG - Using temporary file /tmp/osg_displaykVw8kc for transfer_data
+2017-04-06 10:29:52,023 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displaykVw8kc.
+2017-04-06 10:29:52,023 - DEBUG - Saved data to cache.
+2017-04-06 10:29:52,023 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-06 04:00:00 to 2017-04-06 05:00:00.
+2017-04-06 10:29:52,050 - DEBUG - Successfully parsed results for 2017-04-06 04:00:00.
+2017-04-06 10:29:52,050 - DEBUG - Using temporary file /tmp/osg_displayAjcLQ6 for transfer_data
+2017-04-06 10:29:52,058 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayAjcLQ6.
+2017-04-06 10:29:52,058 - DEBUG - Saved data to cache.
+2017-04-06 10:29:52,058 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-06 03:00:00 to 2017-04-06 04:00:00.
+2017-04-06 10:29:52,077 - DEBUG - Successfully parsed results for 2017-04-06 03:00:00.
+2017-04-06 10:29:52,078 - DEBUG - Using temporary file /tmp/osg_displayxtKusU for transfer_data
+2017-04-06 10:29:52,085 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayxtKusU.
+2017-04-06 10:29:52,085 - DEBUG - Saved data to cache.
+2017-04-06 10:29:52,086 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-04 23:00:00 to 2017-04-05 00:00:00.
+2017-04-06 10:29:52,134 - DEBUG - Successfully parsed results for 2017-04-04 23:00:00.
+2017-04-06 10:29:52,134 - DEBUG - Using temporary file /tmp/osg_displaymszHA7 for transfer_data
+2017-04-06 10:29:52,142 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displaymszHA7.
+2017-04-06 10:29:52,142 - DEBUG - Saved data to cache.
+2017-04-06 10:29:52,142 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-06 14:00:00 to 2017-04-06 15:00:00.
+2017-04-06 10:29:52,162 - DEBUG - Successfully parsed results for 2017-04-06 14:00:00.
+2017-04-06 10:29:52,162 - DEBUG - Using temporary file /tmp/osg_displaymR2mtc for transfer_data
+2017-04-06 10:29:52,170 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displaymR2mtc.
+2017-04-06 10:29:52,171 - DEBUG - Saved data to cache.
+2017-04-06 10:29:52,171 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-05 07:00:00 to 2017-04-05 08:00:00.
+2017-04-06 10:29:52,225 - DEBUG - Successfully parsed results for 2017-04-05 07:00:00.
+2017-04-06 10:29:52,225 - DEBUG - Using temporary file /tmp/osg_displayoCzHQi for transfer_data
+2017-04-06 10:29:52,233 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayoCzHQi.
+2017-04-06 10:29:52,233 - DEBUG - Saved data to cache.
+2017-04-06 10:29:52,233 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-04 06:00:00 to 2017-04-04 07:00:00.
+2017-04-06 10:29:52,268 - DEBUG - Successfully parsed results for 2017-04-04 06:00:00.
+2017-04-06 10:29:52,269 - DEBUG - Using temporary file /tmp/osg_displayqJUX9Q for transfer_data
+2017-04-06 10:29:52,277 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayqJUX9Q.
+2017-04-06 10:29:52,277 - DEBUG - Saved data to cache.
+2017-04-06 10:29:52,277 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-04 09:00:00 to 2017-04-04 10:00:00.
+2017-04-06 10:29:52,306 - DEBUG - Successfully parsed results for 2017-04-04 09:00:00.
+2017-04-06 10:29:52,306 - DEBUG - Using temporary file /tmp/osg_displayPWgXT4 for transfer_data
+2017-04-06 10:29:52,315 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayPWgXT4.
+2017-04-06 10:29:52,315 - DEBUG - Saved data to cache.
+2017-04-06 10:29:52,315 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-05 15:00:00 to 2017-04-05 16:00:00.
+2017-04-06 10:29:52,360 - DEBUG - Successfully parsed results for 2017-04-05 15:00:00.
+2017-04-06 10:29:52,361 - DEBUG - Using temporary file /tmp/osg_displaywGGV9l for transfer_data
+2017-04-06 10:29:52,369 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displaywGGV9l.
+2017-04-06 10:29:52,369 - DEBUG - Saved data to cache.
+2017-04-06 10:29:52,369 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-05 04:00:00 to 2017-04-05 05:00:00.
+2017-04-06 10:29:52,411 - DEBUG - Successfully parsed results for 2017-04-05 04:00:00.
+2017-04-06 10:29:52,411 - DEBUG - Using temporary file /tmp/osg_displaycYmUMb for transfer_data
+2017-04-06 10:29:52,420 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displaycYmUMb.
+2017-04-06 10:29:52,420 - DEBUG - Saved data to cache.
+2017-04-06 10:29:52,420 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-04 14:00:00 to 2017-04-04 15:00:00.
+2017-04-06 10:29:52,454 - DEBUG - Successfully parsed results for 2017-04-04 14:00:00.
+2017-04-06 10:29:52,454 - DEBUG - Using temporary file /tmp/osg_displayw_VGT9 for transfer_data
+2017-04-06 10:29:52,463 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayw_VGT9.
+2017-04-06 10:29:52,463 - DEBUG - Saved data to cache.
+2017-04-06 10:29:52,463 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-05 21:00:00 to 2017-04-05 22:00:00.
+2017-04-06 10:29:52,494 - DEBUG - Successfully parsed results for 2017-04-05 21:00:00.
+2017-04-06 10:29:52,495 - DEBUG - Using temporary file /tmp/osg_displayE6DoLk for transfer_data
+2017-04-06 10:29:52,504 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayE6DoLk.
+2017-04-06 10:29:52,504 - DEBUG - Saved data to cache.
+2017-04-06 10:29:52,504 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-05 10:00:00 to 2017-04-05 11:00:00.
+2017-04-06 10:29:52,542 - DEBUG - Successfully parsed results for 2017-04-05 10:00:00.
+2017-04-06 10:29:52,542 - DEBUG - Using temporary file /tmp/osg_displayEiJhUM for transfer_data
+2017-04-06 10:29:52,551 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displayEiJhUM.
+2017-04-06 10:29:52,551 - DEBUG - Saved data to cache.
+2017-04-06 10:29:52,551 - INFO - Querying Gratia Transfer DB for transfers from 2017-04-05 16:00:00 to 2017-04-05 17:00:00.
+2017-04-06 10:29:52,600 - DEBUG - Successfully parsed results for 2017-04-05 16:00:00.
+2017-04-06 10:29:52,600 - DEBUG - Using temporary file /tmp/osg_displaytKmyyw for transfer_data
+2017-04-06 10:29:52,609 - DEBUG - Overwriting /tmp/transfer_data.pickle.u0 with /tmp/osg_displaytKmyyw.
+2017-04-06 10:29:52,610 - DEBUG - Saved data to cache.
+2017-04-06 10:29:52,610 - DEBUG - Time log - Hourly Transfer Query Time: 2.46865320206
+2017-04-06 10:29:52,955 - DEBUG - Transfer volumes: 24.0816696215, 22.4198328301, 23.2240016335, 25.0405975938, 24.3309215601, 16.7902726726, 33.8155730063, 8.221791971, 7.86631036898, 25.6643089934, 42.1951132195, 34.9129615752, 17.5351245558, 12.4657153085, 19.8342934044, 26.0918736711, 45.215352649, 44.1025938945, 32.8334245694, 26.2926648545, 30.8432330675, 34.7743923105, 18.5142157277, 10.5617821774, 9.98160669513
+2017-04-06 10:29:52,955 - DEBUG - Using temporary file /tmp/osg_displaygbYzya for transfer_volume_hourly
+2017-04-06 10:29:53,140 - DEBUG - Overwriting /var/www/html/osg_display/transfer_volume_hourly.png with /tmp/osg_displaygbYzya.
+2017-04-06 10:29:53,457 - DEBUG - Using temporary file /tmp/osg_displaya0C64d for transfers_hourly
+2017-04-06 10:29:53,664 - DEBUG - Overwriting /var/www/html/osg_display/transfers_hourly.png with /tmp/osg_displaya0C64d.
+2017-04-06 10:29:53,665 - DEBUG - Time log - Hourly Transfer Graph Time: 1.05484700203
+2017-04-06 10:29:53,669 - INFO - Successfully connected to Gratia database
+2017-04-06 10:30:00,526 - INFO - Gratia returned 36 results for daily jobs
+2017-04-06 10:30:00,526 - DEBUG - Job result dump:
+2017-04-06 10:30:00,527 - DEBUG - Day 2017-03-01: Jobs 477998, Job Hours 4364560.72
+2017-04-06 10:30:00,527 - DEBUG - Day 2017-03-02: Jobs 479812, Job Hours 4438173.10
+2017-04-06 10:30:00,527 - DEBUG - Day 2017-03-03: Jobs 603790, Job Hours 4951095.96
+2017-04-06 10:30:00,527 - DEBUG - Day 2017-03-04: Jobs 583192, Job Hours 4537387.70
+2017-04-06 10:30:00,527 - DEBUG - Day 2017-03-05: Jobs 515960, Job Hours 4943670.89
+2017-04-06 10:30:00,527 - DEBUG - Day 2017-03-06: Jobs 586509, Job Hours 4836650.49
+2017-04-06 10:30:00,527 - DEBUG - Day 2017-03-07: Jobs 417373, Job Hours 3614858.52
+2017-04-06 10:30:00,527 - DEBUG - Day 2017-03-08: Jobs 360457, Job Hours 3993952.10
+2017-04-06 10:30:00,527 - DEBUG - Day 2017-03-09: Jobs 572292, Job Hours 3799413.66
+2017-04-06 10:30:00,527 - DEBUG - Day 2017-03-10: Jobs 400739, Job Hours 5143881.00
+2017-04-06 10:30:00,527 - DEBUG - Day 2017-03-11: Jobs 386615, Job Hours 4053829.15
+2017-04-06 10:30:00,528 - DEBUG - Day 2017-03-12: Jobs 358718, Job Hours 4475905.46
+2017-04-06 10:30:00,528 - DEBUG - Day 2017-03-13: Jobs 432681, Job Hours 3856606.40
+2017-04-06 10:30:00,528 - DEBUG - Day 2017-03-14: Jobs 515374, Job Hours 4029323.87
+2017-04-06 10:30:00,528 - DEBUG - Day 2017-03-15: Jobs 440572, Job Hours 5036275.17
+2017-04-06 10:30:00,528 - DEBUG - Day 2017-03-16: Jobs 514179, Job Hours 3924369.37
+2017-04-06 10:30:00,528 - DEBUG - Day 2017-03-17: Jobs 615493, Job Hours 4708425.57
+2017-04-06 10:30:00,528 - DEBUG - Day 2017-03-18: Jobs 543371, Job Hours 4537940.87
+2017-04-06 10:30:00,528 - DEBUG - Day 2017-03-19: Jobs 402954, Job Hours 4404476.35
+2017-04-06 10:30:00,528 - DEBUG - Day 2017-03-20: Jobs 385709, Job Hours 4741206.11
+2017-04-06 10:30:00,528 - DEBUG - Day 2017-03-21: Jobs 385311, Job Hours 4124184.56
+2017-04-06 10:30:00,528 - DEBUG - Day 2017-03-22: Jobs 275558, Job Hours 3502873.75
+2017-04-06 10:30:00,529 - DEBUG - Day 2017-03-23: Jobs 273849, Job Hours 4706635.68
+2017-04-06 10:30:00,529 - DEBUG - Day 2017-03-24: Jobs 320345, Job Hours 4080365.45
+2017-04-06 10:30:00,529 - DEBUG - Day 2017-03-25: Jobs 288965, Job Hours 5029530.65
+2017-04-06 10:30:00,529 - DEBUG - Day 2017-03-26: Jobs 328419, Job Hours 4322510.03
+2017-04-06 10:30:00,529 - DEBUG - Day 2017-03-27: Jobs 403429, Job Hours 3880404.45
+2017-04-06 10:30:00,529 - DEBUG - Day 2017-03-28: Jobs 362263, Job Hours 3350073.05
+2017-04-06 10:30:00,529 - DEBUG - Day 2017-03-29: Jobs 331674, Job Hours 3347201.58
+2017-04-06 10:30:00,529 - DEBUG - Day 2017-03-30: Jobs 360356, Job Hours 3918832.05
+2017-04-06 10:30:00,529 - DEBUG - Day 2017-03-31: Jobs 339772, Job Hours 4496955.21
+2017-04-06 10:30:00,529 - DEBUG - Day 2017-04-01: Jobs 303689, Job Hours 3822649.55
+2017-04-06 10:30:00,529 - DEBUG - Day 2017-04-02: Jobs 321252, Job Hours 3779504.50
+2017-04-06 10:30:00,529 - DEBUG - Day 2017-04-03: Jobs 389339, Job Hours 4989401.77
+2017-04-06 10:30:00,530 - DEBUG - Day 2017-04-04: Jobs 377352, Job Hours 3622051.03
+2017-04-06 10:30:00,530 - DEBUG - Day 2017-04-05: Jobs 327916, Job Hours 3141900.67
+2017-04-06 10:30:00,530 - DEBUG - Time log - 30-Day Query Time: 6.86530208588
+2017-04-06 10:30:00,848 - DEBUG - Using temporary file /tmp/osg_displayYoVLeh for jobs_daily
+2017-04-06 10:30:01,038 - DEBUG - Overwriting /var/www/html/osg_display/jobs_daily.png with /tmp/osg_displayYoVLeh.
+2017-04-06 10:30:01,038 - DEBUG - Time log - 30-Day Count Graph Time: 0.508279085159
+2017-04-06 10:30:01,357 - DEBUG - Using temporary file /tmp/osg_displayeaYboC for hours_daily
+2017-04-06 10:30:01,535 - DEBUG - Overwriting /var/www/html/osg_display/cpu_hours_daily.png with /tmp/osg_displayeaYboC.
+2017-04-06 10:30:01,535 - DEBUG - Time log - 30-Day CPU Graph Time: 0.496681928635
+2017-04-06 10:30:01,540 - INFO - Unable to find cache file: </tmp/dailydatasourcecount.b>
+2017-04-06 10:30:01,540 - DEBUG - Default dates received in getcache are start: <2017-03-01 00:00:00> and end: <2017-04-06 00:00:00> 
+2017-04-06 10:30:01,540 - DEBUG - Setting date back to  start: <2017-03-01 00:00:00> 
+2017-04-06 10:30:01,540 - DEBUG - Received  <0> cached results
+2017-04-06 10:30:01,540 - DEBUG - Received in query_transfers for DB Query start date: <2017-03-01 00:00:00> and end date <2017-04-06 00:00:00> 
+2017-04-06 10:30:05,595 - INFO - -------- Gratia returned 36 results for transfers----------------
+2017-04-06 10:30:05,595 - DEBUG - -------- Transfer result dump: DB Fetched results----------------
+2017-04-06 10:30:05,595 - DEBUG - Day 2017-03-01: Transfers 9050464, Transfer PB 704.13
+2017-04-06 10:30:05,595 - DEBUG - Day 2017-03-02: Transfers 7435223, Transfer PB 605.86
+2017-04-06 10:30:05,595 - DEBUG - Day 2017-03-03: Transfers 9000858, Transfer PB 455.43
+2017-04-06 10:30:05,595 - DEBUG - Day 2017-03-04: Transfers 5345436, Transfer PB 307.34
+2017-04-06 10:30:05,595 - DEBUG - Day 2017-03-05: Transfers 7111452, Transfer PB 383.71
+2017-04-06 10:30:05,595 - DEBUG - Day 2017-03-06: Transfers 5468932, Transfer PB 252.50
+2017-04-06 10:30:05,595 - DEBUG - Day 2017-03-07: Transfers 6220939, Transfer PB 477.83
+2017-04-06 10:30:05,595 - DEBUG - Day 2017-03-08: Transfers 4917496, Transfer PB 396.20
+2017-04-06 10:30:05,596 - DEBUG - Day 2017-03-09: Transfers 6994991, Transfer PB 425.87
+2017-04-06 10:30:05,596 - DEBUG - Day 2017-03-10: Transfers 6298908, Transfer PB 435.53
+2017-04-06 10:30:05,596 - DEBUG - Day 2017-03-11: Transfers 8013482, Transfer PB 518.93
+2017-04-06 10:30:05,596 - DEBUG - Day 2017-03-12: Transfers 6642712, Transfer PB 202.91
+2017-04-06 10:30:05,596 - DEBUG - Day 2017-03-13: Transfers 4971373, Transfer PB 289.03
+2017-04-06 10:30:05,596 - DEBUG - Day 2017-03-14: Transfers 4883250, Transfer PB 513.32
+2017-04-06 10:30:05,596 - DEBUG - Day 2017-03-15: Transfers 5808320, Transfer PB 440.56
+2017-04-06 10:30:05,596 - DEBUG - Day 2017-03-16: Transfers 4097574, Transfer PB 409.31
+2017-04-06 10:30:05,596 - DEBUG - Day 2017-03-17: Transfers 4325331, Transfer PB 389.40
+2017-04-06 10:30:05,596 - DEBUG - Day 2017-03-18: Transfers 4792415, Transfer PB 282.53
+2017-04-06 10:30:05,596 - DEBUG - Day 2017-03-19: Transfers 6641271, Transfer PB 307.58
+2017-04-06 10:30:05,596 - DEBUG - Day 2017-03-20: Transfers 7433990, Transfer PB 390.51
+2017-04-06 10:30:05,597 - DEBUG - Day 2017-03-21: Transfers 5211778, Transfer PB 512.13
+2017-04-06 10:30:05,597 - DEBUG - Day 2017-03-22: Transfers 8026510, Transfer PB 335.85
+2017-04-06 10:30:05,597 - DEBUG - Day 2017-03-23: Transfers 10029168, Transfer PB 460.49
+2017-04-06 10:30:05,597 - DEBUG - Day 2017-03-24: Transfers 7313527, Transfer PB 377.52
+2017-04-06 10:30:05,597 - DEBUG - Day 2017-03-25: Transfers 6530665, Transfer PB 419.00
+2017-04-06 10:30:05,597 - DEBUG - Day 2017-03-26: Transfers 8236826, Transfer PB 360.27
+2017-04-06 10:30:05,597 - DEBUG - Day 2017-03-27: Transfers 7937999, Transfer PB 524.13
+2017-04-06 10:30:05,597 - DEBUG - Day 2017-03-28: Transfers 6657733, Transfer PB 471.10
+2017-04-06 10:30:05,597 - DEBUG - Day 2017-03-29: Transfers 6293892, Transfer PB 622.48
+2017-04-06 10:30:05,597 - DEBUG - Day 2017-03-30: Transfers 5345186, Transfer PB 657.39
+2017-04-06 10:30:05,597 - DEBUG - Day 2017-03-31: Transfers 5947538, Transfer PB 620.12
+2017-04-06 10:30:05,598 - DEBUG - Day 2017-04-01: Transfers 7997239, Transfer PB 683.85
+2017-04-06 10:30:05,598 - DEBUG - Day 2017-04-02: Transfers 6364890, Transfer PB 679.22
+2017-04-06 10:30:05,598 - DEBUG - Day 2017-04-03: Transfers 9728453, Transfer PB 516.85
+2017-04-06 10:30:05,598 - DEBUG - Day 2017-04-04: Transfers 6390201, Transfer PB 526.06
+2017-04-06 10:30:05,598 - DEBUG - Day 2017-04-05: Transfers 6778612, Transfer PB 534.17
+2017-04-06 10:30:05,598 - DEBUG - -------- Printing cached and DB Merged results----------------
+2017-04-06 10:30:05,598 - DEBUG - Day 2017-03-01: Transfers 9050464, Transfer PB 704.13
+2017-04-06 10:30:05,598 - DEBUG - Day 2017-03-02: Transfers 7435223, Transfer PB 605.86
+2017-04-06 10:30:05,598 - DEBUG - Day 2017-03-03: Transfers 9000858, Transfer PB 455.43
+2017-04-06 10:30:05,598 - DEBUG - Day 2017-03-04: Transfers 5345436, Transfer PB 307.34
+2017-04-06 10:30:05,598 - DEBUG - Day 2017-03-05: Transfers 7111452, Transfer PB 383.71
+2017-04-06 10:30:05,599 - DEBUG - Day 2017-03-06: Transfers 5468932, Transfer PB 252.50
+2017-04-06 10:30:05,599 - DEBUG - Day 2017-03-07: Transfers 6220939, Transfer PB 477.83
+2017-04-06 10:30:05,599 - DEBUG - Day 2017-03-08: Transfers 4917496, Transfer PB 396.20
+2017-04-06 10:30:05,599 - DEBUG - Day 2017-03-09: Transfers 6994991, Transfer PB 425.87
+2017-04-06 10:30:05,599 - DEBUG - Day 2017-03-10: Transfers 6298908, Transfer PB 435.53
+2017-04-06 10:30:05,599 - DEBUG - Day 2017-03-11: Transfers 8013482, Transfer PB 518.93
+2017-04-06 10:30:05,599 - DEBUG - Day 2017-03-12: Transfers 6642712, Transfer PB 202.91
+2017-04-06 10:30:05,599 - DEBUG - Day 2017-03-13: Transfers 4971373, Transfer PB 289.03
+2017-04-06 10:30:05,599 - DEBUG - Day 2017-03-14: Transfers 4883250, Transfer PB 513.32
+2017-04-06 10:30:05,599 - DEBUG - Day 2017-03-15: Transfers 5808320, Transfer PB 440.56
+2017-04-06 10:30:05,599 - DEBUG - Day 2017-03-16: Transfers 4097574, Transfer PB 409.31
+2017-04-06 10:30:05,599 - DEBUG - Day 2017-03-17: Transfers 4325331, Transfer PB 389.40
+2017-04-06 10:30:05,600 - DEBUG - Day 2017-03-18: Transfers 4792415, Transfer PB 282.53
+2017-04-06 10:30:05,600 - DEBUG - Day 2017-03-19: Transfers 6641271, Transfer PB 307.58
+2017-04-06 10:30:05,600 - DEBUG - Day 2017-03-20: Transfers 7433990, Transfer PB 390.51
+2017-04-06 10:30:05,600 - DEBUG - Day 2017-03-21: Transfers 5211778, Transfer PB 512.13
+2017-04-06 10:30:05,600 - DEBUG - Day 2017-03-22: Transfers 8026510, Transfer PB 335.85
+2017-04-06 10:30:05,600 - DEBUG - Day 2017-03-23: Transfers 10029168, Transfer PB 460.49
+2017-04-06 10:30:05,600 - DEBUG - Day 2017-03-24: Transfers 7313527, Transfer PB 377.52
+2017-04-06 10:30:05,600 - DEBUG - Day 2017-03-25: Transfers 6530665, Transfer PB 419.00
+2017-04-06 10:30:05,600 - DEBUG - Day 2017-03-26: Transfers 8236826, Transfer PB 360.27
+2017-04-06 10:30:05,600 - DEBUG - Day 2017-03-27: Transfers 7937999, Transfer PB 524.13
+2017-04-06 10:30:05,600 - DEBUG - Day 2017-03-28: Transfers 6657733, Transfer PB 471.10
+2017-04-06 10:30:05,601 - DEBUG - Day 2017-03-29: Transfers 6293892, Transfer PB 622.48
+2017-04-06 10:30:05,601 - DEBUG - Day 2017-03-30: Transfers 5345186, Transfer PB 657.39
+2017-04-06 10:30:05,601 - DEBUG - Day 2017-03-31: Transfers 5947538, Transfer PB 620.12
+2017-04-06 10:30:05,601 - DEBUG - Day 2017-04-01: Transfers 7997239, Transfer PB 683.85
+2017-04-06 10:30:05,601 - DEBUG - Day 2017-04-02: Transfers 6364890, Transfer PB 679.22
+2017-04-06 10:30:05,601 - DEBUG - Day 2017-04-03: Transfers 9728453, Transfer PB 516.85
+2017-04-06 10:30:05,601 - DEBUG - Day 2017-04-04: Transfers 6390201, Transfer PB 526.06
+2017-04-06 10:30:05,601 - DEBUG - Day 2017-04-05: Transfers 6778612, Transfer PB 534.17
+2017-04-06 10:30:05,602 - DEBUG - Time log - 30-Day Transfer Query Time: 4.06695199013
+2017-04-06 10:30:05,919 - DEBUG - Using temporary file /tmp/osg_displayISu0TA for transfers_daily
+2017-04-06 10:30:06,102 - DEBUG - Overwriting /var/www/html/osg_display/transfers_daily.png with /tmp/osg_displayISu0TA.
+2017-04-06 10:30:06,102 - DEBUG - Time log - 30-Day Transfer Count Graph Time: 0.499947071075
+2017-04-06 10:30:06,419 - DEBUG - Using temporary file /tmp/osg_display99q48H for transfer_volume_daily
+2017-04-06 10:30:06,631 - DEBUG - Overwriting /var/www/html/osg_display/transfer_volume_daily.png with /tmp/osg_display99q48H.
+2017-04-06 10:30:06,631 - DEBUG - Time log - 30-Day Transfer Volume Graph Time: 0.528837203979
+2017-04-06 10:30:06,635 - INFO - Successfully connected to Gratia database
+2017-04-06 10:30:15,827 - INFO - Gratia returned 15 results for jobs
+2017-04-06 10:30:15,827 - DEBUG - Job result dump:
+2017-04-06 10:30:15,827 - DEBUG - Month starting on 2016-01-01 00:00:00: Jobs 13343585, Job Hours 107529836.67
+2017-04-06 10:30:15,827 - DEBUG - Month starting on 2016-02-01 00:00:00: Jobs 15032976, Job Hours 101772478.59
+2017-04-06 10:30:15,827 - DEBUG - Month starting on 2016-03-01 00:00:00: Jobs 15397267, Job Hours 103798683.21
+2017-04-06 10:30:15,827 - DEBUG - Month starting on 2016-04-01 00:00:00: Jobs 12061023, Job Hours 100381258.61
+2017-04-06 10:30:15,828 - DEBUG - Month starting on 2016-05-01 00:00:00: Jobs 11720195, Job Hours 108912661.75
+2017-04-06 10:30:15,828 - DEBUG - Month starting on 2016-06-01 00:00:00: Jobs 10519551, Job Hours 105309627.28
+2017-04-06 10:30:15,828 - DEBUG - Month starting on 2016-07-01 00:00:00: Jobs 10190532, Job Hours 107098422.41
+2017-04-06 10:30:15,828 - DEBUG - Month starting on 2016-08-01 00:00:00: Jobs 9314400, Job Hours 100325336.64
+2017-04-06 10:30:15,828 - DEBUG - Month starting on 2016-09-01 00:00:00: Jobs 9467508, Job Hours 116410566.01
+2017-04-06 10:30:15,828 - DEBUG - Month starting on 2016-10-01 00:00:00: Jobs 11567049, Job Hours 120020171.04
+2017-04-06 10:30:15,828 - DEBUG - Month starting on 2016-11-01 00:00:00: Jobs 11816322, Job Hours 123798843.79
+2017-04-06 10:30:15,828 - DEBUG - Month starting on 2016-12-01 00:00:00: Jobs 10499165, Job Hours 134583118.27
+2017-04-06 10:30:15,828 - DEBUG - Month starting on 2017-01-01 00:00:00: Jobs 12852888, Job Hours 133590651.36
+2017-04-06 10:30:15,828 - DEBUG - Month starting on 2017-02-01 00:00:00: Jobs 10793194, Job Hours 115915190.95
+2017-04-06 10:30:15,828 - DEBUG - Month starting on 2017-03-01 00:00:00: Jobs 13263729, Job Hours 133151568.94
+2017-04-06 10:30:15,829 - DEBUG - Time log - 12-Month Query Time: 9.19747400284
+2017-04-06 10:30:16,145 - DEBUG - Using temporary file /tmp/osg_displayb0OFzo for jobs_monthly
+2017-04-06 10:30:16,328 - DEBUG - Overwriting /var/www/html/osg_display/jobs_monthly.png with /tmp/osg_displayb0OFzo.
+2017-04-06 10:30:16,328 - DEBUG - Time log - 12-Month Job Count Graph Time: 0.498996973038
+2017-04-06 10:30:16,644 - DEBUG - Using temporary file /tmp/osg_displayZZJJqm for hours_monthly
+2017-04-06 10:30:16,825 - DEBUG - Overwriting /var/www/html/osg_display/cpu_hours_monthly.png with /tmp/osg_displayZZJJqm.
+2017-04-06 10:30:16,825 - DEBUG - Time log - 12-Month Hour Graph Time: 0.496900081635
+2017-04-06 10:30:16,829 - INFO - Unable to find cache file: </tmp/monthlydatasourcecount.b>
+2017-04-06 10:30:16,829 - DEBUG - Default dates received in getcache are start: <2016-01-01 00:00:00> and end: <2017-04-01 00:00:00> 
+2017-04-06 10:30:16,830 - DEBUG - Setting date back to  start: <2016-01-01 00:00:00> 
+2017-04-06 10:30:16,830 - DEBUG - Received  <0> cached results
+2017-04-06 10:30:16,830 - DEBUG - Received in query_transfers for DB Query start date: <2016-01-01 00:00:00> and end date <2017-04-01 00:00:00> 
+2017-04-06 10:31:16,601 - INFO - -------- Gratia returned 15 results for transfers----------------
+2017-04-06 10:31:16,602 - DEBUG - -------- Transfer result dump: DB Fetched results----------------
+2017-04-06 10:31:16,602 - DEBUG - Month starting on 2016-01-01 00:00:00: Transfers 179837011, Transfer PB 21318.38
+2017-04-06 10:31:16,602 - DEBUG - Month starting on 2016-02-01 00:00:00: Transfers 136780903, Transfer PB 20361.53
+2017-04-06 10:31:16,602 - DEBUG - Month starting on 2016-03-01 00:00:00: Transfers 190492386, Transfer PB 23730.85
+2017-04-06 10:31:16,602 - DEBUG - Month starting on 2016-04-01 00:00:00: Transfers 171305221, Transfer PB 19141.82
+2017-04-06 10:31:16,602 - DEBUG - Month starting on 2016-05-01 00:00:00: Transfers 157014406, Transfer PB 15972.45
+2017-04-06 10:31:16,602 - DEBUG - Month starting on 2016-06-01 00:00:00: Transfers 166361650, Transfer PB 12713.80
+2017-04-06 10:31:16,602 - DEBUG - Month starting on 2016-07-01 00:00:00: Transfers 189527665, Transfer PB 12983.48
+2017-04-06 10:31:16,602 - DEBUG - Month starting on 2016-08-01 00:00:00: Transfers 147777693, Transfer PB 11200.46
+2017-04-06 10:31:16,602 - DEBUG - Month starting on 2016-09-01 00:00:00: Transfers 94980163, Transfer PB 11589.38
+2017-04-06 10:31:16,603 - DEBUG - Month starting on 2016-10-01 00:00:00: Transfers 111822666, Transfer PB 17332.99
+2017-04-06 10:31:16,603 - DEBUG - Month starting on 2016-11-01 00:00:00: Transfers 158222395, Transfer PB 16788.88
+2017-04-06 10:31:16,603 - DEBUG - Month starting on 2016-12-01 00:00:00: Transfers 165991999, Transfer PB 12480.13
+2017-04-06 10:31:16,603 - DEBUG - Month starting on 2017-01-01 00:00:00: Transfers 218457828, Transfer PB 17115.43
+2017-04-06 10:31:16,603 - DEBUG - Month starting on 2017-02-01 00:00:00: Transfers 224035739, Transfer PB 13337.30
+2017-04-06 10:31:16,603 - DEBUG - Month starting on 2017-03-01 00:00:00: Transfers 202985239, Transfer PB 13548.96
+2017-04-06 10:31:16,603 - DEBUG - -------- Printing cached and DB Merged results----------------
+2017-04-06 10:31:16,603 - DEBUG - Month starting on 2016-01-01 00:00:00: Transfers 179837011, Transfer PB 21318.38
+2017-04-06 10:31:16,603 - DEBUG - Month starting on 2016-02-01 00:00:00: Transfers 136780903, Transfer PB 20361.53
+2017-04-06 10:31:16,603 - DEBUG - Month starting on 2016-03-01 00:00:00: Transfers 190492386, Transfer PB 23730.85
+2017-04-06 10:31:16,603 - DEBUG - Month starting on 2016-04-01 00:00:00: Transfers 171305221, Transfer PB 19141.82
+2017-04-06 10:31:16,604 - DEBUG - Month starting on 2016-05-01 00:00:00: Transfers 157014406, Transfer PB 15972.45
+2017-04-06 10:31:16,604 - DEBUG - Month starting on 2016-06-01 00:00:00: Transfers 166361650, Transfer PB 12713.80
+2017-04-06 10:31:16,604 - DEBUG - Month starting on 2016-07-01 00:00:00: Transfers 189527665, Transfer PB 12983.48
+2017-04-06 10:31:16,604 - DEBUG - Month starting on 2016-08-01 00:00:00: Transfers 147777693, Transfer PB 11200.46
+2017-04-06 10:31:16,604 - DEBUG - Month starting on 2016-09-01 00:00:00: Transfers 94980163, Transfer PB 11589.38
+2017-04-06 10:31:16,604 - DEBUG - Month starting on 2016-10-01 00:00:00: Transfers 111822666, Transfer PB 17332.99
+2017-04-06 10:31:16,604 - DEBUG - Month starting on 2016-11-01 00:00:00: Transfers 158222395, Transfer PB 16788.88
+2017-04-06 10:31:16,604 - DEBUG - Month starting on 2016-12-01 00:00:00: Transfers 165991999, Transfer PB 12480.13
+2017-04-06 10:31:16,604 - DEBUG - Month starting on 2017-01-01 00:00:00: Transfers 218457828, Transfer PB 17115.43
+2017-04-06 10:31:16,604 - DEBUG - Month starting on 2017-02-01 00:00:00: Transfers 224035739, Transfer PB 13337.30
+2017-04-06 10:31:16,604 - DEBUG - Month starting on 2017-03-01 00:00:00: Transfers 202985239, Transfer PB 13548.96
+2017-04-06 10:31:16,605 - DEBUG - Time log - 12-Month Transfer Query Time: 59.7802481651
+2017-04-06 10:31:16,924 - DEBUG - Using temporary file /tmp/osg_displayVH64cs for transfers_monthly
+2017-04-06 10:31:17,101 - DEBUG - Overwriting /var/www/html/osg_display/transfers_monthly.png with /tmp/osg_displayVH64cs.
+2017-04-06 10:31:17,101 - DEBUG - Time log - 12-Month Transfer Count Graph Time: 0.496099948883
+2017-04-06 10:31:17,421 - DEBUG - Using temporary file /tmp/osg_display5LJ1oN for transfer_volume_monthly
+2017-04-06 10:31:17,598 - DEBUG - Overwriting /var/www/html/osg_display/transfer_volume_monthly.png with /tmp/osg_display5LJ1oN.
+2017-04-06 10:31:17,598 - DEBUG - Time log - 12-Month Transfer Volume Graph Time: 0.496819019318
+2017-04-06 10:31:18,354 - DEBUG - OIM returned the following sites: NIU ATLAS T3, UCHC_CBG, KANSAS_HOSTED, CSU Fresno T3, brown-cms-new, UMSNH, OU DOSAR, UConn-OSG, JINR_Tier2, STAR-Online, UJ Research Cluster, TAMU Mathematics, Nebraska-CMS, SLAC, GC_UCALDAS, Lehigh Coral, shenma high performance computing at IPP CAS, NYSGRID Cornell, UAB Research Computing, Purdue CMS, CCHDV, UGA Research Computing Center, T3_KR_KISTI, UPittTier3, OU HEP, Florida State HEP, GC_PUJ, UPRM_HEP, ANL ASC, School of Physics and Astronomy, GLOW, DukeTier3, UCR HEP, ucsb-hep, UCSD CMS Tier2, Brown-CMS, KISTI-NSDC, Vanderbilt ACCRE, Vanderbilt_EC2, GC_UDEM, FermiGrid, Nebraska-Omaha, Nebraska-Lincoln, Harvard University, GridUNESP, Nevis, CAS-CNIC, SUSQU, TIGRE TTU, FNAL USCMS Tier1, LU HEP, UW Milwaukee Physics, OSC, FIU CMS Tier3, cinvestav, SWT2 ATLAS UTA, OU ATLAS, Caltech CMS Tier2, WIPAC, Kennesaw State University, LONI_LSU, LUCCRE, Boston University ATLAS Tier2, Brookhaven ATLAS Tier1, uva-cms, Georgia Tech, STANFORD_HOSTED, Baylor University Tier3, UTD-HEP, Bellarmine University, T2_BR_UERJ, Arizona Tier 3, rutgers-cms, NUMEP-OSG, ILS, MWT2 ATLAS UC, SPRACE, Clemson IT, Illinois High Energy Physics, UCIT3, GLOW ATLAS, NERSC, GC_UTB, OSU-CMS, STAR Brookhaven, UC Davis CMS T3, GC_UC, UF HPC, JINR_Cloud, MIT CMS, NU Tier3, UNM HPC, FZU, GC_UV, SU OrangeGrid, NYU ATLAS Tier3, GROW, SBU Atlas Tier3, UF CMS Tier2, OSG-Rice, Penn ATLAS Tier 3, JetStream, High Performance Computing Facility - University of Puerto Rico, UMD-IGS, Princeton_ICSE, UMissHEP, UC Santa Cruz ATLAS Tier-3, GLOW EDU, SMU_HPC, LaTech, FIU HPC, UMD-CMS, NWICG_NDCMS, T3_US_NEU, IIT - Illinois Institute of Technology, TAMU Academy, GC_UPB, AGLT2, GC_UAC, GC_UAM, PNNL_DC, Brandeis Tier 3, GC_UNIANDES, Beocat, NYSGRID Buffalo, Florida Tech, UColorado_HEP, UW-IT, GC_UIS, MIT CMS T3, MSU OSG, CHPC
+2017-04-06 10:31:18,354 - INFO - OIM has 132 registered sites.
+2017-04-06 10:31:18,354 - DEBUG - Querying the following MyOSG URL: http://myosg.grid.iu.edu/rgsummary/xml?datasource=summary&all_resources=on&gridtype=on&gridtype_1=on&active=on&active_value=1&disable=on&disable_value=0&summary_attrs_showhierarchy=on&summary_attrs_showservice=on&service=on&service_1=on&service_5=on&service_2=on&service_3=on
+2017-04-06 10:31:19,067 - DEBUG - OIM returned the following CEs: .
+2017-04-06 10:31:19,067 - DEBUG - OIM returned the following SEs: .
+2017-04-06 10:31:19,067 - INFO - OIM returned 0 CEs and 0 SEs
+2017-04-06 10:31:19,067 - DEBUG - Time log - OIM Time: 1.46850013733
+2017-04-06 10:31:19,067 - DEBUG - Starting JSON creation
+2017-04-06 10:31:19,070 - DEBUG - Done creating JSON.
+2017-04-06 10:31:19,071 - DEBUG - Using temporary file /tmp/osg_display3_hJHy for json
+2017-04-06 10:31:19,073 - DEBUG - Overwriting /var/www/html/osg_display/display.json with /tmp/osg_display3_hJHy.
+2017-04-06 10:31:19,073 - INFO - OSG Display done!
+2017-04-06 10:31:19,074 - DEBUG - Time log - Total Time: 103.420652866
